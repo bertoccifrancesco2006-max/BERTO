@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BERTO — Gestione Clienti</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <a class="logo" href="#">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+    </svg>
+    BERTO
+  </a>
+  <nav class="nav">
+    <button class="nav-btn active" data-view="dashboard">Dashboard</button>
+    <button class="nav-btn" data-view="clienti">Clienti</button>
+    <button class="nav-btn" data-view="statistiche">Statistiche</button>
+  </nav>
+  <div class="header-right">
+    <span class="date-tag" id="date-tag"></span>
+  </div>
+</header>
+
+<!-- ===== MAIN ===== -->
+<main class="main">
+
+  <!-- ========== DASHBOARD ========== -->
+  <div id="view-dashboard" class="view active">
+
+    <!-- KPI -->
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-icon icon-blue">👥</div>
+        <div>
+          <div class="kpi-val" id="k-clienti">—</div>
+          <div class="kpi-lbl">Clienti attivi</div>
+        </div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon icon-red">💳</div>
+        <div>
+          <div class="kpi-val" id="k-dep">—</div>
+          <div class="kpi-lbl">Tot. Depositato</div>
+        </div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon icon-green">📤</div>
+        <div>
+          <div class="kpi-val" id="k-rit">—</div>
+          <div class="kpi-lbl">Tot. Ritirato</div>
+        </div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon icon-gold">⚖️</div>
+        <div>
+          <div class="kpi-val" id="k-diff">—</div>
+          <div class="kpi-lbl">Bilancio Dep/Rit</div>
+        </div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon icon-purple">💰</div>
+        <div>
+          <div class="kpi-val" id="k-comm">—</div>
+          <div class="kpi-lbl">Tot. Commissioni</div>
+        </div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon icon-orange">⚡</div>
+        <div>
+          <div class="kpi-val" id="k-attivi">—</div>
+          <div class="kpi-lbl">In Lavorazione</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHARTS -->
+    <div class="charts-row">
+      <div class="chart-card">
+        <div class="chart-title">Esito <span>Vinto / Perso</span></div>
+        <div class="chart-box donut"><canvas id="ch-esito"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Ritirato per Tramite</div>
+        <div class="chart-box bar"><canvas id="ch-tramite"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Stato Prelievi</div>
+        <div class="chart-box donut"><canvas id="ch-stati"></canvas></div>
+      </div>
+    </div>
+
+    <!-- RECENT -->
+    <div class="card">
+      <div class="card-header">
+        <h3>Ultimi clienti aggiunti</h3>
+        <button class="btn-ghost" onclick="switchView('clienti')">Vedi tutti →</button>
+      </div>
+      <div id="recent-table"></div>
+    </div>
+
+  </div><!-- /dashboard -->
+
+  <!-- ========== CLIENTI ========== -->
+  <div id="view-clienti" class="view">
+    <div class="card">
+      <div class="card-header">
+        <h3>Gestione Clienti</h3>
+        <div class="filters">
+          <input type="text" id="f-search" class="input-search" placeholder="🔍 Cerca cliente o tramite…">
+          <select id="f-tramite" class="input-select">
+            <option value="">Tutti i tramiti</option>
+          </select>
+          <select id="f-esito" class="input-select">
+            <option value="">Tutti gli esiti</option>
+            <option value="VINTO">VINTO</option>
+            <option value="PERSO">PERSO</option>
+          </select>
+          <select id="f-stato" class="input-select">
+            <option value="">Tutti gli stati</option>
+            <option value="SÌ">Completati</option>
+            <option value="IN CORSO">In Corso</option>
+            <option value="DA RIFARE">Da Rifare</option>
+          </select>
+        </div>
+      </div>
+      <div id="main-table"></div>
+      <div class="tfoot" id="tfoot"></div>
+    </div>
+  </div><!-- /clienti -->
+
+  <!-- ========== STATISTICHE ========== -->
+  <div id="view-statistiche" class="view">
+    <div class="stat-grid">
+      <div class="chart-card full">
+        <div class="chart-title">Ritirato vs Depositato per Cliente <span>verde = VINTO</span></div>
+        <div class="chart-box tall"><canvas id="ch-clienti"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Commissioni per Tramite <span>tramite + cliente</span></div>
+        <div class="chart-box bar"><canvas id="ch-comm"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Clienti per Tramite</div>
+        <div class="chart-box bar"><canvas id="ch-pie"></canvas></div>
+      </div>
+    </div>
+  </div><!-- /statistiche -->
+
+</main>
+
+<!-- ===== MODAL ===== -->
+<div id="modal-overlay" class="overlay hidden">
+  <div class="modal">
+    <div class="modal-head">
+      <div>
+        <h2 id="modal-title"></h2>
+        <div class="modal-sub" id="modal-sub"></div>
+      </div>
+      <button class="btn-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
