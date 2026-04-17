@@ -3,6 +3,16 @@ const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>
 const fmt = n => n ? '€\u202f' + Number(n).toLocaleString('it-IT') : '—';
 const fmtPos = n => n > 0 ? '€\u202f' + Number(n).toLocaleString('it-IT') : '—';
 
+// ===== PIATTAFORMA (localStorage) =====
+function getPiattaforma(id) {
+  return localStorage.getItem('berto_pf_' + id) || '';
+}
+function setPiattaforma(id, val) {
+  if (val) localStorage.setItem('berto_pf_' + id, val);
+  else localStorage.removeItem('berto_pf_' + id);
+  buildKPIs();
+}
+
 // ===== BADGES =====
 function bEsito(v) {
   if (!v) return '<span class="badge b-muted">—</span>';
@@ -44,11 +54,13 @@ function buildKPIs() {
   const dep = active.reduce((s, c) => s + c.deposito, 0);
   const rit = active.reduce((s, c) => s + c.rititatiTot, 0);
   const comm = CLIENTS.reduce((s, c) => s + c.tramiti + c.clienti, 0);
-  const diff = rit - dep;
+  const mylotteryFee = active.filter(c => getPiattaforma(c.id) === 'MYLOTTERY').length * 50;
+  const totUscite = dep + mylotteryFee;
+  const diff = rit - totUscite;
   const attivi = CLIENTS.filter(c => c.prelevati === 'IN CORSO' || c.prelevati === 'DA RIFARE' || (!c.prelevati && c.deposito > 0)).length;
 
   document.getElementById('k-clienti').textContent = active.length;
-  document.getElementById('k-dep').textContent = fmt(dep);
+  document.getElementById('k-dep').textContent = fmt(totUscite);
   document.getElementById('k-rit').textContent = fmt(rit);
 
   const kd = document.getElementById('k-diff');
@@ -374,6 +386,7 @@ function openModal(id) {
         ${fieldHtml('Carta', c.carta || '—')}
         ${fieldHtml('Linee tel.', c.tel || '—')}
         ${fieldHtml('Deposito', fmt(c.deposito))}
+        <div class="mfield"><div class="mfield-lbl">Piattaforma</div><div class="mfield-val"><select class="input-select" style="font-size:13px;padding:4px 8px" onchange="setPiattaforma(${c.id}, this.value)"><option value="" ${getPiattaforma(c.id)===''?'selected':''}>— Non specificata</option><option value="SNAI" ${getPiattaforma(c.id)==='SNAI'?'selected':''}>SNAI</option><option value="MYLOTTERY" ${getPiattaforma(c.id)==='MYLOTTERY'?'selected':''}>MyLottery (+€\u202f50)</option></select></div></div>
         ${fieldHtml('Flipping', esc(c.flipping))}
         ${fieldHtml('Wagering', esc(c.wagering))}
       </div>
