@@ -9,6 +9,17 @@
 </head>
 <body>
 
+<!-- ===== AUTH GATE ===== -->
+<div id="auth-gate" class="auth-gate">
+  <div class="auth-box">
+    <div class="auth-logo">⭐ BERTO</div>
+    <div class="auth-title">Inserisci la password per accedere</div>
+    <input type="password" id="auth-input" class="auth-input" placeholder="Password..." onkeydown="if(event.key==='Enter')tryAuth()">
+    <button class="auth-btn" onclick="tryAuth()">Entra</button>
+    <div id="auth-err" class="auth-err hidden">Password errata — riprova</div>
+  </div>
+</div>
+
 <!-- ===== HEADER ===== -->
 <header class="header">
   <a class="logo" href="#">

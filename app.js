@@ -1,3 +1,21 @@
+// ===== AUTH =====
+const APP_PASSWORD = 'mbnpl';
+(function initAuth() {
+  if (sessionStorage.getItem('berto_auth') === '1') {
+    document.getElementById('auth-gate').classList.add('hidden');
+  }
+})();
+function tryAuth() {
+  if (document.getElementById('auth-input').value === APP_PASSWORD) {
+    sessionStorage.setItem('berto_auth', '1');
+    document.getElementById('auth-gate').classList.add('hidden');
+  } else {
+    document.getElementById('auth-err').classList.remove('hidden');
+    document.getElementById('auth-input').value = '';
+    document.getElementById('auth-input').focus();
+  }
+}
+
 // ===== UTILS =====
 const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 const fmt = n => n ? '€\u202f' + Number(n).toLocaleString('it-IT') : '—';
