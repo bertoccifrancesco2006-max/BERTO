@@ -1172,13 +1172,25 @@ document.addEventListener('keydown', e => {
 });
 
 function copyText(text, btn) {
-  navigator.clipboard.writeText(text).then(() => {
+  const done = () => {
     if (btn) {
       const ok = btn.nextElementSibling;
       btn.style.display = 'none';
       if (ok) { ok.style.display = 'inline'; setTimeout(() => { btn.style.display=''; ok.style.display='none'; }, 1800); }
     }
-  });
+  };
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.cssText = 'position:fixed;top:-9999px;left:-9999px;opacity:0';
+    document.body.appendChild(ta);
+    ta.focus(); ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    done();
+  }
 }
 
 // ===== INIT =====
