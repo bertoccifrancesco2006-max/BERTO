@@ -1,0 +1,432 @@
+## MODULO C — TREND E STRUTTURA DEL MERCATO
+
+Quattro lezioni (video 5, 7, 6 e 8, in quest'ordine didattico) dedicate allo scheletro del grafico: la direzione di fondo, il modo di descriverla in termini oggettivi, i diversi «caratteri» che il mercato può assumere e la forza con cui si muove.
+
+Se il Modulo B risponde a «perché il prezzo si muove», il Modulo C risponde a «**dove sta andando e in che stato è adesso**».
+
+[[pagebreak]]
+## SCHEDA 05 — E4. Trend e Strutture
+
+[[cols:16,12,14,16,42]]
+|Video playlist|Codice|Durata|Livello|Modulo|
+|5|E4|1:06:23|Base|C - Trend e struttura|
+
+**Argomento principale.** Come si definisce in modo oggettivo la direzione del mercato e come si descrive la sua struttura, cioè la sequenza di massimi e minimi che compone il movimento. È la lezione che sostituisce l'impressione («mi sembra che salga») con un criterio verificabile.
+
+### COS'È
+:::def Trend e struttura
+- **Trend rialzista:** sequenza di massimi crescenti e minimi crescenti. Ogni nuova spinta arriva più in alto della precedente e ogni correzione si ferma più in alto della precedente.
+- **Trend ribassista:** massimi decrescenti e minimi decrescenti.
+- **Struttura:** l'insieme dei punti di svolta (i massimi e i minimi rilevanti, detti *swing*) che disegna lo scheletro del movimento. La struttura è ciò che resta del grafico se togli il rumore.
+- **Rottura di struttura:** quando il prezzo supera l'ultimo massimo rilevante in un trend ribassista, o rompe l'ultimo minimo rilevante in un trend rialzista. È il primo segnale che il carattere del mercato sta cambiando. *(Integrazione: nel gergo internazionale si chiama BOS, Break of Structure; il titolo non usa questo termine.)*
+:::
+
+Il punto delicato è la parola «rilevante»: non tutti i massimi contano. Un massimo è rilevante quando è visibile a occhio nudo sul timeframe che stai usando e ha prodotto una reazione chiara.
+
+### A COSA SERVE
+Serve ad avere un **bias**, cioè un'idea direzionale motivata. Senza struttura ogni movimento sembra ugualmente valido nelle due direzioni e finisci per operare su ogni oscillazione. Con la struttura, in ogni momento sai qual è la direzione principale e quali eventi la metterebbero in discussione.
+
+### QUANDO SI USA
+Sempre, e per prima cosa. È il primo passaggio di qualsiasi analisi: prima di cercare zone, conferme o ingressi, devi sapere in che direzione lavori. Diventa ancora più decisivo quando il mercato è ambiguo, perché ti dice se stai in una fase direzionale o in una fase laterale.
+
+### COME SI USA
+1. Apri il grafico su un timeframe alto (giornaliero o a 4 ore) e segna solo i massimi e i minimi ben visibili: pochi punti, non decine.
+2. Leggi la sequenza: massimi e minimi crescenti, decrescenti, oppure allineati (assenza di trend).
+3. Individua l'ultimo minimo rilevante in un trend rialzista, o l'ultimo massimo rilevante in un trend ribassista: è il livello che, se rotto, invalida il trend.
+4. Scendi di timeframe e ripeti: spesso il grafico piccolo è in trend opposto a quello grande. Questa non è una contraddizione, è la normalità.
+5. Scrivi in una frase: «direzione principale al rialzo finché il prezzo resta sopra X». Se non riesci a scriverla, non hai ancora letto la struttura.
+
+:::rule La frase da scrivere sempre
+Ogni analisi deve poter essere riassunta così: **«Sono rialzista/ribassista su [strumento] finché il prezzo resta sopra/sotto [livello]».** Se il livello manca, non hai un'analisi: hai un'opinione.
+:::
+
+### PERCHÉ È IMPORTANTE
+Perché la struttura è l'unico elemento che ti dice **quando avere torto**. È la differenza tra un trader che chiude una posizione perché lo scenario è cambiato e uno che la chiude perché non sopporta più la perdita.
+
+### ESEMPIO PRATICO
+**NASDAQ**, grafico giornaliero. Negli ultimi due mesi: minimo a 17.200, massimo a 18.000, correzione fino a 17.600, nuovo massimo a 18.400, correzione fino a 18.050. Massimi crescenti (18.000 poi 18.400) e minimi crescenti (17.200, 17.600, 18.050): trend rialzista pulito.
+
+Il livello che conta è 18.050, l'ultimo minimo rilevante. Finché il prezzo resta sopra, lavori solo in acquisto sui ritracciamenti. Se il prezzo scende sotto 18.050 e ci resta, la struttura rialzista è rotta: non significa che devi vendere subito, significa che non puoi più comprare con la stessa fiducia.
+
+### COLLEGAMENTI
+- **Prima di questo:** i video 2-4, che spiegano che cosa produce quei massimi e minimi.
+- **Dopo questo:** il video 7, che applica questi concetti sul grafico.
+- **Si collega a:** il video 8 (momentum), che aggiunge la forza al quadro direzionale; il video 12 (range operativo), che descrive che cosa fare quando la struttura è assente; il video 4 (liquidità), perché i massimi e minimi di struttura sono esattamente i punti in cui si accumulano gli ordini.
+
+### COSA CERCARE NEL VIDEO
+- Con quale criterio Giuliano definisce «rilevante» uno swing?
+- Quale timeframe usa per definire la struttura principale?
+- Considera rotta una struttura alla semplice rottura del livello o richiede la chiusura della candela oltre?
+- Usa termini specifici (BOS, CHoCH, o una nomenclatura sua) e con quale significato preciso?
+
+:::key
+- Trend rialzista = massimi e minimi crescenti; ribassista = massimi e minimi decrescenti.
+- La struttura è fatta da pochi punti importanti, non da tutte le oscillazioni.
+- Il livello che invalida il trend è l'ultimo minimo (o massimo) rilevante.
+- Timeframe diversi possono avere trend diversi contemporaneamente: è normale.
+- Un'analisi senza livello di invalidazione non è un'analisi.
+:::
+
+:::err
+Cambiare idea sulla direzione a ogni candela. Il principiante ridisegna la struttura ogni volta che il prezzo si muove contro di lui, finendo per essere rialzista in cima e ribassista in fondo. La struttura si aggiorna quando **un livello viene rotto**, non quando ti senti a disagio.
+:::
+
+[[notes:3]]
+
+[[pagebreak]]
+## SCHEDA 06 — E6. Applicazione Concetti di Trend
+
+[[cols:16,12,14,16,42]]
+|Video playlist|Codice|Durata|Livello|Modulo|
+|7|E6|1:07:52|Intermedio|C - Trend e struttura|
+
+**Argomento principale.** La lezione pratica che segue la teoria del trend: come si applicano davvero i concetti di direzione e struttura su un grafico reale. Il titolo dice esplicitamente «applicazione», quindi ci si aspetta più esempi che definizioni.
+
+### COS'È
+È il passaggio dal disegno teorico al grafico vero, dove i massimi non sono mai perfettamente allineati, le correzioni non sono simmetriche e ogni movimento è ambiguo mentre accade. Applicare il trend significa prendere decisioni con informazioni incomplete usando un criterio fisso.
+
+### A COSA SERVE
+Serve a evitare il problema più diffuso di chi studia price action: **conoscere le definizioni e non saperle usare**. Sapere che il trend rialzista è fatto di massimi crescenti non ti dice quale massimo contare quando ce ne sono cinque a livelli simili.
+
+### QUANDO SI USA
+Ogni giorno, durante la preparazione dell'analisi. È la fase in cui prendi il grafico grezzo e lo trasformi in una mappa con tre o quattro livelli segnati.
+
+### COME SI USA
+1. Parti dal timeframe più alto che usi e scendi progressivamente: giornaliero, poi 4 ore, poi 1 ora, poi il timeframe operativo. *(Integrazione: il metodo multi-timeframe non è nominato nei titoli, ma è la conseguenza naturale del contenuto.)*
+2. Su ogni timeframe scrivi una sola parola: rialzista, ribassista, laterale.
+3. Confronta i risultati. Se timeframe alto e timeframe operativo concordano, la situazione è favorevole; se sono opposti, quasi sempre sei in una correzione del timeframe alto.
+4. Opera **nella direzione del timeframe superiore**, usando il timeframe inferiore per trovare il punto di ingresso. *(Integrazione)*
+5. Riduci l'esposizione o resta fermo quando i timeframe si contraddicono in modo confuso.
+
+:::rule Il principio di allineamento
+Il timeframe alto dice **dove** vai. Il timeframe basso dice **quando** entri. Se li inverti, entri sempre con precisione nella direzione sbagliata.
+:::
+
+### PERCHÉ È IMPORTANTE
+Perché è qui che si formano le abitudini corrette. La differenza tra chi migliora e chi resta fermo per anni non sta nella quantità di concetti conosciuti, ma nell'aver ripetuto lo stesso procedimento di analisi centinaia di volte, sempre nello stesso ordine.
+
+### ESEMPIO PRATICO
+**GBP/USD.** Giornaliero: trend ribassista, massimi decrescenti da tre settimane. Grafico a 1 ora: il prezzo sta salendo da due giorni e sembra rialzista.
+
+Il principiante vede il grafico a 1 ora e compra. Chi applica correttamente il trend riconosce invece una **correzione dentro un ribasso**: il movimento a 1 ora è controcorrente rispetto al giornaliero. La lettura corretta è aspettare che la salita si esaurisca in una zona significativa e cercare la ripresa del ribasso, che è la direzione dominante.
+
+### COLLEGAMENTI
+- **Prima di questo:** il video 5, di cui questa lezione è l'applicazione.
+- **Dopo questo:** il video 6 (profili di mercato), che classifica i diversi stati del mercato in cui applicare il trend.
+- **Si collega a:** il video 10 (premium e discount), perché in una correzione il punto in cui rientrare dipende da quanto il prezzo è caro o a sconto; e al video 11 (setup completo), che integra tutto.
+
+### COSA CERCARE NEL VIDEO
+- Quali timeframe usa Giuliano e in quale sequenza?
+- Come gestisce il caso in cui i timeframe si contraddicono?
+- Quali esempi porta e su quali strumenti?
+- Traccia la struttura sui prezzi di chiusura o sui massimi e minimi assoluti delle candele?
+
+:::key
+- Applicare è una competenza diversa dal sapere: si allena solo ripetendo.
+- Analisi dall'alto verso il basso: prima il timeframe grande, poi il piccolo.
+- Il timeframe alto dà la direzione, il timeframe basso il momento di entrare.
+- Timeframe in contraddizione = molto spesso correzione, non inversione.
+- Fare sempre lo stesso procedimento nello stesso ordine vale più di aggiungere concetti nuovi.
+:::
+
+:::err
+Scendere di timeframe finché non si trova un grafico che dà ragione all'idea che si aveva già in testa. È il modo più elegante di ingannarsi: c'è sempre un timeframe in cui il prezzo va nella direzione che desideri. La sequenza dei timeframe va decisa **prima** di guardare il grafico.
+:::
+
+[[notes:3]]
+
+[[pagebreak]]
+## SCHEDA 07 — E5. Profili di Mercato, letture dettagliate
+
+[[cols:16,12,14,16,42]]
+|Video playlist|Codice|Durata|Livello|Modulo|
+|6|E5|1:06:25|Intermedio|C - Trend e struttura|
+
+**Argomento principale.** Come riconoscere il «carattere» del mercato in un dato momento: non solo la direzione, ma il modo in cui il prezzo si sta muovendo. Il titolo parla di *letture dettagliate*, quindi la lezione entra nel dettaglio di più profili distinti.
+
+:::note Due letture possibili del titolo
+L'espressione «profilo di mercato» ha due significati nel gergo del trading e dal solo titolo **non si può stabilire quale sia quello usato**:
+- **Lettura A (più probabile in questo percorso):** profilo inteso come *tipo di comportamento* del mercato: direzionale, laterale, in espansione, in ritracciamento, in inversione. Si adatta al contesto price action / Smart Money del resto della playlist.
+- **Lettura B:** *Market Profile* in senso tecnico, cioè lo studio statistico di quanto tempo il prezzo passa a ogni livello (TPO, volume profile, value area).
+La scheda è scritta seguendo la Lettura A, segnalando dove la Lettura B cambierebbe le cose. **Verifica nei primi minuti del video quale delle due è quella giusta.**
+:::
+
+### COS'È
+Un profilo di mercato è uno **stato tipico** in cui il prezzo si trova. I profili ricorrenti sono:
+
+|Profilo|Come si presenta|Che cosa conviene fare|
+|Direzionale (trend)|Movimenti ampi in una direzione, correzioni brevi|Operare a favore, entrare sulle correzioni|
+|Laterale (range)|Il prezzo rimbalza tra due estremi|Operare sugli estremi o restare fermi|
+|Espansione|Aumento improvviso dell'ampiezza delle candele dopo una fase compressa|Seguire la direzione dell'espansione, con prudenza|
+|Ritracciamento|Movimento contrario all'interno di una direzione più grande|Aspettare la fine, non scambiarlo per inversione|
+|Inversione|La struttura cambia: si rompe l'ultimo livello rilevante|Riconsiderare completamente il bias|
+
+### A COSA SERVE
+Serve a **scegliere lo strumento giusto per la situazione giusta**. Una strategia di continuazione applicata in un mercato laterale produce perdite continue; una strategia da range applicata in un trend forte ti fa vendere ripetutamente contro un movimento che non si ferma. Il profilo non ti dice dove entrare: ti dice quale approccio ha senso oggi.
+
+### QUANDO SI USA
+Prima di decidere se operare. È il filtro iniziale della giornata: se il profilo non corrisponde a quello per cui la tua strategia è stata costruita, la risposta corretta è non operare.
+
+### COME SI USA
+1. Guarda le ultime 30-50 candele del tuo timeframe di riferimento senza indicatori.
+2. Chiediti: il prezzo si sta spostando o sta oscillando? Le candele sono ampie o compresse?
+3. Assegna un'etichetta di profilo, una sola.
+4. Verifica la coerenza con il timeframe superiore: un range su 15 minuti può essere una semplice pausa dentro un trend giornaliero.
+5. Scegli l'approccio coerente con il profilo, oppure rinuncia alla giornata.
+
+### PERCHÉ È IMPORTANTE
+Perché la maggior parte delle perdite non nasce da errori di esecuzione, ma dall'aver applicato la strategia giusta nel contesto sbagliato. Riconoscere il profilo è ciò che ti fa dire «oggi il mio setup non esiste», e questa frase vale più di dieci setup nuovi.
+
+### ESEMPIO PRATICO
+**EUR/USD**, tre giornate consecutive.
+- Lunedì: candele da 15-20 pip, prezzo tra 1,0840 e 1,0870 tutto il giorno. Profilo **laterale**: chi cerca continuazione viene stoppato più volte.
+- Martedì: alle 14:30 esce un dato macro, la candela oraria è di 60 pip e il prezzo passa da 1,0860 a 1,0790. Profilo **espansione**: qui una strategia da range perde molto.
+- Mercoledì: il prezzo scende con correzioni brevi fino a 1,0720. Profilo **direzionale**: le vendite sulle correzioni funzionano, gli acquisti no.
+Stesso strumento, stessa settimana, tre approcci diversi.
+
+### COLLEGAMENTI
+- **Prima di questo:** i video 5 e 7, perché il profilo si legge sulla struttura.
+- **Dopo questo:** il video 8 (momentum), che quantifica la forza del movimento e aiuta a distinguere espansione da rumore.
+- **Si collega a:** il video 12 (range operativo), che approfondisce il profilo laterale; il video 13 (sessioni), perché il profilo cambia con l'ora del giorno.
+
+### COSA CERCARE NEL VIDEO
+- Quali profili elenca esattamente Giuliano e con quali nomi? (Questa è la domanda più importante di tutta la scheda.)
+- Il termine «profilo» si riferisce al comportamento del prezzo o a uno strumento statistico?
+- Associa a ogni profilo un modo di operare specifico?
+- Su quale timeframe determina il profilo?
+
+:::key
+- Il mercato non è sempre lo stesso: cambia carattere, e la strategia deve adeguarsi.
+- I profili tipici sono: direzionale, laterale, espansione, ritracciamento, inversione.
+- Il profilo si legge su poche decine di candele, senza indicatori.
+- Il profilo dice quale approccio usare, non dove entrare.
+- «Oggi il mio setup non esiste» è una conclusione professionale, non una rinuncia.
+:::
+
+:::err
+Forzare la propria strategia preferita su qualsiasi profilo. Chi ha imparato una tecnica di continuazione tende a vedere continuazioni ovunque, anche dentro un range dove il prezzo torna indietro ogni volta. Il profilo va letto **prima** di scegliere la strategia, non dopo.
+:::
+
+[[notes:3]]
+
+[[pagebreak]]
+## SCHEDA 08 — E7. Momentum e Direzionalità SM
+
+[[cols:16,12,14,16,42]]
+|Video playlist|Codice|Durata|Livello|Modulo|
+|8|E7|1:06:20|Intermedio|C - Trend e struttura|
+
+**Argomento principale.** Due elementi complementari: il **momentum**, cioè la forza e la velocità con cui il prezzo si muove, e la **direzionalità Smart Money**, cioè la direzione verso cui il denaro istituzionale sta effettivamente spingendo. La sigla SM riprende il concetto di Smart Money introdotto nei video 2 e 3.
+
+### COS'È
+:::def Momentum
+Il momentum è la **qualità del movimento**, non la sua direzione. Un prezzo può salire in due modi molto diversi: con candele ampie, corpi pieni e poche ombre (momentum forte), oppure con candele piccole, sovrapposte e piene di ombre (momentum debole). La direzione è la stessa, il significato è opposto.
+
+Un movimento con momentum forte segnala partecipazione reale e tende a proseguire. Un movimento lento e faticoso segnala spesso l'assenza di interesse: è il tipo di salita che si spegne e si ritraccia interamente. *(Integrazione: nel gergo internazionale un movimento improvviso e ampio che rompe la struttura si chiama displacement; il termine non compare nei titoli.)*
+:::
+
+La **direzionalità Smart Money** è la direzione dominante dedotta dal comportamento del prezzo: dove avvengono i movimenti impulsivi e dove invece quelli lenti e correttivi. Il principio è semplice: le fasi impulsive mostrano la vera direzione, le fasi lente mostrano le correzioni.
+
+### A COSA SERVE
+Serve a distinguere i movimenti veri da quelli finti — cioè, tornando al Modulo B, la **distribuzione** dalla **manipolazione**. È il filtro che ti evita di inseguire ogni rottura.
+
+### QUANDO SI USA
+- Dopo una presa di liquidità, per capire se la reazione è credibile.
+- Quando il prezzo rompe un livello: la forza della rottura ne determina il valore.
+- Quando devi decidere se un trend è ancora vivo o si sta esaurendo.
+
+### COME SI USA
+1. Confronta l'ampiezza delle candele del movimento attuale con quella delle candele precedenti: la forza è sempre relativa, mai assoluta.
+2. Guarda i corpi: corpi ampi e ombre corte indicano decisione; corpi piccoli e ombre lunghe indicano conflitto.
+3. Osserva la velocità della correzione: in un movimento forte, la correzione è breve e poco profonda.
+4. Confronta i due lati: se le salite sono impulsive e le discese lente, la direzionalità è rialzista, anche se il prezzo per ore va giù.
+5. Diffida di un movimento che rompe un livello **senza** momentum: molto spesso viene riassorbito.
+
+### PERCHÉ È IMPORTANTE
+Perché ti dà un criterio per **fidarti o non fidarti di ciò che vedi**. Due grafici con la stessa struttura possono richiedere decisioni opposte in base alla forza dei movimenti. È l'elemento che distingue un'analisi meccanica da una lettura consapevole.
+
+### ESEMPIO PRATICO
+**XAU/USD**, grafico a 15 minuti. Il prezzo scende lentamente per due ore, con candele da 2-3 dollari, corpi piccoli, molte ombre in basso: discesa faticosa. Poi, in tre candele, sale di 14 dollari con corpi pieni e quasi senza ombre.
+
+Lettura: la discesa era una correzione a basso momentum, la salita è il movimento impulsivo. La direzionalità Smart Money è **rialzista**, e la lettura corretta è cercare acquisti sui ritracciamenti, non vendere il minimo appena rotto.
+
+Stessa situazione al contrario sul **NASDAQ**: se dopo un massimo l'indice scende di 150 punti in due candele e poi risale lentamente per un'ora, il movimento veloce indica la direzione, quello lento indica la correzione.
+
+### COLLEGAMENTI
+- **Prima di questo:** i video 5 e 7 (struttura) e il video 4 (liquidità).
+- **Dopo questo:** il video 9 (qualità del setup e lettura della candela), che porta la stessa idea alla scala della singola candela.
+- **Si collega a:** il video 10 (imbalance), perché un movimento impulsivo lascia quasi sempre uno squilibrio sul grafico; e al video 11 (setup completo), dove il momentum è la conferma che rende valido l'ingresso.
+
+### COSA CERCARE NEL VIDEO
+- Come misura Giuliano il momentum: a occhio, con un rapporto tra candele, con un indicatore?
+- Che cosa intende esattamente per «direzionalità SM» e come la determina?
+- Esiste una soglia oltre la quale un movimento è considerato impulsivo?
+- Il momentum viene usato come filtro d'ingresso o come conferma successiva?
+
+:::key
+- Il momentum descrive la qualità del movimento, non la direzione.
+- Movimento impulsivo = direzione vera; movimento lento = correzione.
+- La forza si valuta sempre confrontando con le candele precedenti.
+- Una rottura senza forza è quasi sempre una trappola.
+- Momentum e liquidità insieme distinguono la manipolazione dalla distribuzione.
+:::
+
+:::err
+Confondere una candela grande con un movimento forte. Una singola candela enorme dopo una notizia può essere solo volatilità istantanea, che rientra in pochi minuti. Il momentum vero si vede nella **sequenza**: più candele nella stessa direzione, con correzioni che non riassorbono il movimento.
+:::
+
+[[notes:3]]
+
+## MODULO D — PRICE ACTION: LEGGERE LA SINGOLA CANDELA
+
+Due lezioni (video 9 e 16) che scendono al massimo livello di dettaglio: la singola candela. Sono collocate qui perché usano lo stesso ragionamento del momentum, applicato però a una scala più piccola e più precisa.
+
+Le ho affiancate anche se nella playlist sono lontane, perché parlano dello stesso oggetto a due gradi di difficoltà diversi: la candela come segnale di ingresso (video 9) e la candela settimanale come contesto (video 16).
+
+[[pagebreak]]
+## SCHEDA 09 — E8. QLT/QNT e Strategia Doji
+
+[[cols:16,12,14,16,42]]
+|Video playlist|Codice|Durata|Livello|Modulo|
+|9|E8|1:06:22|Intermedio|D - Price action e candele|
+
+**Argomento principale.** Introduce due sigle di valutazione (**QLT** e **QNT**) e una strategia costruita attorno alla candela **Doji**. È una lezione di price action fine: dopo aver studiato struttura e forza, si scende al livello della singola candela.
+
+:::note Sulle sigle QLT e QNT
+Dal titolo si può dedurre che siano due criteri di valutazione contrapposti, ma **non il loro significato esatto**. La lettura più naturale in italiano e in inglese è **QLT = qualità (quality)** e **QNT = quantità (quantity)**: due modi complementari di giudicare un setup, uno basato su quanto è buono, l'altro su quanti elementi sono presenti (o su quante volte si presenta). La scheda usa questa interpretazione dichiarandola come ipotesi. **È la prima cosa da verificare nel video.**
+:::
+
+### COS'È
+**Qualità (QLT)** e **quantità (QNT)** sono i due assi con cui si giudica un'operazione:
+- La **qualità** riguarda quanto un singolo setup è buono: quante condizioni favorevoli sono presenti, quanto è pulita la reazione, quanto è chiaro il contesto.
+- La **quantità** riguarda quanti setup prendi: molte operazioni mediocri oppure poche eccellenti.
+
+I due assi sono in tensione: chi alza l'asticella della qualità opera meno; chi vuole operare spesso deve accettare setup più deboli.
+
+:::def Doji
+Una candela **Doji** è una candela in cui apertura e chiusura sono quasi allo stesso prezzo: il corpo è ridotto a una linea e le ombre possono essere lunghe. Significa che compratori e venditori si sono equivalsi: il prezzo si è mosso, ma alla fine è tornato al punto di partenza.
+
+Da sola non vale nulla. Vale molto quando compare **in un punto significativo**: dopo una presa di liquidità, su un estremo di struttura, alla fine di un movimento impulsivo. Lì segnala che la spinta si è esaurita.
+:::
+
+### A COSA SERVE
+La coppia qualità/quantità serve a **decidere quanto essere selettivo**. La Doji serve invece come **segnale di tempistica**: aiuta a capire quando un movimento ha finito la sua spinta, quindi quando entrare o quando uscire.
+
+### QUANDO SI USA
+- Quando devi scegliere se un'operazione merita di essere presa (asse qualità/quantità).
+- Quando il prezzo arriva su una zona che avevi individuato e vuoi una conferma dalla candela.
+- Alla fine di un movimento veloce, per valutare se sta perdendo forza.
+
+### COME SI USA
+1. Definisci in anticipo che cosa rende un setup di alta qualità: la lista deve essere scritta, non mentale.
+2. Attribuisci un punteggio a ogni operazione potenziale in base a quante condizioni sono soddisfatte. *(Integrazione: il sistema a punteggio è un mio suggerimento operativo, non necessariamente il metodo del video.)*
+3. Attendi che il prezzo raggiunga la zona individuata.
+4. Osserva la candela: una Doji su quella zona indica equilibrio ed esaurimento della spinta precedente.
+5. Cerca la conferma nella candela successiva: se rompe la Doji nella direzione attesa, il segnale è valido; se la rompe dall'altra parte, non lo è.
+6. Registra tutto e a fine mese confronta i risultati dei setup ad alta qualità con quelli mediocri: quasi sempre il confronto ti dice da solo dove alzare l'asticella.
+
+### PERCHÉ È IMPORTANTE
+Perché la maggior parte dei conti non viene distrutta dalle perdite grandi, ma dalle **troppe operazioni mediocri**. Un criterio esplicito di qualità è quello che trasforma «ho fatto 14 operazioni questa settimana» in «ho fatto le 3 che rispettavano le condizioni».
+
+### ESEMPIO PRATICO
+**EUR/USD**, grafico a 5 minuti. Il prezzo scende, buca il minimo della sessione asiatica a 1,0812 (presa di liquidità), scende fino a 1,0806 e forma una candela con apertura e chiusura a 1,0810 e un'ombra lunga verso il basso: una Doji.
+
+Elementi favorevoli presenti: presa di liquidità, contesto rialzista sul timeframe superiore, esaurimento visibile del momentum ribassista, candela di equilibrio. Quattro condizioni su quattro: setup di alta qualità.
+
+Se invece la stessa Doji comparisse a metà di un movimento, senza liquidità presa e contro il trend superiore, sarebbe una candela qualsiasi: una condizione su quattro, setup da scartare.
+
+### COLLEGAMENTI
+- **Prima di questo:** il video 8 (momentum), perché la Doji è la versione a scala ridotta dell'esaurimento di forza; e il video 4 (liquidità), perché la Doji conta solo dove c'è un motivo.
+- **Dopo questo:** il video 10 (imbalance e premium/discount) e il video 11 (setup completo), dove la candela diventa il grilletto di un procedimento più ampio.
+- **Si collega a:** il video 16 (profilo della candela settimanale), che applica il ragionamento sulla candela a un orizzonte molto più ampio.
+
+### COSA CERCARE NEL VIDEO
+- Che cosa significano esattamente QLT e QNT nel metodo di Giuliano?
+- Esiste un punteggio o una soglia minima per considerare valido un setup?
+- La «strategia Doji» ha regole precise di ingresso, stop e obiettivo? Quali?
+- Su quale timeframe si cerca la Doji e quale conferma è richiesta dopo?
+
+:::key
+- Qualità e quantità sono in conflitto: più sei selettivo, meno operi.
+- I criteri di qualità devono essere scritti prima, non decisi davanti al grafico.
+- La Doji indica equilibrio ed esaurimento della spinta, non inversione automatica.
+- Una candela vale solo per il posto in cui compare.
+- Serve sempre una conferma dopo la Doji: la candela successiva è il vero segnale.
+:::
+
+:::err
+Operare la Doji ovunque la si veda. Su un grafico a 5 minuti ne compaiono decine ogni giorno e la stragrande maggioranza non significa niente. Senza contesto — liquidità presa, zona rilevante, trend superiore a favore — la Doji è solo rumore travestito da segnale.
+:::
+
+[[notes:3]]
+
+[[pagebreak]]
+## SCHEDA 10 — E15. Trading Pro per Profilo Candela (settimanale)
+
+[[cols:16,12,14,16,42]]
+|Video playlist|Codice|Durata|Livello|Modulo|
+|16|E15|1:13:18|Avanzato|D - Price action e candele|
+
+**Argomento principale.** Come impostare l'operatività a partire dal **profilo della candela settimanale**: cioè usare la forma e il comportamento della candela di una settimana intera come cornice per le decisioni dei giorni successivi. Il titolo indica esplicitamente il riferimento settimanale.
+
+### COS'È
+Una candela settimanale riassume cinque giorni di mercato in quattro numeri: apertura, massimo, minimo, chiusura. Il suo «profilo» è il modo in cui quei quattro numeri si sono formati nel tempo: in quale giorno si è fatto il minimo, in quale il massimo, dove ha chiuso rispetto al suo intervallo.
+
+L'idea operativa è che il modo in cui una settimana si sviluppa segue schemi ricorrenti — per esempio settimane in cui il minimo si forma nei primi giorni e la chiusura arriva vicino al massimo. *(Integrazione: nel mondo Smart Money questi schemi sono spesso associati a giorni specifici della settimana; il titolo non specifica quali.)*
+
+### A COSA SERVE
+Serve a dare **contesto ampio** alle operazioni piccole. È l'antidoto al problema tipico dello scalper: prendere decine di decisioni al giorno senza sapere in quale movimento più grande si trovi. La candela settimanale dice qual è la storia della settimana; l'operatività quotidiana ne diventa un capitolo.
+
+### QUANDO SI USA
+- **Nel fine settimana o al lunedì mattina**, come preparazione: si guarda la settimana chiusa e si formula un'ipotesi su quella che si apre.
+- Durante la settimana, per verificare se lo scenario resta valido.
+- Quando l'operatività intraday diventa confusa e serve un riferimento superiore.
+
+### COME SI USA
+1. Apri il grafico settimanale e osserva le ultime 8-12 candele: direzione, ampiezza, posizione delle chiusure.
+2. Individua massimo e minimo della settimana appena chiusa: sono due livelli di liquidità fondamentali per la settimana entrante.
+3. Chiediti dove ha chiuso la candela: vicino al massimo (forza), vicino al minimo (debolezza), a metà (indecisione).
+4. Formula un'ipotesi per la settimana: quale dei due estremi è più probabile che venga visitato per primo.
+5. Scendi al giornaliero e all'intraday e opera **solo nella direzione compatibile** con l'ipotesi settimanale.
+6. Rivedi l'ipotesi a metà settimana: se il prezzo ha già fatto ciò che ti aspettavi, cambia il piano.
+
+:::rule Il livello più semplice e più sottovalutato
+Massimo e minimo della settimana precedente sono due dei livelli più osservati da tutto il mercato, quindi due delle zone di liquidità più affidabili. Segnali sul grafico ogni lunedì: è l'operazione di preparazione con il miglior rapporto tra tempo speso e utilità.
+:::
+
+### PERCHÉ È IMPORTANTE
+Perché ti fa smettere di operare «alla giornata». La maggior parte dei trader intraday guarda solo grafici da 1 o 5 minuti e naviga a vista. Chi ha un'ipotesi settimanale ha un criterio per rifiutare le operazioni contrarie al quadro generale — e sono spesso quelle che fanno più danno.
+
+### ESEMPIO PRATICO
+**GBP/USD.** La settimana appena chiusa ha aperto a 1,2650, ha fatto minimo a 1,2600 il lunedì, poi è salita per tutta la settimana fino a un massimo di 1,2790 e ha chiuso a 1,2780, cioè quasi sul massimo.
+
+Lettura: profilo di forza. Il minimo si è formato all'inizio, la chiusura è in cima all'intervallo: la settimana è stata rialzista e non ha mostrato cedimento finale.
+
+Ipotesi per la settimana successiva: probabile continuazione, con eventuale ritracciamento nei primi giorni verso l'area 1,2700-1,2730 prima della ripresa. Il livello 1,2790 (massimo precedente) è liquidità che il prezzo potrebbe andare a prendere.
+
+Operativamente: nei primi giorni si cercano acquisti sui ritracciamenti, non vendite; una vendita sarebbe contraria al quadro settimanale, quindi va scartata anche se il grafico a 5 minuti la rende invitante.
+
+### COLLEGAMENTI
+- **Prima di questo:** il video 9 (lettura della candela) e il video 5 (struttura), perché il profilo settimanale è struttura su scala grande.
+- **Dopo questo:** i video 17-19 e 21-23 (strategie e backtest), dove l'operatività di dettaglio ha bisogno esattamente di questo contesto.
+- **Si collega a:** il video 13 (sessioni), perché settimana e giornata sono due scale dello stesso ragionamento temporale; e al video 15 (calendario economico), perché la settimana va letta sapendo quali notizie contiene.
+
+### COSA CERCARE NEL VIDEO
+- Quali profili di candela settimanale identifica Giuliano e come li chiama?
+- Associa a giorni specifici della settimana la formazione del massimo o del minimo?
+- Come collega il profilo settimanale alle strategie intraday delle altre lezioni?
+- Che cosa fa quando il profilo settimanale è ambiguo?
+
+:::key
+- La candela settimanale è il contesto: dice in quale storia si inseriscono le tue operazioni.
+- Massimo e minimo della settimana precedente sono due livelli di liquidità primari.
+- La posizione della chiusura nell'intervallo indica forza o debolezza.
+- L'ipotesi settimanale si formula prima dell'apertura e si aggiorna a metà settimana.
+- Serve a rifiutare operazioni, non solo a trovarle.
+:::
+
+:::err
+Trasformare l'ipotesi settimanale in una certezza e difenderla per cinque giorni. Il contesto settimanale serve a filtrare, non a impegnarti: se il lunedì il prezzo rompe con forza nella direzione opposta, l'ipotesi va aggiornata subito. Un'idea settimanale sbagliata tenuta viva fino al venerdì può costare cinque giornate di operazioni contrarie al mercato.
+:::
+
+[[notes:3]]

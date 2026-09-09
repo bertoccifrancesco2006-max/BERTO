@@ -1,0 +1,123 @@
+# PARTE V — CHECKLIST OPERATIVA
+
+Questa parte è pensata per essere **stampata e tenuta accanto al monitor**. Non contiene teoria: contiene domande. Se una domanda non ha risposta, l'operazione non si fa.
+
+Le checklist sono tre, per tre momenti diversi della giornata: prima di iniziare, prima di entrare, dopo aver chiuso.
+
+:::rule Come si usa una checklist
+Si legge **prima** di agire, non dopo. Una checklist compilata a posteriori serve solo a giustificare quello che hai già fatto. Se ti accorgi di rispondere «sì» a tutto senza guardare il grafico, non la stai usando: la stai recitando.
+:::
+
+[[pagebreak]]
+## Checklist 1 — Prima di aprire la piattaforma
+
+Da fare una volta al giorno, prima di guardare qualsiasi grafico. Tempo richiesto: cinque minuti.
+
+[] Che giorno e che ora sono? Sono nella mia finestra operativa?
+[] Ho controllato il calendario economico? Ci sono eventi ad alto impatto oggi, e a che ora?
+[] Come ha chiuso la candela settimanale: vicino al massimo, al minimo o a metà?
+[] Quali sono massimo e minimo della settimana precedente?
+[] Quali sono massimo e minimo di ieri?
+[] Qual è la direzione sul timeframe alto (giornaliero e 4 ore)?
+[] Che profilo ha avuto il mercato negli ultimi giorni: direzionale, laterale, in espansione?
+[] Sono in condizioni fisiche e mentali adatte per operare oggi?
+[] Ho già una perdita significativa questa settimana? Se sì, devo ridurre il rischio o fermarmi?
+
+:::key
+Se rispondi «non lo so» a più di due domande di questa lista, non sei pronto a operare: sei pronto a improvvisare.
+:::
+
+[[notes:4]]
+
+[[pagebreak]]
+## Checklist 2 — Prima di entrare in un'operazione
+
+È la checklist principale. Segue esattamente la catena della Parte III.
+
+### A. Contesto
+
+[] Qual è la struttura del mercato sul timeframe superiore: rialzista, ribassista o laterale?
+[] Qual è il livello che invaliderebbe questa lettura?
+[] Il profilo di mercato di oggi è compatibile con la strategia che voglio usare?
+[] Qual è il range operativo che sto usando? Quali sono i suoi tre livelli (alto, basso, metà)?
+[] La direzione che sto per prendere è quella del timeframe superiore? Se no, perché sto facendo un'eccezione?
+
+### B. Liquidità ed evento
+
+[] Dove si trova la liquidità: quali massimi e minimi sono i bersagli più probabili?
+[] C'è stata una presa di liquidità? Su quale livello e a che ora?
+[] Dopo la presa, il prezzo è rientrato invece di proseguire?
+[] La reazione successiva ha avuto momentum, cioè candele visibilmente più ampie delle precedenti?
+[] Il movimento impulsivo ha lasciato un imbalance? Dove esattamente?
+
+### C. Posizione del prezzo e zona
+
+[] Il prezzo si trova dalla parte giusta del range: in discount se compro, in premium se vendo?
+[] La zona di interesse è ancora integra, cioè non è già stata riempita?
+[] Il prezzo è tornato nella zona, oppure lo sto inseguendo?
+[] C'è una conferma sulla candela (rifiuto, Doji seguita da candela direzionale, rallentamento evidente)?
+[] Quante condizioni del mio setup sono soddisfatte? Tutte, o «quasi tutte»?
+
+### D. Rischio ed esecuzione
+
+[] Dove sarebbe invalidata la mia idea, in termini di prezzo?
+[] Dove metto lo stop loss, e sta dietro un livello logico (non a una distanza scelta a piacere)?
+[] Qual è il take profit, e corrisponde a una liquidità reale?
+[] Qual è il rapporto rischio/rendimento? È almeno 1:1,5?
+[] Quanto sto rischiando in percentuale del conto? È lo stesso importo di sempre?
+[] Ho già calcolato la dimensione della posizione a partire dalla distanza dello stop?
+[] Ci sono notizie ad alto impatto nei prossimi trenta minuti?
+
+### E. La domanda finale
+
+[] Sto entrando perché ho un setup completo, oppure perché ho paura di perdere il movimento?
+[] Se questa operazione va in perdita, avrò comunque la certezza di aver fatto la cosa giusta?
+
+:::err La domanda che salva più conti
+«Sto entrando perché ho un setup o perché ho paura di restare fuori?» Se la risposta onesta è la seconda, chiudi la piattaforma per dieci minuti. Il movimento che stai per inseguire, statisticamente, è quello che ti stopperà.
+:::
+
+[[notes:4]]
+
+[[pagebreak]]
+## Checklist 3 — Dopo la chiusura dell'operazione
+
+Da compilare **subito**, non a fine giornata.
+
+[] Ho registrato l'operazione nel diario: data, ora, strumento, direzione, ingresso, stop, obiettivo?
+[] Ho scritto qual era il setup e quali condizioni erano presenti?
+[] Ho segnato il risultato in R, cioè in multipli del rischio?
+[] Ho risposto alla domanda «regole rispettate: sì o no»?
+[] Se la risposta è no, ho scritto quale regola ho violato e perché?
+[] L'operazione è stata ben eseguita, indipendentemente dal risultato?
+[] C'è qualcosa che avrei potuto fare meglio nell'esecuzione, non nel risultato?
+
+:::rule La distinzione fondamentale
+**Decisione** e **risultato** sono due cose diverse. Una buona decisione può perdere, una cattiva decisione può guadagnare. Valuta sempre la decisione: è l'unica cosa che controlli, ed è l'unica che puoi migliorare.
+:::
+
+[[pagebreak]]
+## Checklist compatta — una pagina da stampare
+
+Se preferisci un formato ridotto da tenere in vista, questa versione condensa la checklist 2 in dodici domande.
+
+[[cols:8,60,32]]
+|N.|Domanda|Se la risposta è no|
+|1|La struttura del timeframe alto è a favore?|Non operare|
+|2|Il profilo di mercato è compatibile con la strategia?|Non operare|
+|3|Ho tracciato il range e la sua metà?|Fermati e tracciali|
+|4|Il prezzo è dalla parte giusta (discount/premium)?|Aspetta il ritorno|
+|5|Ho individuato la liquidità sopra e sotto?|Fermati e individuala|
+|6|C'è stata una presa di liquidità?|Aspetta|
+|7|La reazione ha avuto momentum?|Nessuna operazione|
+|8|C'è un imbalance ancora integro?|Nessuna zona, nessun ingresso|
+|9|Il prezzo è tornato nella zona?|Non inseguire|
+|10|C'è una conferma di candela?|Aspetta la conferma|
+|11|Stop logico, obiettivo su liquidità, rapporto almeno 1:1,5?|Rivedi o rinuncia|
+|12|Sto entrando per il setup, non per paura di restare fuori?|Chiudi la piattaforma|
+
+:::key Regola delle dodici risposte
+Dodici sì: si opera. Undici sì e un no: non si opera. Non esiste il «quasi»: la differenza tra un metodo e un'abitudine costosa sta tutta in questa singola regola.
+:::
+
+[[notes:6]]

@@ -1,0 +1,199 @@
+# PARTE IV — IL MIO PERCORSO DI STUDIO
+
+Ventotto ore di lezione non si guardano in una settimana. O meglio: si possono guardare, ma non producono quasi nulla.
+
+Questa parte divide i venticinque video in **cinque fasi**, ognuna con un obiettivo dichiarato, un ordine di visione e un esercizio pratico da fare **prima** di passare alla fase successiva. La regola è una sola: non si avanza per aver visto i video, si avanza per aver completato l'esercizio.
+
+:::rule Il criterio di avanzamento
+Non passare alla fase successiva finché non sai **spiegare a voce**, senza appunti, i concetti della fase in corso, e non li hai **trovati sul grafico** almeno dieci volte. Il tempo indicato per ogni fase è una stima onesta, non una scadenza: se ti serve il doppio, prenditelo.
+:::
+
+## Quadro d'insieme delle cinque fasi
+
+[[cols:12,32,14,42]]
+|Fase|Titolo|Video|Obiettivo|
+|1|Assolutamente da sapere|1, 2, 3, 5, 13, 15|Capire che cos'è il mercato, chi lo muove, che direzione ha e quando è attivo|
+|2|Importanti|4, 7, 6, 8|Capire perché il prezzo va dove va: liquidità, applicazione del trend, profili, forza|
+|3|Intermedio: costruire l'analisi|10, 12, 20, 9|Saper dire dove si trova il prezzo e dove è ragionevole entrare|
+|4|Avanzato: dal setup all'esecuzione|11, 16, 21, 17, 18, 19|Avere un setto di regole complete e saperle verificare|
+|5|Approfondimento e consolidamento|14, 22, 23, 24, 25|Rifinire, testare a lungo, chiudere il cerchio|
+
+[[pagebreak]]
+## FASE 1 — ASSOLUTAMENTE DA SAPERE
+
+**Obiettivo:** arrivare a guardare un grafico e saper dire, con parole tue, che cos'è quello che vedi, chi lo muove, in che direzione va e se è un'ora sensata per operare.
+
+**Tempo indicativo:** 2-3 settimane. **Ore di video:** circa 5 e mezza.
+
+[[cols:10,42,48]]
+|Ordine|Video|Perché proprio qui|
+|1|1 - E1. Introduzione al Forex|Il vocabolario. Senza, tutto il resto è rumore|
+|2|2 - E2 (1/2). SmartMoney / AMD|La prima risposta alla domanda «perché il prezzo si muove»|
+|3|3 - E2 (2/2). SmartMoney e AMD|Continuazione diretta: i due video sono una lezione sola|
+|4|5 - E4. Trend e Strutture|La direzione: il primo strumento davvero operativo|
+|5|13 - E12. Sessioni di Trading|Anticipato rispetto alla playlist: è semplice, si applica subito e migliora immediatamente la qualità dell'osservazione|
+|6|15 - E14. Calendario Economico|Anticipato per lo stesso motivo: protegge da errori evitabili fin dal primo giorno|
+
+:::note Perché anticipo sessioni e calendario
+Nella playlist arrivano al tredicesimo e quindicesimo posto. Li ho spostati in Fase 1 perché sono i due argomenti con il miglior rapporto tra semplicità e utilità immediata: si capiscono in una lezione, si applicano il giorno dopo e riducono da subito gli errori più banali. Se preferisci l'ordine cronologico, spostali pure: non pregiudicano nulla.
+:::
+
+### Esercizio della Fase 1 (obbligatorio prima di proseguire)
+1. Apri un conto **demo** e non aprire alcuna operazione per due settimane.
+2. Ogni giorno, su un solo strumento (consiglio EUR/USD), scrivi tre righe: qual è il trend sul giornaliero, dove sono massimo e minimo di ieri, quali notizie escono oggi.
+3. Segna sul grafico l'orario di apertura di Londra e New York.
+4. Prova a marcare a posteriori una fase di accumulazione, una di manipolazione e una di distribuzione, ogni giorno.
+5. A fine periodo devi avere dieci schede giornaliere scritte a mano.
+
+:::key Sai di aver finito la Fase 1 quando...
+- Sai spiegare che cos'è un pip, un lotto, lo spread e la leva senza guardare gli appunti.
+- Sai dire se un grafico è in trend rialzista, ribassista o laterale e **quale livello** ti farebbe cambiare idea.
+- Sai riconoscere a posteriori le tre fasi dell'AMD.
+- Guardi l'orologio prima di guardare il grafico.
+- Controlli il calendario economico ogni mattina senza doverci pensare.
+:::
+
+[[pagebreak]]
+## FASE 2 — IMPORTANTI
+
+**Obiettivo:** capire il motore del movimento. Alla fine di questa fase devi saper indicare, prima che accada, **dove** il prezzo andrà a cercare gli ordini.
+
+**Tempo indicativo:** 3-4 settimane. **Ore di video:** circa 4 e mezza.
+
+[[cols:10,42,48]]
+|Ordine|Video|Perché proprio qui|
+|1|4 - E3. Forze e Interessi / Liquidità e AMD|Il concetto più importante dell'intero percorso: la liquidità|
+|2|7 - E6. Applicazione Concetti di Trend|Applica sul grafico ciò che hai studiato in Fase 1|
+|3|6 - E5. Profili di Mercato|Classifica i tipi di mercato: ti insegna quando la tua analisi non serve|
+|4|8 - E7. Momentum e Direzionalità SM|Distingue i movimenti veri da quelli finti|
+
+### Esercizio della Fase 2
+1. Ogni giorno segna sul grafico **tre livelli di liquidità**: massimo e minimo di ieri, massimo e minimo della sessione asiatica, eventuali massimi o minimi allineati.
+2. Scrivi la previsione: «oggi mi aspetto che il prezzo vada a prendere il livello X».
+3. A fine giornata verifica se è successo. Tieni il conteggio: quante volte sì, quante no.
+4. Per ogni movimento significativo, classifica il momentum: impulsivo o correttivo.
+5. Assegna a ogni giornata un profilo di mercato (direzionale, laterale, espansione, ritracciamento).
+
+:::key Sai di aver finito la Fase 2 quando...
+- Sai indicare al mattino due o tre livelli che il prezzo probabilmente visiterà.
+- Distingui a occhio una candela impulsiva da una correttiva.
+- Riconosci una giornata laterale entro le prime ore e sai che quel giorno la tua strategia direzionale non funzionerà.
+- Non ti sorprende più il fatto che il prezzo vada a rompere un massimo e poi torni indietro.
+:::
+
+[[pagebreak]]
+## FASE 3 — INTERMEDIO: COSTRUIRE L'ANALISI
+
+**Obiettivo:** saper dire **dove si trova il prezzo** (caro o a sconto, dentro quale perimetro) e **dove sarebbe ragionevole entrare**. Alla fine di questa fase hai un'analisi completa, anche se non ancora un'operatività.
+
+**Tempo indicativo:** 4-6 settimane. **Ore di video:** circa 4 e mezza.
+
+[[cols:10,42,48]]
+|Ordine|Video|Perché proprio qui|
+|1|10 - E9. Imbalance, Premium/Discount, Trend Following|Il concetto che migliora il rapporto rischio/rendimento più di ogni altro|
+|2|12 - E11. RANGE OPERATIVO|Dà il perimetro senza cui premium e discount non esistono|
+|3|20 - E19. IRL > ERL|Anticipato rispetto alla playlist: completa la geometria del range ed è il complemento naturale del video 12|
+|4|9 - E8. QLT/QNT e Strategia Doji|La conferma finale e il criterio di qualità dei setup|
+
+:::note Perché anticipo il video 20 (IRL/ERL)
+Nella playlist è il ventesimo. Ma liquidità interna ed esterna si definiscono **rispetto a un range**: studiarlo subito dopo il video 12 evita di imparare due volte la stessa geometria con nomi diversi. È lo spostamento più utile di tutto il percorso di studio.
+:::
+
+### Esercizio della Fase 3
+1. Ogni giorno traccia il range operativo (scegli un criterio e mantienilo per tutto il mese).
+2. Segna la metà del range e annota se il prezzo si trova in premium o in discount.
+3. Individua ogni imbalance lasciato dai movimenti impulsivi e segna se viene riempito, e in quanto tempo.
+4. Scrivi il **percorso atteso**: prima la liquidità interna, poi quella esterna.
+5. Fai venti «operazioni sulla carta»: annota ingresso, stop e obiettivo che avresti scelto, senza eseguire nulla. Poi verifica il risultato.
+
+:::key Sai di aver finito la Fase 3 quando...
+- Sai tracciare un range e dire in quale metà si trova il prezzo, in dieci secondi.
+- Riconosci un imbalance senza esitare.
+- Prima di ogni ipotesi operativa sai indicare stop e obiettivo, non solo l'ingresso.
+- Le tue venti operazioni sulla carta hanno un rapporto rischio/rendimento medio superiore a 1:1,5.
+:::
+
+[[pagebreak]]
+## FASE 4 — AVANZATO: DAL SETUP ALL'ESECUZIONE
+
+**Obiettivo:** passare dall'analisi alle regole. Alla fine di questa fase hai un setto di condizioni scritte, un metodo per verificarle e un diario in funzione.
+
+**Tempo indicativo:** 6-8 settimane. **Ore di video:** circa 7 e mezza.
+
+[[cols:10,42,48]]
+|Ordine|Video|Perché proprio qui|
+|1|11 - E10. SETUP COMPLETO|La sintesi: tutto ciò che hai studiato diventa una procedura|
+|2|16 - E15. Profilo Candela settimanale|Aggiunge il contesto ampio prima di iniziare a operare in piccolo|
+|3|21 - E20. Nuova Strategia Meccanica Semplificata|La versione eseguibile del setup: è da qui che conviene partire davvero|
+|4|17 - E16. Scalping Pro, Backtest 1|Come si verifica una strategia|
+|5|18 - E17. Backtest 2|Perché una verifica sola non basta|
+|6|19 - E18. +18% e Trading Journal|Come si misura la propria operatività reale|
+
+:::note Perché la strategia meccanica prima dei backtest della Scalping Pro
+Nella playlist i backtest della prima strategia (17, 18, 19) precedono la strategia meccanica (21). Didatticamente conviene conoscere **prima** la versione semplificata e poi studiare il metodo di verifica: chi parte da una strategia meccanica ha qualcosa di concreto da testare mentre impara a testare. Se preferisci l'ordine cronologico, guarda 17-18-19 prima del 21: non cambia la sostanza.
+Il video 19 (journal) merita una nota: la parte sul diario di trading andrebbe vista **il prima possibile**, anche in Fase 2, perché il diario va iniziato subito, non alla fine.
+:::
+
+### Esercizio della Fase 4
+1. Scrivi le tue regole su **una sola pagina**: contesto, condizioni di ingresso, stop, obiettivo, orari, rischio.
+2. Fai leggere quella pagina a qualcuno che non fa trading: se ha dubbi su qualche punto, la regola non è abbastanza precisa.
+3. Esegui un backtest di almeno **50 operazioni**, con la parte destra del grafico coperta.
+4. Calcola: percentuale di successo, rapporto rischio/rendimento medio, peggiore serie di perdite consecutive.
+5. Apri il diario di trading e comincia a compilarlo, anche in demo.
+6. Opera in demo con quelle regole per almeno un mese, senza modificarle.
+
+:::key Sai di aver finito la Fase 4 quando...
+- Le tue regole stanno in una pagina e non contengono la parola «dipende».
+- Conosci la peggiore serie di perdite consecutive della tua strategia.
+- Hai almeno 50 operazioni registrate tra backtest e demo.
+- Sai distinguere le operazioni «fuori regola» e quantificare quanto ti costano.
+:::
+
+[[pagebreak]]
+## FASE 5 — APPROFONDIMENTO E CONSOLIDAMENTO
+
+**Obiettivo:** rifinire il metodo, verificarlo su campioni più ampi e chiudere il percorso con un piano operativo personale.
+
+**Tempo indicativo:** in parallelo alla pratica, senza scadenza. **Ore di video:** circa 6 e mezza.
+
+[[cols:10,42,48]]
+|Ordine|Video|Perché proprio qui|
+|1|14 - E13. Divergenze in breve|Strumento accessorio: utile come conferma, dannoso se usato da solo|
+|2|22 - E21. +4% backtest settembre|La verifica mensile della strategia meccanica|
+|3|23 - E22. +12% backtest trimestrale 2.0|La verifica estesa e l'evoluzione della strategia|
+|4|24 - E23. Q&A e Dettagli Tecnici|I casi ambigui: si capisce davvero solo dopo aver operato|
+|5|25 - E24. FINE PERCORSO|La chiusura e il piano personale|
+
+### Esercizio della Fase 5
+1. Ripeti il backtest su un trimestre completo, con le tue regole definitive.
+2. Confronta i risultati del backtest con quelli della demo: la differenza misura la qualità della tua esecuzione, non della strategia.
+3. Riguarda il video 24 (Q&A) tenendo accanto la lista dei tuoi dubbi reali.
+4. Scrivi il tuo piano post-corso in cinque righe (vedi scheda 25).
+5. Fissa una data, a tre mesi di distanza, per rivedere tutto e decidere se cambiare qualcosa.
+
+:::key Sai di aver finito la Fase 5 quando...
+- Hai un trimestre di dati, in backtest o in demo, con le stesse regole.
+- Sai spiegare la differenza tra i risultati attesi e quelli reali.
+- Il tuo piano operativo sta in cinque righe.
+- Non stai più cercando una strategia nuova.
+:::
+
+## Due percorsi alternativi
+
+Non tutti hanno lo stesso tempo. Ecco due varianti dello stesso materiale.
+
+### Percorso rapido (se hai poche settimane)
+Per capire la logica del metodo senza pretendere di operare:
+video **1 -> 2 -> 3 -> 5 -> 4 -> 8 -> 10 -> 12 -> 11**.
+Nove video, circa dieci ore. Alla fine avrai il quadro concettuale completo, ma senza la parte di verifica: non operare con denaro reale al termine di questo percorso.
+
+### Percorso «prima l'operatività» (se hai già basi solide)
+Se conosci già struttura, liquidità e price action:
+video **11 -> 20 -> 21 -> 22 -> 23 -> 19**.
+Sei video: setup completo, geometria della liquidità, strategia meccanica, le sue verifiche e il journal. È il nucleo operativo del percorso. Torna poi indietro sui video 4, 6, 8 e 9 per colmare le lacune che emergeranno dalla pratica.
+
+:::err L'errore più costoso nella pianificazione dello studio
+Guardare i video delle strategie (17-23) per primi, perché sembrano la parte «concreta». Senza le fasi precedenti sono istruzioni senza contesto: saprai che cosa fare ma non perché, e alla prima serie di perdite abbandonerai le regole, perché non avrai nessun motivo per fidartene.
+:::
+
+[[notes:5]]

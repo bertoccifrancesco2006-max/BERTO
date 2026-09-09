@@ -1,0 +1,192 @@
+# PARTE VI — ERRORI COMUNI E INTEGRAZIONI
+
+Questa parte ha due capitoli con due nature diverse.
+
+Il primo raccoglie gli **errori** segnalati nelle venticinque schede, riorganizzati per tema: è materiale che deriva dai contenuti della playlist.
+
+Il secondo raccoglie le **integrazioni**: argomenti che i titoli dei video non dichiarano, ma senza i quali il metodo non è applicabile — stop loss, take profit, gestione del rischio e del trade. Sono chiaramente segnalati come contenuto aggiunto da me.
+
+:::warn Come leggere il capitolo delle integrazioni
+Nessun titolo della playlist nomina lo stop loss, il take profit, la dimensione della posizione o la gestione della posizione aperta. Questo **non significa che il corso non ne parli**: significa che dai titoli non posso saperlo, e quindi non posso attribuirne a Giuliano una versione specifica. Quello che segue è materiale standard di gestione del rischio, valido in generale e da confrontare con quanto viene detto nelle lezioni. Dove il video dice diversamente, vale il video.
+:::
+
+## Capitolo 1 — I quindici errori che costano di più
+
+### Errori di analisi
+
+**1. Cambiare direzione a ogni candela.** La struttura si aggiorna quando un livello viene rotto, non quando ti senti a disagio. *(Scheda 05)*
+
+**2. Scendere di timeframe finché il grafico ti dà ragione.** C'è sempre un timeframe che conferma quello che vuoi vedere. La sequenza dei timeframe si decide prima di guardare. *(Scheda 06)*
+
+**3. Vedere l'AMD solo a posteriori.** Su un grafico chiuso tutti riconoscono le tre fasi. La prova è scrivere la fase in corso **adesso**, prima che il movimento sia completo. *(Scheda 02)*
+
+**4. Forzare la propria strategia su qualsiasi profilo di mercato.** Una tecnica da trend applicata in un range perde in modo continuo e prevedibile. *(Scheda 07)*
+
+**5. Ridisegnare il range per farlo coincidere con il prezzo attuale.** Se il perimetro si adatta al prezzo, non misura più niente. *(Scheda 12)*
+
+### Errori di ingresso
+
+**6. Comprare la rottura di un massimo solo perché è una rottura.** Il tuo ordine sopra il massimo è esattamente la liquidità che serve a chi sta vendendo. *(Scheda 04)*
+
+**7. Entrare in premium in acquisto (o in discount in vendita).** Analisi giusta, livello sbagliato: stop lontano, obiettivo vicino, e la prima correzione normale ti chiude in perdita. *(Scheda 11)*
+
+**8. Operare ogni Doji che si vede.** Senza contesto — liquidità presa, zona rilevante, trend a favore — è rumore travestito da segnale. *(Scheda 09)*
+
+**9. Vendere solo perché c'è una divergenza.** In un trend forte le divergenze compaiono di continuo mentre il prezzo continua a salire. *(Scheda 16)*
+
+**10. Inseguire il prezzo verso la liquidità esterna.** L'ERL è l'obiettivo, non il punto di ingresso. *(Scheda 13)*
+
+### Errori di metodo e di gestione
+
+**11. Prendere setup «quasi validi».** Tre condizioni su quattro non è un setup: è un'operazione discrezionale mascherata da metodo. *(Scheda 17)*
+
+**12. Fare backtest con la parte destra del grafico visibile.** Il risultato sarà splendido e completamente falso. *(Scheda 18)*
+
+**13. Modificare le regole finché i numeri tornano.** Così si costruisce una strategia perfetta sul passato e inservibile sul futuro. *(Scheda 19)*
+
+**14. Tenere il diario solo quando le cose vanno bene.** Un diario incompleto produce conclusioni false: peggio che non averlo. *(Scheda 20)*
+
+**15. Passare al conto reale il giorno dopo aver finito i video.** Chi salta la pratica non accelera: paga la formazione al mercato invece che con il tempo. *(Scheda 25)*
+
+:::key I tre errori che ne contengono quindici
+- **Anticipare:** entrare prima che le condizioni si completino.
+- **Inseguire:** entrare dopo, quando il movimento è già avvenuto.
+- **Adattare:** cambiare le regole per far tornare i conti con quello che è già successo.
+Quasi ogni errore di questo elenco è una variante di uno di questi tre.
+:::
+
+[[pagebreak]]
+## Capitolo 2 — Integrazioni: quello che serve e che i titoli non dichiarano
+
+:::note Ancora una volta, per chiarezza
+Tutto questo capitolo è **contenuto aggiunto da me**. Non deriva dai titoli della playlist e non va attribuito al metodo di Giuliano. Serve perché senza queste nozioni le strategie dei video non sono eseguibili in sicurezza. Confronta ogni punto con quanto viene detto nelle lezioni e, in caso di differenza, segui il corso.
+:::
+
+### 2.1 Stop loss
+
+Lo **stop loss** è l'ordine che chiude automaticamente l'operazione quando il prezzo raggiunge il livello che rende sbagliata la tua idea.
+
+:::def Il principio dello stop logico
+Lo stop **non** si mette «a venti pip». Si mette nel punto oltre il quale lo scenario che hai descritto non è più vero. Nella catena della Parte III, quel punto è quasi sempre **oltre l'estremo raggiunto durante la presa di liquidità**: se il prezzo torna lì e lo supera, la manipolazione che avevi ipotizzato non era tale.
+:::
+
+Regole pratiche:
+- Lo stop si decide **prima** di entrare, insieme all'ingresso. Se lo decidi dopo, lo deciderà l'emozione.
+- Lo stop non si allontana **mai**. Se la distanza logica è troppo grande per il tuo rischio, riduci la dimensione della posizione o rinuncia all'operazione.
+- Un piccolo margine oltre il livello (qualche pip) evita di essere stoppati dall'ombra esatta. Quanto, dipende dallo strumento: su XAU/USD e NASDAQ serve più spazio che su EUR/USD.
+- Durante le notizie ad alto impatto lo stop può essere eseguito peggio del previsto: è un rischio da mettere in conto prima, non da scoprire dopo.
+
+:::err
+Togliere lo stop «solo per questa volta», perché il prezzo sta per tornare. È il singolo comportamento che chiude più conti di trading di qualsiasi altro. Una perdita pianificata è un costo; una perdita senza stop è illimitata.
+:::
+
+### 2.2 Take profit
+
+Il **take profit** è il livello a cui chiudi in guadagno. Nella logica della playlist, l'obiettivo naturale è la **liquidità opposta**: se sei entrato dopo una presa di liquidità in basso, l'obiettivo è la liquidità in alto (scheda 13).
+
+Tre modi di gestirlo:
+
+|Metodo|Come funziona|Quando conviene|
+|Obiettivo fisso|Un solo livello, deciso prima|Strategie meccaniche e backtest: è l'unico modo di testare con precisione|
+|Parziali|Si chiude metà posizione a un primo obiettivo, il resto va oltre|Movimenti ampi; riduce la tensione emotiva ma abbassa il risultato medio|
+|Chiusura per struttura|Si esce quando la struttura che sostiene l'operazione si rompe|Operatività discrezionale con esperienza|
+
+Per chi inizia, l'obiettivo fisso è quasi sempre la scelta migliore: è l'unico compatibile con un backtest serio.
+
+:::rule Il rapporto rischio/rendimento minimo
+Il rapporto tra quanto rischi e quanto punti a guadagnare determina quale percentuale di successo ti serve per essere in pari:
+- rapporto 1:1 -> serve più del 50 percento di operazioni vincenti;
+- rapporto 1:1,5 -> serve circa il 40 percento;
+- rapporto 1:2 -> serve circa il 33 percento;
+- rapporto 1:3 -> serve il 25 percento.
+Con un rapporto 1:2 puoi sbagliare due operazioni su tre e restare in pari. È il motivo per cui il livello di ingresso (premium o discount) conta più della capacità di indovinare la direzione.
+:::
+
+### 2.3 Gestione del rischio
+
+È la parte che decide se sopravvivi, indipendentemente dalla qualità della strategia.
+
+:::def Rischio per operazione
+La percentuale del conto che sei disposto a perdere in una singola operazione. Il riferimento più diffuso è **1 percento**, spesso meno per chi inizia (0,25-0,5 percento). Non è prudenza eccessiva: è ciò che ti permette di attraversare la peggiore serie di perdite della tua strategia senza danni irreparabili.
+:::
+
+**Come si calcola la dimensione della posizione.** La formula è sempre la stessa:
+
+dimensione = (capitale × percentuale di rischio) ÷ (distanza dello stop × valore per pip)
+
+Esempio concreto su **EUR/USD**: conto da 5.000 euro, rischio 1 percento (50 euro), stop a 25 pip di distanza. Con un valore di circa 1 dollaro per pip ogni 0,10 lotti, la posizione corretta è circa 0,20 lotti. Se lo stop fosse a 50 pip, la posizione corretta sarebbe la metà.
+
+**Il punto centrale:** la dimensione si adatta allo stop, non il contrario. È l'inversione mentale più importante di tutta la gestione del rischio.
+
+**Altri limiti da fissare prima:**
+
+|Limite|Valore indicativo|Perché|
+|Rischio per operazione|0,5 - 1%|Sopravvivere alle serie negative|
+|Perdita massima giornaliera|2 - 3%|Impedire la rincorsa dopo due perdite|
+|Perdita massima mensile|5 - 8%|Fermarsi e rivedere il metodo invece di insistere|
+|Operazioni aperte insieme|1 - 2|Posizioni correlate (EUR/USD e GBP/USD) sono di fatto la stessa operazione|
+
+:::def Drawdown
+Il **drawdown** è la discesa del conto dal suo punto più alto a quello più basso successivo. È il numero che determina se riuscirai davvero a seguire la tua strategia: un metodo che guadagna il 30 percento all'anno ma attraversa un drawdown del 25 percento verrà abbandonato dalla maggior parte delle persone molto prima di arrivare al guadagno.
+:::
+
+:::err
+Aumentare la dimensione dopo una perdita per «recuperare». È il comportamento che trasforma una serie negativa normale in una perdita irreparabile. La dimensione si riduce dopo le perdite, non si aumenta.
+:::
+
+### 2.4 Gestione del trade (posizione aperta)
+
+Che cosa fare tra l'ingresso e l'uscita. È la fase in cui l'emotività fa più danni, perché ogni candela sembra chiedere una decisione.
+
+- **Break-even** (spostare lo stop al prezzo di ingresso): protegge dal trasformare un'operazione in guadagno in una perdita, ma se fatto troppo presto ti fa uscire dal rumore normale del mercato. Regola sensata: spostarlo solo dopo che il prezzo ha percorso almeno una volta la distanza del rischio.
+- **Chiusure parziali:** riducono la tensione, ma abbassano il risultato medio. Se le usi, mettile nelle regole e testale: non deciderle sul momento.
+- **Trailing stop** (stop che segue il prezzo): utile nei movimenti ampi, dannoso nei mercati laterali dove ti fa uscire a ogni oscillazione.
+- **Non toccare nulla:** nella maggior parte dei casi, per una strategia meccanica testata, è la scelta corretta. Il backtest è stato fatto lasciando correre l'operazione fino allo stop o all'obiettivo: se in diretta intervieni, stai operando una strategia diversa da quella che hai testato.
+
+:::rule La regola del «già deciso»
+Ogni azione sulla posizione aperta deve essere **già prevista** dalle tue regole prima di entrare. Se ti trovi a decidere qualcosa che non avevi previsto, stai improvvisando: annota il caso e aggiungi la regola **dopo**, per la prossima volta, non adesso.
+:::
+
+### 2.5 Analisi multi-timeframe
+
+Nessun titolo la nomina esplicitamente, ma è implicita nell'uso combinato del settimanale (video 16), del contesto giornaliero e delle strategie intraday.
+
+Schema di lavoro consigliato:
+
+|Timeframe|A che cosa serve|Che cosa ci cerchi|
+|Settimanale|Contesto ampio|Profilo della candela, massimi e minimi settimanali|
+|Giornaliero / 4 ore|Direzione|Struttura, trend, livelli principali di liquidità|
+|1 ora / 15 minuti|Preparazione|Range operativo, premium e discount, zone di interesse|
+|5 minuti / 1 minuto|Esecuzione|Presa di liquidità, momentum, conferma di candela|
+
+Il principio: **si scende di timeframe, mai si sale**. Si parte dal contesto e si arriva all'esecuzione. Chi parte dal grafico a 1 minuto e poi sale per cercare conferme sta costruendo una giustificazione, non un'analisi.
+
+### 2.6 Order block e zone: una precisazione
+
+Nessun titolo della playlist cita gli **order block**. Poiché è un termine molto diffuso in ambito Smart Money e potresti incontrarlo altrove, ecco la definizione, con l'avvertenza che **non fa parte del materiale di questo percorso**:
+
+:::def Order block (integrazione, non presente nei titoli)
+L'ultima candela di direzione opposta prima di un movimento impulsivo che rompe la struttura. L'idea è che in quella candela siano stati costruiti gli ordini che hanno prodotto il movimento, e che il prezzo, tornandoci, trovi ancora interesse.
+
+Il rapporto con l'imbalance (video 10) è stretto: spesso l'order block e l'area di squilibrio sono adiacenti o sovrapposti, e molti operatori usano la zona che li comprende entrambi. Nel dubbio, attieniti a ciò che il corso insegna: l'imbalance è il concetto che la playlist dichiara esplicitamente.
+:::
+
+### 2.7 Costi, e perché lo scalping li amplifica
+
+|Costo|Che cos'è|Impatto|
+|Spread|Differenza tra acquisto e vendita|Su obiettivi da 10 pip, uno spread di 1 pip è il 10 percento del risultato atteso|
+|Commissioni|Costo fisso per lotto, su alcuni conti|Va inclusa in ogni backtest|
+|Swap|Costo o guadagno per il mantenimento notturno|Irrilevante nello scalping, rilevante nelle posizioni pluri-giornaliere|
+|Slippage|Differenza tra prezzo atteso ed eseguito|Aumenta molto durante le notizie|
+
+Con obiettivi piccoli i costi pesano in proporzione molto di più. È il motivo per cui una strategia di scalping che in backtest sembra profittevole può risultare in pareggio nella realtà: quasi sempre la differenza sta nei costi non conteggiati.
+
+:::key Le cinque regole di sopravvivenza
+- Lo stop si decide prima di entrare e non si allontana mai.
+- La dimensione della posizione si calcola dalla distanza dello stop, non dall'entusiasmo.
+- Un limite di perdita giornaliero e uno mensile, scritti e rispettati.
+- Nessuna azione sulla posizione aperta che non fosse già prevista.
+- I costi vanno inclusi in ogni calcolo, sempre.
+:::
+
+[[notes:5]]

@@ -1,0 +1,227 @@
+# PARTE III — COME SI COLLEGANO TUTTI I CONCETTI
+
+Fin qui hai venticinque schede: venticinque pezzi. Questa parte serve a montarli.
+
+L'obiettivo non è darti una sequenza da imparare a memoria, ma farti capire **la logica** che la tiene insieme: perché un passaggio viene prima di un altro, che cosa succede se ne salti uno, e come ogni fase determina la successiva.
+
+:::warn Da dove viene questa sequenza
+La catena che segue è **ricostruita da me** mettendo in ordine i concetti che i titoli della playlist dichiarano, seguendo la loro dipendenza logica e l'ordine in cui il percorso li presenta. Non è la strategia ufficiale di Giuliano, che solo i video possono darti nei dettagli: è la mappa concettuale che rende comprensibili quelle regole. Usala per capire, e correggila con quanto senti nelle lezioni.
+:::
+
+[[pagebreak]]
+## La catena in una pagina
+
+:::flow
+CONTESTO TEMPORALE | sessione, calendario, candela settimanale
+
+STRUTTURA E TREND | la direzione di fondo
+
+PROFILO DI MERCATO | che tipo di mercato è oggi
+
+RANGE OPERATIVO | i confini entro cui lavoro
+
+PREMIUM / DISCOUNT | il prezzo è caro o a sconto
+
+LIQUIDITÀ · ERL fuori, IRL dentro | dove sono gli ordini degli altri
+
+ACCUMULAZIONE | la fase di attesa
+
+MANIPOLAZIONE = PRESA DI LIQUIDITÀ | l'evento scatenante
+
+MOMENTUM / DIREZIONALITÀ SM | la reazione che conferma
+
+IMBALANCE | la zona di interesse lasciata dalla reazione
+
+RITORNO NELLA ZONA + CONFERMA DI CANDELA | il grilletto
+
+INGRESSO
+
+STOP LOSS | dove l'idea è sbagliata
+
+TAKE PROFIT | la liquidità opposta
+
+JOURNAL, BACKTEST, REVISIONE | il ciclo che produce miglioramento
+:::
+
+Quindici passaggi, ma in realtà tre blocchi: **capire dove sei** (passi 1-6), **aspettare che il mercato si tradisca** (passi 7-11), **eseguire e misurare** (passi 12-15).
+
+:::key La logica in una frase sola
+Prima definisci un perimetro e capisci in che punto del perimetro ti trovi; poi individui dove sono gli ordini degli altri; poi aspetti che il prezzo vada a prenderli e fallisca; e solo allora entri, nella direzione opposta alla trappola, con lo stop dietro la trappola stessa e l'obiettivo sulla liquidità dall'altra parte.
+:::
+
+## I quindici passaggi, uno per uno
+
+Per ogni passaggio trovi sempre le stesse cinque domande: che cosa guardo, perché lo guardo, che cosa deve succedere, che cosa **non** deve succedere, e come questo influenza il passaggio successivo.
+
+### Passo 1 — Contesto temporale
+*(Schede 14, 15, 10 - video 13, 15, 16)*
+
+- **Che cosa guardo:** che ora è, quale sessione è aperta, quali notizie escono oggi, come si è comportata la candela settimanale.
+- **Perché lo guardo:** perché lo stesso movimento ha significati diversi alle 3 di notte e alle 14:30; e perché un dato macroeconomico può annullare qualsiasi analisi tecnica.
+- **Che cosa deve succedere:** devo trovarmi in una finestra oraria compatibile con il mio stile operativo, senza eventi ad alto impatto imminenti.
+- **Che cosa NON deve succedere:** non devo iniziare l'analisi ignorando il calendario, né operare in ore in cui il mio metodo non è stato testato.
+- **Come influenza il passaggio successivo:** se il contesto temporale non è adatto, la catena si ferma qui. Non si passa al passo 2: si chiude la piattaforma.
+
+### Passo 2 — Struttura e trend
+*(Schede 05, 06 - video 5, 7)*
+
+- **Che cosa guardo:** la sequenza di massimi e minimi sul timeframe alto, poi via via più basso.
+- **Perché lo guardo:** perché tutto ciò che segue avrà senso solo in una direzione. Un setup perfetto contro la struttura principale è un setup a probabilità ridotta.
+- **Che cosa deve succedere:** devo riuscire a scrivere la frase: «sono rialzista/ribassista finché il prezzo resta sopra/sotto X».
+- **Che cosa NON deve succedere:** non devo trovare una struttura ambigua e decidere comunque una direzione perché «mi sembra».
+- **Come influenza il passaggio successivo:** stabilisce **da che lato** posso operare. Da qui in avanti, tutti i setup nella direzione opposta vengono scartati senza discussione.
+
+### Passo 3 — Profilo di mercato
+*(Scheda 07 - video 6)*
+
+- **Che cosa guardo:** il carattere del movimento nelle ultime decine di candele: direzionale, laterale, in espansione, in ritracciamento.
+- **Perché lo guardo:** perché la strategia giusta nel profilo sbagliato produce perdite continue.
+- **Che cosa deve succedere:** il profilo deve corrispondere a quello per cui la mia strategia è stata costruita e testata.
+- **Che cosa NON deve succedere:** non devo applicare regole da trend in un mercato compresso, né regole da range in una fase di espansione.
+- **Come influenza il passaggio successivo:** determina **quale** strategia usare oggi, o se rinunciare.
+
+### Passo 4 — Range operativo
+*(Scheda 12 - video 12)*
+
+- **Che cosa guardo:** massimo e minimo del periodo di riferimento (sessione, giornata, settimana) e la loro metà.
+- **Perché lo guardo:** perché senza confini non posso misurare niente: né dove sono, né dove voglio arrivare.
+- **Che cosa deve succedere:** devo poter tracciare tre livelli chiari: alto, basso, metà.
+- **Che cosa NON deve succedere:** non devo scegliere il range in base a dove si trova adesso il prezzo, adattandolo alla mia idea.
+- **Come influenza il passaggio successivo:** crea il sistema di coordinate. Senza di esso i passi 5 e 6 sono impossibili.
+
+### Passo 5 — Premium e discount
+*(Scheda 11 - video 10)*
+
+- **Che cosa guardo:** in quale metà del range si trova il prezzo adesso.
+- **Perché lo guardo:** perché il lato da cui entro decide il rapporto rischio/rendimento più di qualsiasi altra cosa.
+- **Che cosa deve succedere:** se voglio comprare, il prezzo deve essere (o tornare) in discount; se voglio vendere, in premium.
+- **Che cosa NON deve succedere:** non devo comprare in premium solo perché il movimento è forte, né vendere in discount solo perché sta scendendo.
+- **Come influenza il passaggio successivo:** stabilisce **se è il momento di agire o di aspettare**. Molto spesso la risposta corretta a questo passo è: attendi che il prezzo torni dalla parte giusta.
+
+### Passo 6 — Liquidità: dove sono gli ordini
+*(Schede 04, 13 - video 4, 20)*
+
+- **Che cosa guardo:** i massimi e i minimi evidenti (soprattutto quelli allineati) e le aree di squilibrio dentro il range: ERL fuori, IRL dentro.
+- **Perché lo guardo:** perché il prezzo si muove verso gli ordini, non a caso. La liquidità è la mappa dei bersagli.
+- **Che cosa deve succedere:** devo saper indicare almeno due bersagli: uno interno e uno esterno.
+- **Che cosa NON deve succedere:** non devo pensare che il prezzo «salirà e basta»: senza un bersaglio identificato non ho un obiettivo, quindi non potrò avere un take profit sensato.
+- **Come influenza il passaggio successivo:** mi dice **dove guardare** e mi permette di aspettare l'evento nel punto giusto invece di seguire il prezzo ovunque vada.
+
+### Passo 7 — Accumulazione
+*(Schede 02, 03 - video 2, 3)*
+
+- **Che cosa guardo:** una fase di compressione: candele piccole, poco movimento, massimi e minimi ravvicinati.
+- **Perché lo guardo:** perché è la fase in cui si costruiscono le posizioni: la noia precede il movimento.
+- **Che cosa deve succedere:** il prezzo deve stare in un'area delimitata abbastanza a lungo da rendere evidenti i suoi estremi.
+- **Che cosa NON deve succedere:** non devo operare **dentro** l'accumulazione, dove i movimenti sono piccoli e contraddittori.
+- **Come influenza il passaggio successivo:** definisce gli estremi che verranno violati nel passo 8. Senza accumulazione riconosciuta, la presa di liquidità non è identificabile.
+
+### Passo 8 — Manipolazione: la presa di liquidità
+*(Schede 02, 03, 04 - video 2, 3, 4)*
+
+- **Che cosa guardo:** la violazione di un estremo (il minimo della sessione asiatica, un massimo allineato, il minimo del giorno prima) e ciò che accade **subito dopo**.
+- **Perché lo guardo:** perché è l'evento che attiva lo scenario. È il momento in cui il mercato «si tradisce»: prende gli ordini che gli servono e mostra la direzione vera.
+- **Che cosa deve succedere:** il prezzo deve superare il livello e **non proseguire**, rientrando rapidamente.
+- **Che cosa NON deve succedere:** il prezzo non deve superare il livello e continuare con forza. Se accade, non è manipolazione: è continuazione, e il mio scenario è annullato.
+- **Come influenza il passaggio successivo:** dà la direzione attesa (opposta alla presa) e fornisce il livello per lo stop loss: l'estremo raggiunto durante la presa.
+
+### Passo 9 — Momentum: la reazione che conferma
+*(Scheda 08 - video 8)*
+
+- **Che cosa guardo:** la forza del movimento che segue la presa di liquidità: ampiezza dei corpi, velocità, assenza di esitazione.
+- **Perché lo guardo:** perché distingue una vera inversione da un semplice rimbalzo destinato a esaurirsi.
+- **Che cosa deve succedere:** una reazione impulsiva, con candele visibilmente più ampie delle precedenti, che riporta il prezzo dentro il range e possibilmente rompe una struttura minore.
+- **Che cosa NON deve succedere:** una reazione lenta, sovrapposta, indecisa. Un rientro fiacco significa che nessuno ha davvero comprato o venduto lì.
+- **Come influenza il passaggio successivo:** è la reazione impulsiva stessa a **creare** l'imbalance del passo 10. Nessuna reazione forte, nessuna zona di ingresso.
+
+### Passo 10 — Imbalance: la zona di interesse
+*(Scheda 11 - video 10)*
+
+- **Che cosa guardo:** il vuoto lasciato dal movimento impulsivo, cioè l'area attraversata troppo in fretta perché tutti gli ordini potessero essere eseguiti.
+- **Perché lo guardo:** perché è il punto in cui è ragionevole attendere il ritorno del prezzo, e quindi il punto in cui posso entrare con uno stop stretto.
+- **Che cosa deve succedere:** l'area deve trovarsi dal lato giusto del range (in discount se compro, in premium se vendo) e non essere già stata riempita.
+- **Che cosa NON deve succedere:** non devo inseguire il prezzo mentre corre. Se non torna nella zona, l'operazione semplicemente non si fa.
+- **Come influenza il passaggio successivo:** definisce **il prezzo di ingresso** e, con esso, tutta la matematica dell'operazione.
+
+### Passo 11 — Ritorno nella zona e conferma
+*(Scheda 09 - video 9)*
+
+- **Che cosa guardo:** il comportamento del prezzo quando torna nella zona: la forma della candela, la lunghezza delle ombre, dove chiude.
+- **Perché lo guardo:** perché una zona non è una garanzia: è un luogo dove aspettare una reazione. La conferma è ciò che trasforma l'attesa in decisione.
+- **Che cosa deve succedere:** una reazione visibile: rifiuto del prezzo, candela di equilibrio seguita da una candela nella direzione attesa, rallentamento evidente.
+- **Che cosa NON deve succedere:** il prezzo non deve attraversare la zona senza reagire. Se la taglia da parte a parte, l'ipotesi è morta.
+- **Come influenza il passaggio successivo:** è il grilletto. Senza conferma non si passa all'ingresso, per quanto perfetto sia stato tutto il resto.
+
+### Passo 12 — Ingresso
+*(Scheda 17 - video 11)*
+
+- **Che cosa guardo:** la lista delle condizioni, tutte insieme: contesto, struttura, range, lato del prezzo, liquidità presa, momentum, zona, conferma.
+- **Perché lo guardo:** perché entro solo se la catena è completa, non se «quasi» lo è.
+- **Che cosa deve succedere:** tutte le condizioni previste dalla mia strategia devono essere soddisfatte, e devo saperle elencare a voce prima di premere il pulsante.
+- **Che cosa NON deve succedere:** non devo entrare per paura di perdere il movimento, né perché ho aspettato tre ore e voglio che l'attesa serva a qualcosa.
+- **Come influenza il passaggio successivo:** l'ingresso determina il rischio: da qui in poi non decidi più tu, decide il mercato. Per questo lo stop va deciso **prima** dell'ingresso.
+
+### Passo 13 — Stop loss
+*(Integrazione: nessun titolo della playlist cita lo stop loss, ma è implicito in ogni strategia e in ogni backtest. Vedi anche la Parte VI.)*
+
+- **Che cosa guardo:** il punto oltre il quale la mia lettura è semplicemente sbagliata — tipicamente oltre l'estremo raggiunto durante la manipolazione.
+- **Perché lo guardo:** perché senza un punto di invalidazione non ho un'idea, ho una speranza.
+- **Che cosa deve succedere:** lo stop deve stare in un luogo **logico** (dietro l'evento), non a una distanza scelta per far tornare i conti del rischio.
+- **Che cosa NON deve succedere:** lo stop non deve essere spostato più lontano dopo l'ingresso. Mai. Se la distanza logica è troppo grande per il tuo rischio, la risposta è ridurre la dimensione o rinunciare all'operazione.
+- **Come influenza il passaggio successivo:** la distanza dello stop determina la dimensione della posizione e, insieme all'obiettivo, il rapporto rischio/rendimento che decide se l'operazione vale la pena.
+
+### Passo 14 — Take profit
+*(Scheda 13 - video 20, per la logica IRL verso ERL. Le regole precise sono da verificare nei video.)*
+
+- **Che cosa guardo:** la prossima zona di liquidità nella direzione dell'operazione: tipicamente l'estremo opposto del range.
+- **Perché lo guardo:** perché un obiettivo deve essere un luogo dove il prezzo ha un motivo per andare, non un numero di pip scelto a piacere.
+- **Che cosa deve succedere:** l'obiettivo deve valere almeno una volta e mezza il rischio, altrimenti la matematica dell'operazione è debole. *(Integrazione: la soglia esatta dipende dalla percentuale di successo della strategia.)*
+- **Che cosa NON deve succedere:** non devo chiudere in anticipo per nervosismo appena l'operazione va in profitto, né spostare l'obiettivo più lontano quando ci sta arrivando.
+- **Come influenza il passaggio successivo:** l'esito, positivo o negativo, diventa un dato. E il dato va registrato.
+
+### Passo 15 — Journal, backtest, revisione
+*(Schede 18, 19, 20, 22, 23 - video 17, 18, 19, 22, 23)*
+
+- **Che cosa guardo:** l'operazione appena chiusa e, ogni settimana, l'insieme delle operazioni.
+- **Perché lo guardo:** perché è l'unico modo per capire se i passi precedenti stanno funzionando o se sto ripetendo un errore.
+- **Che cosa deve succedere:** ogni operazione va registrata subito, con il risultato in R e con l'indicazione se le regole sono state rispettate.
+- **Che cosa NON deve succedere:** non devo giudicare la decisione dal risultato. Un'operazione perfetta può perdere; un'operazione fuori regola può guadagnare, ed è la più pericolosa di tutte.
+- **Come influenza il passaggio successivo:** chiude il cerchio. I dati raccolti qui modificano i criteri del passo 3 (quale profilo), del passo 11 (quale conferma), del passo 13 (quale stop). È il ciclo che, ripetuto, produce miglioramento.
+
+[[pagebreak]]
+## Le tre catene brevi da ricordare
+
+Se quindici passaggi sono troppi da tenere a mente in tempo reale, riducili a queste tre catene. Sono la stessa cosa, compressa.
+
+:::rule Catena 1 - DOVE SONO
+Struttura -> Range -> Premium o Discount.
+Risponde a: da che lato posso operare e se il prezzo è dalla parte giusta.
+:::
+
+:::rule Catena 2 - CHE COSA ASPETTO
+Liquidità -> Presa della liquidità -> Reazione impulsiva -> Imbalance -> Conferma.
+Risponde a: che cosa deve accadere prima che io possa entrare.
+:::
+
+:::rule Catena 3 - COME ESEGUO
+Ingresso -> Stop dietro l'evento -> Obiettivo sulla liquidità opposta -> Registrazione.
+Risponde a: come trasformo l'analisi in un'operazione misurabile.
+:::
+
+## Dove si rompe più spesso la catena
+
+|Punto di rottura|Che cosa succede in pratica|Rimedio|
+|Salti il passo 1 (contesto temporale)|Operi in ore morte o dentro una notizia|Due minuti di calendario ogni mattina|
+|Salti il passo 2 (struttura)|Operi in entrambe le direzioni nello stesso giorno|Scrivi la frase con il livello di invalidazione|
+|Salti il passo 5 (premium/discount)|Hai ragione sulla direzione ma vieni stoppato|Traccia sempre la metà del range prima di operare|
+|Salti il passo 8 (presa di liquidità)|Entri sulle rotture e fornisci carburante agli altri|Aspetta il rientro, non la rottura|
+|Salti il passo 9 (momentum)|Compri ogni rimbalzo, anche quelli deboli|Confronta l'ampiezza delle candele con le precedenti|
+|Salti il passo 11 (conferma)|Entri nella zona «al volo» e vieni attraversato|Nessuna candela di conferma, nessuna operazione|
+|Salti il passo 13 (stop logico)|Metti lo stop alla distanza che ti fa comodo|Lo stop lo decide il grafico, la size la decidi tu|
+|Salti il passo 15 (journal)|Ripeti gli stessi errori per mesi senza accorgertene|Compila subito dopo la chiusura, non a fine giornata|
+
+:::key Perché l'ordine conta
+Ogni passaggio **produce l'informazione** che serve al successivo: il range crea premium e discount; la presa di liquidità crea il livello dello stop; la reazione impulsiva crea l'imbalance; l'imbalance crea il prezzo di ingresso; ingresso e stop creano la dimensione della posizione. Saltare un passaggio non ti fa risparmiare tempo: ti lascia senza il dato che ti servirà due passaggi dopo. È per questo che i trader che «vanno a occhio» non riescono a spiegare perché sono entrati: non hanno saltato una regola, hanno saltato un'informazione.
+:::
+
+[[notes:6]]

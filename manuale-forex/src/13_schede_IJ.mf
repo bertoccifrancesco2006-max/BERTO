@@ -1,0 +1,685 @@
+## MODULO I — SETUP, STRATEGIE, BACKTEST E JOURNAL
+
+Sette lezioni (video 11, 17, 18, 19, 21, 22, 23): è il modulo più grande del percorso e quello in cui la teoria diventa un insieme di regole da eseguire e da verificare.
+
+Il modulo ha una struttura interna precisa, che si legge nei titoli:
+
+|Fase|Video|Che cosa succede|
+|Sintesi|11 - SETUP COMPLETO|Tutti i concetti vengono uniti in un unico procedimento|
+|Prima strategia|17, 18|Una strategia di scalping viene presentata e verificata due volte|
+|Risultati e diario|19|Il risultato del backtest e lo strumento per registrare le operazioni|
+|Seconda strategia|21|Una nuova strategia, più semplice e meccanica|
+|Verifiche|22, 23|La nuova strategia viene testata su un mese e poi su un trimestre, in versione 2.0|
+
+:::key Il messaggio nascosto in questa sequenza
+Nel percorso non c'è **una** strategia definitiva: ce ne sono almeno due, e la seconda nasce dopo aver testato la prima. Il vero insegnamento del modulo non è quale strategia usare, ma **il metodo con cui una strategia si costruisce, si verifica, si semplifica e si migliora**. Se assorbi questo, non dipendi più da nessuna strategia altrui.
+:::
+
+[[pagebreak]]
+## SCHEDA 17 — E10. SETUP COMPLETO
+
+[[cols:16,12,14,16,42]]
+|Video playlist|Codice|Durata|Livello|Modulo|
+|11|E10|1:15:14|Intermedio / Avanzato|I - Setup e strategie|
+
+**Argomento principale.** La lezione di sintesi del percorso: tutti i concetti studiati fino a quel punto — Smart Money, AMD, liquidità, struttura, momentum, candela, imbalance, premium e discount — vengono uniti in un **unico setup operativo**. Il titolo in maiuscolo e la collocazione a metà percorso ne segnalano l'importanza.
+
+### COS'È
+:::def Setup
+Un setup è l'**insieme di condizioni che devono verificarsi contemporaneamente** perché un'operazione sia considerata valida. Non è un segnale singolo: è una lista di requisiti.
+
+Un setup completo si compone tipicamente di quattro blocchi:
+1. **Contesto:** direzione del timeframe superiore, profilo di mercato, range di riferimento.
+2. **Evento scatenante:** ciò che deve accadere perché lo scenario si attivi, tipicamente una presa di liquidità.
+3. **Zona di interesse:** il luogo preciso in cui si valuta l'ingresso (per esempio un imbalance in zona di sconto).
+4. **Conferma:** il segnale finale sul prezzo o sulla candela che autorizza l'esecuzione.
+:::
+
+### A COSA SERVE
+Serve a rendere le decisioni **ripetibili**. Finché ogni operazione nasce da una valutazione a braccio, non è possibile né migliorare né verificare nulla: non sai che cosa stai facendo, quindi non puoi sapere che cosa funziona. Un setto di condizioni scritte trasforma il trading in qualcosa che si può misurare.
+
+### QUANDO SI USA
+Ogni volta che si valuta un'operazione, senza eccezioni. Il setup è anche — e soprattutto — uno strumento per **non** operare: se manca anche solo una condizione, l'operazione non si prende.
+
+### COME SI USA
+1. **Contesto:** stabilisci la direzione sul timeframe superiore e verifica che il profilo di mercato sia compatibile (video 5, 6, 7).
+2. **Range:** definisci l'intervallo di riferimento e individua premium e discount (video 10, 12).
+3. **Liquidità:** individua i livelli sopra e sotto i quali si trovano gli stop (video 4).
+4. **Attesa dell'evento:** aspetta che il prezzo prenda quella liquidità senza proseguire (video 2, 3).
+5. **Reazione:** verifica che segua un movimento impulsivo nella direzione attesa (video 8).
+6. **Zona:** individua l'imbalance lasciato da quel movimento; è la tua area di ingresso (video 10).
+7. **Conferma:** attendi il ritorno del prezzo nella zona e la reazione sulla candela (video 9).
+8. **Esecuzione:** entra, con lo stop oltre il punto che invaliderebbe lo scenario e l'obiettivo sulla liquidità opposta (video 20).
+9. **Registrazione:** annota l'operazione nel diario (video 19).
+
+:::rule Il principio della catena
+Un setup è una catena: se salta un anello, salta tutto. Non esistono «setup quasi validi». Le operazioni prese con tre condizioni su quattro sono, statisticamente, la principale fonte di perdita dei trader che pure hanno un buon metodo.
+:::
+
+### PERCHÉ È IMPORTANTE
+Perché è il punto in cui smetti di collezionare concetti e cominci ad avere un metodo. Prima di questa lezione hai una cassetta degli attrezzi; da qui in avanti hai una procedura. Ed è anche la lezione che rende possibili tutte quelle successive: senza regole definite non esiste backtest, e senza backtest non esiste fiducia nel metodo.
+
+### ESEMPIO PRATICO
+**EUR/USD**, giornata completa.
+- **Contesto:** giornaliero rialzista, struttura con minimi crescenti. Si cercano solo acquisti.
+- **Range:** minimo settimanale 1,0750, massimo 1,0890, metà a 1,0820.
+- **Liquidità:** minimo della sessione asiatica a 1,0842, con due minimi allineati poco sopra.
+- **Evento:** alle 9:15 il prezzo scende a 1,0835, sotto il minimo asiatico, e non prosegue.
+- **Reazione:** tre candele a 5 minuti riportano il prezzo a 1,0868: movimento impulsivo, momentum forte.
+- **Zona:** durante quella salita resta un imbalance tra 1,0850 e 1,0856; l'area è sotto la metà del range, quindi in discount.
+- **Conferma:** il prezzo torna a 1,0854 e forma una candela con ombra inferiore lunga e chiusura in alto.
+- **Esecuzione:** acquisto a 1,0855, stop a 1,0830 (sotto il minimo dell'evento), obiettivo 1,0890 (liquidità esterna sopra il massimo settimanale). Rischio 25 pip, obiettivo 35 pip.
+
+Tutte le condizioni presenti. Se fosse mancata anche solo la presa di liquidità iniziale, l'operazione non si sarebbe presa, per quanto invitante fosse il resto.
+
+### COLLEGAMENTI
+- **Prima di questo:** tutti i video dal 2 al 10. Questa lezione non è comprensibile senza di essi.
+- **Dopo questo:** i video 17-19 e 21-23, che trasformano il setup in strategie testabili.
+- **Si collega a:** il video 20 (IRL/ERL) per gli obiettivi, il video 13 (sessioni) per il momento in cui il setup si presenta.
+
+### COSA CERCARE NEL VIDEO
+- Quali sono **esattamente** le condizioni del setup di Giuliano, in ordine?
+- Quali sono obbligatorie e quali facoltative?
+- Su quali timeframe viene cercata ciascuna condizione?
+- Dove colloca lo stop e come definisce l'obiettivo?
+- Quante operazioni al giorno o alla settimana ci si può aspettare da questo setup?
+
+:::key
+- Un setup è una lista di condizioni simultanee, non un segnale singolo.
+- I quattro blocchi sono: contesto, evento, zona, conferma.
+- Serve soprattutto a scartare operazioni, non solo a trovarle.
+- Se manca un anello della catena, l'operazione non si prende.
+- Senza un setto di regole scritte non esiste alcun backtest possibile.
+:::
+
+:::err
+Personalizzare il setup prima di averlo eseguito almeno cento volte così com'è. Modificare le regole dopo poche operazioni negative è la strada più diretta verso un metodo che non è né quello del corso né uno tuo, e di cui non conosci alcuna statistica.
+:::
+
+[[notes:3]]
+
+[[pagebreak]]
+## SCHEDA 18 — E16. Strategia FX Scalping Pro, Backtest 1
+
+[[cols:16,12,14,16,42]]
+|Video playlist|Codice|Durata|Livello|Modulo|
+|17|E16|1:06:26|Avanzato|I - Setup e strategie|
+
+**Argomento principale.** Presentazione di una strategia di **scalping** sul Forex, chiamata «Scalping Pro», e primo **backtest**, cioè la sua verifica su dati storici. È la prima volta nel percorso in cui una strategia viene messa alla prova con un metodo.
+
+### COS'È
+:::def Scalping e backtest
+- **Scalping:** stile operativo basato su molte operazioni brevi, con obiettivi contenuti e tempi di permanenza nel mercato ridotti (minuti). Richiede regole rapidissime, costi bassi e forte disciplina, perché lo spread incide molto sul risultato di ogni singola operazione.
+- **Backtest:** applicazione delle regole di una strategia a dati storici, operazione per operazione, per stimarne il comportamento. Serve a rispondere a tre domande: la strategia guadagna? Quanto può perdere di fila? Quante operazioni produce?
+:::
+
+### A COSA SERVE
+Serve a **sostituire l'opinione con i numeri**. Chiunque può dire che una strategia funziona; il backtest è ciò che permette di dirlo con un campione di operazioni davanti. Serve inoltre a costruire la fiducia necessaria per eseguire le regole nei momenti difficili: chi ha visto la propria strategia attraversare dieci perdite consecutive nello storico non va nel panico alla quarta.
+
+### QUANDO SI USA
+- Prima di operare qualsiasi strategia, anche in demo.
+- Dopo ogni modifica alle regole: una regola cambiata rende obsoleti i risultati precedenti.
+- Periodicamente, per verificare che la strategia funzioni ancora nelle condizioni di mercato attuali.
+
+### COME SI USA
+1. Scrivi le regole in modo che una persona che non le conosce possa applicarle senza chiederti nulla. Se non ci riesci, non hai ancora una strategia.
+2. Scegli un periodo storico e uno strumento, e non cambiarli in corsa.
+3. Scorri il grafico candela per candela, nascondendo il futuro, e registra ogni operazione che le regole impongono, comprese quelle che «sembrano brutte».
+4. Annota per ciascuna: data, ora, direzione, ingresso, stop, obiettivo, esito, rischio in percentuale.
+5. Alla fine calcola: numero di operazioni, percentuale di successo, rapporto medio rischio/rendimento, perdita massima consecutiva, risultato complessivo.
+6. Non interrompere il test quando i risultati ti piacciono: è la forma più comune di autoinganno.
+
+:::rule Le tre onestà del backtest
+**1)** Registra anche le operazioni perdenti che avresti «sicuramente evitato in diretta»: non è vero. **2)** Includi lo spread e i costi. **3)** Non cambiare le regole a metà campione: se le cambi, il test ricomincia da zero.
+:::
+
+### PERCHÉ È IMPORTANTE
+Perché è l'unico modo per sapere se stai operando un metodo o un'illusione. E perché ti prepara psicologicamente: la maggior parte degli abbandoni non avviene dopo una perdita, ma dopo una **serie** di perdite che il trader non sapeva essere normale.
+
+### ESEMPIO PRATICO
+Backtest su **EUR/USD**, grafico a 5 minuti, tre mesi di dati, finestra oraria 9:00-12:00.
+
+Risultati ipotetici: 120 operazioni, 62 vincenti e 58 perdenti (52 percento di successo), rapporto medio rischio/rendimento 1:1,4, perdita massima consecutiva 7 operazioni, rendimento complessivo positivo rischiando l'1 percento per operazione.
+
+Il numero più importante di questo elenco **non è il rendimento**: è il 7. Sapere che sette perdite di fila rientrano nel comportamento normale della strategia è ciò che ti permette di non abbandonarla alla quinta.
+
+### COLLEGAMENTI
+- **Prima di questo:** il video 11 (setup completo), perché non si può testare ciò che non è definito; e il video 13 (sessioni), perché una strategia di scalping vive di orari.
+- **Dopo questo:** il video 18, che è il secondo backtest della stessa strategia.
+- **Si collega a:** il video 19 (journal), che è il backtest applicato all'operatività reale, e al video 15 (calendario), perché un backtest che ignora le notizie sovrastima i risultati.
+
+### COSA CERCARE NEL VIDEO
+- Quali sono le regole esatte della strategia Scalping Pro: ingresso, stop, obiettivo, orari?
+- Su quale strumento, quale timeframe e quale periodo storico è fatto il backtest?
+- Quante operazioni compongono il campione?
+- Include costi e spread nel calcolo?
+- Qual è la perdita massima consecutiva registrata?
+
+:::key
+- Lo scalping richiede regole rapide, costi bassi e disciplina alta.
+- Il backtest converte le opinioni in numeri.
+- Le regole vanno scritte in modo che un estraneo possa applicarle.
+- Il dato più utile non è il rendimento, ma la peggiore serie di perdite.
+- Cambiare le regole a metà test annulla il test.
+:::
+
+:::err
+Fare il backtest scorrendo il grafico all'indietro con tutto il movimento futuro visibile. Guardando un grafico già formato, ogni ingresso sembra ovvio: il risultato sarà splendido e completamente falso. Il backtest va fatto **nascondendo la parte destra del grafico** e avanzando una candela alla volta.
+:::
+
+[[notes:3]]
+
+[[pagebreak]]
+## SCHEDA 19 — E17. Backtest 2 della Strategia PRO
+
+[[cols:16,12,14,16,42]]
+|Video playlist|Codice|Durata|Livello|Modulo|
+|18|E17|1:08:59|Avanzato|I - Setup e strategie|
+
+**Argomento principale.** Il secondo backtest della stessa strategia. Il fatto che il percorso dedichi due lezioni consecutive alla verifica della medesima strategia è di per sé un insegnamento: **una sola verifica non basta**.
+
+### COS'È
+È la ripetizione del test su un campione diverso: un altro periodo, un altro strumento o un'altra fase di mercato. Serve a stabilire se i risultati del primo test erano una proprietà della strategia o una caratteristica di quel particolare periodo.
+
+:::def Robustezza
+Una strategia è **robusta** quando continua a funzionare in condizioni diverse da quelle in cui è stata costruita: altri mesi, altri strumenti, altre fasi di volatilità. Il contrario della robustezza è l'**overfitting**: regole talmente calibrate su uno storico specifico da funzionare solo lì. *(Integrazione: il termine non compare nei titoli, ma è il rischio che due backtest consecutivi servono precisamente a controllare.)*
+:::
+
+### A COSA SERVE
+Serve a distinguere la fortuna dal metodo. Un campione di quaranta operazioni in un mercato favorevole può produrre risultati eccellenti anche con regole mediocri. Il secondo test, su un contesto diverso, è il primo controllo serio.
+
+### QUANDO SI USA
+- Subito dopo il primo backtest positivo, prima di operare anche in demo.
+- Ogni volta che si modifica una regola.
+- Quando il mercato cambia carattere in modo evidente (per esempio dopo un forte aumento della volatilità).
+
+### COME SI USA
+1. Mantieni **identiche** le regole del primo test: cambiare regole e campione insieme rende il confronto inutile.
+2. Cambia una sola variabile: il periodo, oppure lo strumento.
+3. Ripeti la registrazione operazione per operazione, con lo stesso livello di dettaglio.
+4. Confronta i due campioni: percentuale di successo, rapporto rischio/rendimento, perdita massima consecutiva.
+5. Valuta la **differenza**, non i valori assoluti: se il secondo test è molto peggiore del primo, la strategia dipende dal contesto più di quanto sembrasse.
+6. Se i due test sono coerenti, hai una base ragionevole per passare alla demo.
+
+:::rule Che cosa ti aspetti da un secondo test
+Non risultati identici: sarebbe sospetto. Ti aspetti **la stessa forma**: percentuali simili, rapporto rischio/rendimento simile, e una perdita massima consecutiva dello stesso ordine di grandezza. Se cambiano di poco, la strategia è credibile; se cambiano di molto, il primo risultato era in gran parte fortuna.
+:::
+
+### PERCHÉ È IMPORTANTE
+Perché è il momento in cui si impara la lezione più utile e meno piacevole del trading: **la maggior parte delle strategie che sembrano funzionare non supera il secondo test**. Chi lo scopre sul proprio conto reale lo paga; chi lo scopre in backtest lo paga solo in tempo.
+
+### ESEMPIO PRATICO
+Prima verifica: **EUR/USD**, tre mesi, 120 operazioni, 52 percento di successo, rapporto 1:1,4, peggiore serie 7 perdite.
+
+Seconda verifica su un trimestre diverso, con volatilità più alta: 96 operazioni, 44 percento di successo, rapporto 1:1,5, peggiore serie 11 perdite.
+
+Lettura: la strategia resta in equilibrio (il rapporto rischio/rendimento compensa la percentuale più bassa), ma la peggiore serie di perdite passa da 7 a 11. Conseguenza pratica: il rischio per operazione va dimensionato pensando a 11 perdite consecutive, non a 7. Con l'1 percento per operazione significa mettere in conto una discesa vicina all'11 percento del conto: sopportabile. Con il 3 percento per operazione, la stessa serie porta a una perdita di circa un terzo del capitale, che quasi nessuno regge psicologicamente.
+
+### COLLEGAMENTI
+- **Prima di questo:** il video 17, di cui è la continuazione diretta.
+- **Dopo questo:** il video 19, che presenta i risultati e introduce il diario di trading.
+- **Si collega a:** i video 22 e 23, che ripetono lo stesso procedimento sulla seconda strategia, su periodi di lunghezza diversa.
+
+### COSA CERCARE NEL VIDEO
+- Che cosa cambia rispetto al primo backtest: periodo, strumento, o entrambi?
+- I risultati sono coerenti con il primo test o peggiori?
+- Giuliano modifica qualche regola dopo il primo test? Quale e perché?
+- Che cosa considera un risultato accettabile?
+
+:::key
+- Un solo backtest non dimostra nulla: serve almeno una seconda verifica indipendente.
+- Le regole restano identiche, cambia il campione.
+- Si confronta la forma dei risultati, non i valori assoluti.
+- La perdita massima consecutiva determina quanto puoi rischiare per operazione.
+- Molte strategie promettenti muoiono al secondo test: è normale e utile.
+:::
+
+:::err
+Aggiustare le regole finché anche il secondo test dà buoni risultati. In questo modo si costruisce una strategia perfetta sul passato e inutile sul futuro. Se il secondo test va male, l'informazione corretta è «questa strategia è fragile», non «devo trovare i parametri giusti».
+:::
+
+[[notes:3]]
+
+[[pagebreak]]
+## SCHEDA 20 — E18. +18% con Scalping PRO e Trading Journal
+
+[[cols:16,12,14,16,42]]
+|Video playlist|Codice|Durata|Livello|Modulo|
+|19|E18|1:14:05|Avanzato|I - Setup e strategie|
+
+**Argomento principale.** Due contenuti in una lezione: il **risultato complessivo** della strategia Scalping Pro (+18 percento, presentato nel contesto dei backtest delle due lezioni precedenti) e il **trading journal**, cioè il diario delle operazioni. È l'unica lezione della playlist che nomina esplicitamente uno strumento di autovalutazione.
+
+:::warn Come leggere quel «+18%»
+Il numero arriva dalla sequenza dei backtest (video 17 e 18), quindi è **un risultato su dati storici**, non un rendimento reale garantito né ripetibile. Tre avvertenze indispensabili:
+- un risultato percentuale senza il periodo di riferimento e senza il rischio per operazione non è interpretabile: +18 percento in tre mesi rischiando l'1 percento è cosa molto diversa da +18 percento in tre mesi rischiando il 5 percento;
+- il dato non dice quanto il conto è sceso nel frattempo (la perdita massima), che è l'informazione che determina se una persona riesce davvero a seguire la strategia;
+- nel trading reale si aggiungono slippage, emozioni, esecuzioni imperfette e operazioni saltate: il risultato reale è quasi sempre inferiore a quello del backtest.
+:::
+
+### COS'È
+:::def Trading journal
+Il diario di trading è il registro sistematico di tutte le operazioni. Per ognuna si annotano: data e ora, strumento, direzione, motivo dell'ingresso (quale setup), prezzo di ingresso, stop, obiettivo, esito, rischio in percentuale, e un breve commento sull'esecuzione (regole rispettate oppure no).
+
+Il journal non serve a contare i soldi: serve a **produrre i dati** con cui migliorare. È il backtest applicato all'operatività reale.
+:::
+
+### A COSA SERVE
+Serve a rispondere a domande a cui la memoria non sa rispondere onestamente: in quale fascia oraria guadagni davvero? Quale variante del setup funziona meglio? Quante volte hai violato le regole, e con quale risultato? Quanto perdi per le operazioni «extra» prese per noia?
+
+Nella quasi totalità dei casi, le prime settimane di diario rivelano che una parte consistente delle perdite viene da un numero ristretto di comportamenti ripetuti, quasi sempre operazioni fuori regola.
+
+### QUANDO SI USA
+- **Dopo ogni operazione**, quando i dettagli sono ancora freschi.
+- **Ogni fine settimana**, per una revisione: quante operazioni conformi alle regole, quante no, e con quale risultato.
+- **Ogni fine mese**, per il confronto tra la propria operatività reale e i risultati del backtest.
+
+### COME SI USA
+1. Prepara un foglio di calcolo con colonne fisse: data, ora, strumento, direzione, setup, ingresso, stop, obiettivo, esito in R, rischio in percentuale, regole rispettate (sì/no), nota.
+2. Misura l'esito in **R** — cioè in multipli del rischio — non in euro: un'operazione che guadagna il doppio di quanto rischiava vale +2R, indipendentemente dalla dimensione del conto. *(Integrazione: è la convenzione più diffusa per rendere i risultati confrontabili.)*
+3. Compila subito dopo la chiusura dell'operazione, non a fine giornata.
+4. Ogni domenica separa le operazioni «conformi» da quelle «fuori regola» e calcola i due risultati separatamente.
+5. Ogni mese verifica se la percentuale di successo reale è compatibile con quella del backtest: se è molto più bassa, il problema quasi sempre è nell'esecuzione, non nella strategia.
+
+:::rule La colonna che cambia tutto
+Se puoi tenere una sola colonna oltre al risultato, tieni **«regole rispettate: sì/no»**. Quasi tutti i trader scoprono, dopo un mese, che il totale delle operazioni «sì» è positivo e quello delle operazioni «no» è pesantemente negativo. Quel confronto, visto in numeri propri, convince più di qualsiasi consiglio.
+:::
+
+### PERCHÉ È IMPORTANTE
+Perché senza dati non c'è miglioramento, solo sensazioni. E perché il journal separa due cose che il trader confonde sempre: **la qualità della decisione** e **il risultato dell'operazione**. Si può eseguire perfettamente un buon setup e perdere: quella è un'operazione ben fatta. Si può violare ogni regola e guadagnare: quella è un'operazione mal fatta, e il guadagno è il rinforzo più pericoloso che esista.
+
+### ESEMPIO PRATICO
+Primo mese di diario su **XAU/USD** e **EUR/USD**: 32 operazioni totali.
+- 21 conformi alle regole: risultato +6R.
+- 11 fuori regola (ingressi anticipati, operazioni durante notizie, «recuperi» dopo una perdita): risultato -8R.
+- Totale: -2R, cioè un mese in perdita.
+
+Senza diario, la conclusione sarebbe «la strategia non funziona» e si cercherebbe un metodo nuovo. Con il diario, la conclusione corretta è: **la strategia funziona, l'esecuzione no**. Il lavoro da fare non è cambiare metodo, è eliminare undici operazioni.
+
+### COLLEGAMENTI
+- **Prima di questo:** i video 17 e 18 (backtest), di cui il journal è la versione applicata al reale.
+- **Dopo questo:** il video 21 (nuova strategia meccanica): non è improbabile che la semplificazione nasca proprio dalle difficoltà di esecuzione che un diario mette in luce.
+- **Si collega a:** il video 9 (qualità dei setup), perché il diario è ciò che permette di verificare quali criteri di qualità pagano davvero.
+
+### COSA CERCARE NEL VIDEO
+- Su quale periodo e con quale rischio per operazione è calcolato il +18 percento?
+- Qual è stata la perdita massima nel percorso di quel risultato?
+- Quali campi contiene il journal proposto da Giuliano?
+- Con quale frequenza consiglia di rivederlo?
+
+:::key
+- Una percentuale di rendimento senza periodo, rischio e perdita massima non è un'informazione.
+- I risultati di backtest sono un limite superiore: il reale è quasi sempre inferiore.
+- Il journal produce i dati con cui si migliora: senza, si procede a sensazione.
+- Misura i risultati in R, cioè in multipli del rischio.
+- Separa sempre operazioni conformi e non conformi: il confronto è la lezione più utile.
+:::
+
+:::err
+Tenere il diario solo dei trade andati bene, o smettere di compilarlo dopo una brutta settimana. È esattamente il contrario di ciò che serve: i dati delle settimane peggiori sono quelli che contengono l'informazione utile. Un diario incompleto è peggio di nessun diario, perché produce conclusioni false.
+:::
+
+[[notes:3]]
+
+[[pagebreak]]
+## SCHEDA 21 — E20. Nuova Strategia Meccanica Semplificata
+
+[[cols:16,12,14,16,42]]
+|Video playlist|Codice|Durata|Livello|Modulo|
+|21|E20|1:17:46|Intermedio / Avanzato|I - Setup e strategie|
+
+**Argomento principale.** Presentazione di una **nuova strategia**, descritta come **meccanica** e **semplificata**. Arriva dopo la lezione su liquidità interna ed esterna (video 20) e prima dei suoi backtest (video 22 e 23). È la seconda strategia completa del percorso.
+
+### COS'È
+:::def Strategia meccanica
+Una strategia è meccanica quando le sue regole sono così precise da non lasciare spazio all'interpretazione: ogni condizione è verificabile con un sì o un no, e due persone diverse che applicano le stesse regole allo stesso grafico prendono le stesse operazioni.
+
+Il suo opposto è la strategia **discrezionale**, in cui il trader valuta il contesto e decide. La discrezionale ha un potenziale più alto in mano a chi ha esperienza; la meccanica è molto più facile da testare, da eseguire e da mantenere sotto pressione.
+:::
+
+«Semplificata» indica una riduzione volontaria del numero di condizioni rispetto al setup completo del video 11.
+
+### A COSA SERVE
+Serve a risolvere il problema che quasi sempre emerge quando si comincia a operare davvero: un setup ricco di condizioni è **corretto ma difficile da eseguire**. Nel momento in cui il prezzo si muove, valutare sei elementi contemporaneamente porta a esitare, entrare in ritardo o saltare le operazioni valide.
+
+Una strategia meccanica trasforma l'analisi in una lista di controllo binaria: molto meno elegante, molto più eseguibile.
+
+### QUANDO SI USA
+- Quando il setup discrezionale produce risultati incoerenti a causa dell'esecuzione.
+- Quando si vuole una base testabile in modo rigoroso.
+- Quando si dispone di poco tempo davanti al grafico e servono decisioni rapide.
+- Come strategia di partenza per un principiante, prima di aggiungere valutazioni discrezionali.
+
+### COME SI USA
+1. Scrivi tutte le condizioni in forma di domande con risposta sì o no.
+2. Fissa i parametri: orari, timeframe, distanza dello stop, obiettivo. Nessun «dipende».
+3. Definisci in anticipo che cosa fare in ogni caso ambiguo: se serve un giudizio, la regola non è ancora meccanica.
+4. Applica la strategia senza eccezioni per un numero minimo di operazioni stabilito prima (per esempio 50). *(Integrazione)*
+5. Solo dopo quel campione valuta i risultati e considera modifiche, una alla volta.
+
+:::rule Il test di meccanicità
+Consegna le tue regole a una persona che non fa trading e falle applicare a uno storico. Se prende le tue stesse operazioni, la strategia è meccanica. Se ti chiede «e qui che faccio?», hai ancora una strategia discrezionale che credi meccanica.
+:::
+
+### PERCHÉ È IMPORTANTE
+Perché la maggior parte dei trader non fallisce per mancanza di conoscenze, ma per **incoerenza di esecuzione**. Una strategia semplice eseguita sempre allo stesso modo batte una strategia sofisticata eseguita in modo diverso ogni giorno. È anche l'unico tipo di strategia che si può testare davvero: se le regole dipendono dal giudizio, il backtest misura il tuo umore, non il metodo.
+
+### ESEMPIO PRATICO
+Esempio di regole meccaniche su **GBP/USD**, grafico a 5 minuti, finestra 9:00-11:00 *(esempio didattico, non le regole del video)*:
+1. Il prezzo ha superato il massimo o il minimo della sessione asiatica? Sì/No.
+2. È rientrato dentro il range asiatico entro 15 minuti? Sì/No.
+3. Esiste un imbalance lasciato dal movimento di rientro? Sì/No.
+4. Il prezzo torna in quell'area? Sì/No.
+
+Se tutte le risposte sono sì: ingresso, stop 5 pip oltre l'estremo dell'evento, obiettivo l'estremo opposto del range asiatico. Se una sola è no: nessuna operazione.
+
+Nessun giudizio, nessuna interpretazione. Questa struttura può essere testata su cento giorni e produrre statistiche affidabili — che è esattamente quello che accade nei due video successivi.
+
+### COLLEGAMENTI
+- **Prima di questo:** il video 20 (IRL/ERL), che lo precede immediatamente nella playlist e ne fornisce probabilmente la logica; e il video 11 (setup completo), di cui questa è la versione semplificata.
+- **Dopo questo:** i video 22 e 23, che ne sono la verifica su un mese e su un trimestre.
+- **Si collega a:** il video 19 (journal), perché una strategia meccanica rende il diario molto più informativo.
+
+### COSA CERCARE NEL VIDEO
+- Quali sono le regole esatte, in ordine, e quali parametri numerici usa?
+- Che cosa è stato **tolto** rispetto al setup completo del video 11? La risposta dice molto sul metodo.
+- Quali orari e quali strumenti?
+- Come vengono definiti stop e obiettivo?
+
+:::key
+- Meccanica significa: ogni condizione ha risposta sì o no, nessun giudizio.
+- Semplificare non è impoverire: è rendere eseguibile ciò che è corretto.
+- Solo una strategia meccanica può essere testata in modo affidabile.
+- L'esecuzione coerente conta più della sofisticazione delle regole.
+- Fissa prima quante operazioni servono per giudicare, e non cambiare nulla nel frattempo.
+:::
+
+:::err
+Aggiungere «solo un piccolo filtro discrezionale» dopo qualche perdita. È così che una strategia meccanica torna a essere discrezionale senza che tu te ne accorga, perdendo l'unico vantaggio che aveva: la possibilità di sapere che cosa ti aspetta.
+:::
+
+[[notes:3]]
+
+[[pagebreak]]
+## SCHEDA 22 — E21. +4% con la Strategia Meccanica, backtest di settembre
+
+[[cols:16,12,14,16,42]]
+|Video playlist|Codice|Durata|Livello|Modulo|
+|22|E21|1:12:23|Avanzato|I - Setup e strategie|
+
+**Argomento principale.** Backtest della strategia meccanica su un periodo definito, il mese di settembre, con risultato dichiarato di +4 percento. È la prima verifica della seconda strategia del percorso.
+
+### COS'È
+È un backtest **mensile**: un campione breve, relativo a un solo mese di mercato. Il valore di una verifica del genere sta nella sua concretezza (regole applicate a un periodo reale e delimitato), il suo limite sta nella dimensione del campione.
+
+:::def Perché un mese è poco
+Un mese di scalping può contenere venti o trenta operazioni. Con numeri così piccoli, la fortuna pesa moltissimo: due o tre operazioni andate diversamente possono ribaltare il risultato. Un mese serve a verificare che le regole siano applicabili, non a dimostrare che siano redditizie. *(Integrazione)*
+:::
+
+### A COSA SERVE
+Serve come **primo controllo di realtà**: le regole sono applicabili? Quante operazioni generano? In quali situazioni diventano ambigue? È anche il modo più rapido per scoprire che una regola scritta bene sulla carta è impraticabile sul grafico.
+
+### QUANDO SI USA
+Subito dopo aver definito una nuova strategia, prima di impegnare tempo in test più lunghi.
+
+### COME SI USA
+1. Scegli un mese e non cambiarlo, qualunque cosa accada nei risultati.
+2. Applica le regole a ogni giornata, comprese quelle in cui non si opera: anche «zero operazioni» è un dato.
+3. Registra le operazioni in R.
+4. Annota separatamente i **casi ambigui**: sono la lista delle regole da rendere più precise.
+5. Confronta il numero di operazioni con le tue aspettative: una strategia che genera tre operazioni al mese non è utilizzabile da chi vuole operare ogni giorno, anche se è profittevole.
+
+:::rule Come leggere un +4% mensile
+Sempre insieme a tre altri numeri: **quante operazioni**, **quanto si rischiava per operazione**, **quanto è sceso il conto nel punto peggiore**. Un +4 percento con 25 operazioni all'1 percento di rischio è un risultato solido. Lo stesso +4 percento con 3 operazioni al 5 percento di rischio è casualità.
+:::
+
+### PERCHÉ È IMPORTANTE
+Perché insegna a valutare i numeri nel loro contesto — competenza che serve ben oltre questo corso, ogni volta che qualcuno mostra un rendimento. E perché il confronto con il +18 percento della strategia precedente è istruttivo: **non sono numeri confrontabili**, perché si riferiscono a strategie diverse, periodi diversi e probabilmente rischi diversi. Chi confronta due percentuali senza confrontare i loro contesti non sta ragionando sui dati.
+
+### ESEMPIO PRATICO
+Immagina due backtest mensili della stessa strategia:
+- **Settembre:** 24 operazioni, +4 percento, perdita massima -2,5 percento, rischio 0,5 percento per operazione.
+- **Ottobre:** 19 operazioni, -1 percento, perdita massima -3 percento, stesso rischio.
+
+Un mese positivo e uno negativo. Il modo giusto di leggerli non è «funziona a settembre e non a ottobre», ma: su 43 operazioni il risultato è leggermente positivo, con oscillazioni del conto contenute entro il 3 percento. È un campione ancora piccolo, ma coerente: nessun mese distrugge il conto e le regole sono applicabili. Questo giustifica un test più lungo — che è esattamente il contenuto della lezione successiva.
+
+### COLLEGAMENTI
+- **Prima di questo:** il video 21, che presenta la strategia testata qui.
+- **Dopo questo:** il video 23, che estende la verifica a un trimestre con una versione aggiornata della strategia.
+- **Si collega a:** i video 17 e 18, che sono la stessa procedura applicata alla prima strategia.
+
+### COSA CERCARE NEL VIDEO
+- Quante operazioni compongono il campione di settembre?
+- Qual era il rischio per operazione?
+- Qual è stata la perdita massima nel mese?
+- Ci sono giornate escluse (notizie, festività, bassa volatilità)?
+- Emergono regole ambigue che vengono chiarite durante il test?
+
+:::key
+- Un mese è un campione piccolo: verifica l'applicabilità, non la redditività.
+- Una percentuale va sempre letta insieme a numero di operazioni, rischio e perdita massima.
+- Anche «nessuna operazione» è un dato da registrare.
+- I casi ambigui incontrati nel test sono la lista delle regole da migliorare.
+- Percentuali di strategie e periodi diversi non sono confrontabili tra loro.
+:::
+
+:::err
+Prendere il risultato di un mese come prova che la strategia funziona (o non funziona). Con venti o trenta operazioni la variabilità è enorme: esistono strategie perdenti che chiudono un mese in guadagno e strategie valide che chiudono in perdita. Il giudizio richiede campioni più ampi, che è esattamente il motivo per cui il percorso prosegue con un backtest trimestrale.
+:::
+
+[[notes:3]]
+
+[[pagebreak]]
+## SCHEDA 23 — E22. +12% nel backtest trimestrale, Strategia Meccanica 2.0
+
+[[cols:16,12,14,16,42]]
+|Video playlist|Codice|Durata|Livello|Modulo|
+|23|E22|1:15:07|Avanzato|I - Setup e strategie|
+
+**Argomento principale.** Backtest su un **trimestre** della strategia meccanica in versione **2.0**, con risultato dichiarato di +12 percento. Due informazioni importanti nel titolo: il campione si allunga (da un mese a tre) e la strategia è stata **aggiornata**.
+
+### COS'È
+È la verifica più estesa del percorso e, insieme, la presentazione di una versione migliorata delle regole. La sigla «2.0» indica che qualcosa è stato modificato rispetto alla versione testata a settembre.
+
+:::def Iterazione di una strategia
+Una strategia non nasce finita: si scrive, si testa, si individuano i punti deboli, si corregge una cosa alla volta e si ritesta. Ogni versione va identificata (1.0, 2.0) e testata separatamente, perché **i risultati della versione precedente non valgono più** per quella nuova. *(Integrazione)*
+:::
+
+### A COSA SERVE
+Serve a due cose contemporaneamente: allargare il campione, che è l'unico modo per ridurre il peso del caso, e verificare se le modifiche introdotte hanno prodotto un miglioramento reale o soltanto un adattamento ai dati passati.
+
+### QUANDO SI USA
+- Quando un test mensile ha dato risultati incoraggianti ma insufficienti a decidere.
+- Dopo ogni revisione delle regole.
+- Prima di passare dalla demo al conto reale.
+
+### COME SI USA
+1. Elenca esplicitamente le differenze tra versione 1.0 e 2.0: che cosa è cambiato e perché.
+2. Testa la versione 2.0 su un periodo che comprenda condizioni di mercato diverse (fasi laterali e fasi direzionali).
+3. Registra tutto come nei test precedenti, in R.
+4. Confronta i risultati con la versione 1.0 **sullo stesso periodo**, non su periodi diversi: altrimenti stai confrontando due mercati, non due strategie.
+5. Calcola anche la perdita massima e la peggiore serie di operazioni negative: sono i numeri che determinano se potrai eseguire davvero la strategia.
+6. Se il miglioramento è piccolo ma la complessità è cresciuta molto, la versione 1.0 è probabilmente migliore.
+
+:::rule Il principio di parsimonia
+Tra due strategie con risultati simili, **vince la più semplice**. Ogni regola aggiuntiva è un'occasione in più di adattarsi al passato e una difficoltà in più nell'esecuzione. Le modifiche vanno introdotte una alla volta, ognuna con il suo test.
+:::
+
+### PERCHÉ È IMPORTANTE
+Perché è la conclusione naturale del percorso di verifica e la lezione più trasferibile dell'intera playlist: **come si migliora un metodo senza ingannarsi**. Il ciclo scrivi le regole, testa, misura, correggi una cosa sola, ritesta è applicabile a qualsiasi strategia, non solo a questa.
+
+### ESEMPIO PRATICO
+Confronto ipotetico su un trimestre di **EUR/USD** e **GBP/USD**:
+
+|Versione|Operazioni|Successo|Rischio/rendimento|Risultato|Perdita massima|
+|1.0|58|46%|1:1,6|+7%|-4,2%|
+|2.0|41|54%|1:1,7|+12%|-3,1%|
+
+La versione 2.0 opera meno (41 contro 58) ma con maggiore precisione, e il conto oscilla meno. È il segnale tipico di un filtro aggiunto che scarta i setup peggiori: meno operazioni, qualità più alta. È anche esattamente la logica QLT/QNT della scheda 09, applicata a livello di strategia.
+
+Attenzione però: 41 operazioni restano un campione modesto. La conclusione ragionevole non è «la 2.0 rende il 12 percento a trimestre», ma «la 2.0 sembra più selettiva e più stabile della 1.0; serve altro campione per confermarlo».
+
+### COLLEGAMENTI
+- **Prima di questo:** i video 21 e 22 (strategia meccanica e primo backtest).
+- **Dopo questo:** il video 24 (Q&A) e il video 25 (chiusura), che concludono il percorso.
+- **Si collega a:** i video 17-19, che sono lo stesso procedimento applicato alla prima strategia: leggerli in parallelo mostra il metodo di lavoro complessivo.
+
+### COSA CERCARE NEL VIDEO
+- Che cosa cambia esattamente tra 1.0 e 2.0?
+- Quale trimestre è stato usato e su quali strumenti?
+- Quante operazioni e quale rischio per operazione?
+- Qual è la perdita massima del periodo?
+- Il confronto tra le due versioni è fatto sullo stesso periodo?
+
+:::key
+- Campione più ampio = risultato più credibile, ma tre mesi sono ancora poco.
+- Ogni versione della strategia va testata da capo: i risultati precedenti non valgono più.
+- Le versioni vanno confrontate sullo stesso periodo.
+- Meno operazioni con qualità più alta è spesso un miglioramento, non una perdita di opportunità.
+- Tra due strategie equivalenti, si sceglie la più semplice.
+:::
+
+:::err
+Innamorarsi della versione 2.0 perché ha il numero più alto. Un +12 percento su un trimestre, con poche decine di operazioni, ha un margine di incertezza molto ampio. Il modo corretto di usarlo è: «ipotesi promettente, da continuare a verificare in avanti», non «metodo dimostrato, si passa al conto reale con size aumentata».
+:::
+
+[[notes:3]]
+
+## MODULO J — CONSOLIDAMENTO E CHIUSURA
+
+Le ultime due lezioni (video 24 e 25). Non introducono un metodo nuovo: servono a chiarire i dubbi accumulati e a chiudere il percorso. Sono le lezioni che si tende a saltare e che invece, riviste dopo qualche mese di pratica, valgono più della prima visione.
+
+[[pagebreak]]
+## SCHEDA 24 — E23. Q&A e Dettagli Tecnici sul Prezzo
+
+[[cols:16,12,14,16,42]]
+|Video playlist|Codice|Durata|Livello|Modulo|
+|24|E23|1:18:02|Avanzato|J - Consolidamento|
+
+**Argomento principale.** Sessione di domande e risposte unita ad approfondimenti tecnici sul comportamento del prezzo. È **la lezione più lunga del percorso** (oltre 78 minuti), il che suggerisce una grande quantità di dubbi accumulati e di dettagli fini da chiarire.
+
+### COS'È
+È la lezione delle rifiniture: i casi limite, le eccezioni, le domande del tipo «e se invece succede questo?». I «dettagli tecnici sul prezzo» sono presumibilmente le sfumature del comportamento del prezzo che non entrano in una regola generale ma fanno la differenza nell'esecuzione. *(Integrazione: il titolo non specifica quali.)*
+
+### A COSA SERVE
+Serve a colmare la distanza tra la regola e il caso reale. Ogni metodo funziona bene sugli esempi scelti; le difficoltà arrivano sui casi ambigui, ed è lì che una sessione di domande e risposte vale più di una lezione teorica.
+
+Ha anche un secondo uso, spesso più prezioso: le domande poste dagli altri partecipanti ti dicono **quali sono i punti che tutti trovano difficili**. Se una domanda ti sembra ovvia, probabilmente non hai ancora incontrato il problema.
+
+### QUANDO SI USA
+- Alla fine del percorso, per chiudere i dubbi.
+- **Soprattutto dopo qualche settimana di pratica**: molte risposte diventano comprensibili solo quando hai già incontrato il problema di persona.
+- Come materiale di consultazione, riascoltando le parti utili quando serve.
+
+### COME SI USA
+1. Guardala una prima volta di seguito, prendendo nota delle domande poste.
+2. Costruisci un elenco personale: «domanda - risposta - riguarda quale lezione».
+3. Riguardala dopo un mese di pratica: cambieranno le parti che ti sembrano importanti.
+4. Le domande a cui non trovi risposta diventano il tuo elenco di verifiche da fare in backtest.
+
+### PERCHÉ È IMPORTANTE
+Perché in una lezione di domande e risposte emerge il **come si ragiona**, non solo il che cosa si fa. Vedere qualcuno applicare il metodo a un caso non previsto insegna più della descrizione del metodo stesso.
+
+### ESEMPIO PRATICO
+Esempi tipici di dubbi che una sessione così può chiarire — e che vale la pena verificare *(elenco costruito da me sui contenuti della playlist, non tratto dal video)*:
+- Il prezzo entra nella zona di interesse ma non forma nessuna candela di conferma: si entra o si lascia perdere?
+- L'imbalance viene riempito solo a metà e il prezzo riparte: l'ingresso è ancora valido?
+- Il setup si presenta a cinque minuti dall'uscita di un dato macroeconomico: si opera?
+- La liquidità viene presa ma il momentum successivo è debole: si aspetta la seconda occasione o si abbandona lo scenario?
+- La struttura del timeframe alto è rialzista ma il range operativo è ribassista: quale comanda?
+Sono esattamente i punti in cui le regole scritte non bastano e serve il criterio di chi le ha costruite.
+
+### COLLEGAMENTI
+- **Prima di questo:** tutto il percorso. Questa lezione presuppone tutte le altre.
+- **Dopo questo:** il video 25 (chiusura del percorso).
+- **Si collega a:** in particolare il video 11 (setup completo) e i video 21-23 (strategia meccanica), perché la maggior parte dei dubbi operativi nasce lì.
+
+### COSA CERCARE NEL VIDEO
+- Quali domande vengono poste più spesso? (È l'indice dei punti difficili del metodo.)
+- Quali «dettagli tecnici sul prezzo» vengono aggiunti rispetto alle lezioni precedenti?
+- Ci sono chiarimenti che modificano regole date in precedenza?
+- Emergono errori tipici che gli studenti commettono?
+
+:::key
+- È la lezione più lunga del percorso: contiene le rifiniture, non la teoria.
+- Le domande degli altri indicano i punti difficili per tutti.
+- Va rivista dopo qualche settimana di pratica: cambierà completamente utilità.
+- Serve a gestire i casi ambigui, dove le regole generali non bastano.
+- Le domande senza risposta diventano oggetto di verifica in backtest.
+:::
+
+:::err
+Considerarla una lezione secondaria «perché sono solo domande». È l'opposto: le domande arrivano dai punti in cui il metodo è difficile da applicare, cioè esattamente dove perderai denaro se non li hai chiariti.
+:::
+
+[[notes:3]]
+
+[[pagebreak]]
+## SCHEDA 25 — E24. FINE PERCORSO
+
+[[cols:16,12,14,16,42]]
+|Video playlist|Codice|Durata|Livello|Modulo|
+|25|E24|1:14:32|Sintesi|J - Consolidamento|
+
+**Argomento principale.** La lezione conclusiva del percorso «Da Base a Pro». Il titolo, scritto in maiuscolo, indica una chiusura: presumibilmente una sintesi del cammino svolto e indicazioni su come proseguire in autonomia.
+
+### COS'È
+È il momento in cui il percorso guidato finisce e comincia il lavoro personale. Dura oltre 74 minuti: non è un saluto, è una lezione a tutti gli effetti. *(Integrazione: il contenuto esatto non è deducibile dal titolo; una chiusura di percorso tipicamente contiene un riepilogo, gli errori più frequenti visti durante il corso e indicazioni sui passi successivi.)*
+
+### A COSA SERVE
+Serve a fissare la struttura complessiva. Dopo 28 ore di lezione il rischio è di ricordare venti tecniche separate senza il filo che le unisce: una lezione di chiusura serve a ricostruire quel filo.
+
+### QUANDO SI USA
+- Alla fine della prima visione completa del percorso.
+- **Di nuovo dopo tre mesi di pratica**: la seconda visione è quella che conta davvero, perché a quel punto sai quali parti ti mancano.
+
+### COME SI USA
+1. Guardala tenendo accanto questo manuale e le tue note.
+2. Segna quali concetti del riepilogo sai spiegare a voce senza guardare nulla: quelli sono acquisiti.
+3. Per gli altri, torna alla scheda corrispondente e riguarda la lezione originale.
+4. Scrivi il tuo piano dei tre mesi successivi: quali strumenti seguirai, in quali orari, con quale strategia e con quale rischio massimo.
+5. Fissa una data per rivedere questa lezione.
+
+:::rule Il piano post-corso, in cinque righe
+Alla fine del percorso devi saper scrivere queste cinque righe. Se non ci riesci, il percorso non è finito.
+- **Strumenti:** quali (uno o due, non dieci).
+- **Orari:** in quale finestra operi.
+- **Strategia:** quale, in quale versione, con quali regole scritte.
+- **Rischio:** quanto per operazione e quanto al massimo in un mese.
+- **Verifica:** quando rileggi il diario e con quali criteri decidi di cambiare qualcosa.
+:::
+
+### PERCHÉ È IMPORTANTE
+Perché segna il passaggio più delicato: da studente a operatore autonomo. È il momento in cui la maggior parte delle persone commette l'errore decisivo — considerare finita la formazione e cominciare a rischiare denaro vero. Il percorso finisce, l'apprendimento no: da qui in avanti l'insegnante è il diario di trading.
+
+### ESEMPIO PRATICO
+Un piano post-corso concreto, come esempio di applicazione:
+- **Strumenti:** EUR/USD e XAU/USD, nient'altro, per tre mesi.
+- **Orari:** 9:00-11:30 e 14:30-16:30.
+- **Strategia:** la versione meccanica, regole scritte su una pagina, senza eccezioni.
+- **Rischio:** 0,5 percento per operazione, stop del mese a -4 percento (raggiunto quel limite, si chiude il mese e si studia).
+- **Verifica:** revisione del diario ogni domenica, valutazione delle regole solo dopo 60 operazioni.
+Un piano del genere è meno entusiasmante di «cerco il setup migliore ogni giorno», ed è la ragione per cui funziona.
+
+### COLLEGAMENTI
+- **Prima di questo:** l'intero percorso.
+- **Dopo questo:** la Parte III di questo manuale («Come si collegano tutti i concetti»), la Parte IV (percorso di studio) e la Parte V (checklist), che sono pensate esattamente per il dopo-corso.
+
+### COSA CERCARE NEL VIDEO
+- Quali concetti Giuliano indica come i più importanti dell'intero percorso? (È la sua gerarchia: molto più affidabile di qualsiasi mia ipotesi.)
+- Quali errori dice di aver visto più spesso negli studenti?
+- Che cosa consiglia di fare nei mesi successivi?
+- Indica un percorso di prosecuzione o materiali di approfondimento?
+
+:::key
+- La fine del corso è l'inizio del lavoro vero.
+- Il rischio maggiore è confondere «ho finito i video» con «sono pronto».
+- Il piano post-corso deve stare in cinque righe: strumenti, orari, strategia, rischio, verifica.
+- Va rivista dopo qualche mese di pratica: la seconda visione è la più utile.
+- Da qui in avanti l'insegnante è il diario di trading.
+:::
+
+:::err
+Passare al conto reale il giorno dopo aver finito i video. Tra la comprensione e l'esecuzione c'è di mezzo la pratica su un numero di operazioni sufficiente a conoscere il proprio comportamento sotto pressione. Chi salta questo passaggio non sta accelerando: sta solo pagando la formazione al mercato invece che con il tempo.
+:::
+
+[[notes:3]]

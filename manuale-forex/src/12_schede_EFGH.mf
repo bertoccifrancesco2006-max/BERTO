@@ -1,0 +1,476 @@
+## MODULO E — INEFFICIENZE E POSIZIONE DEL PREZZO
+
+Un solo video (il 10), ma è uno dei più densi della playlist: mette insieme tre argomenti che nel resto del percorso tornano continuamente — le inefficienze lasciate dal prezzo, la distinzione tra prezzo caro e prezzo a sconto, e una strategia che li usa entrambi.
+
+[[pagebreak]]
+## SCHEDA 11 — E9. Imbalance, Premium/Discount e Strategia Trend Following
+
+[[cols:16,12,14,16,42]]
+|Video playlist|Codice|Durata|Livello|Modulo|
+|10|E9|1:17:16|Intermedio|E - Inefficienze e posizione del prezzo|
+
+**Argomento principale.** Tre concetti collegati in una lezione lunga (oltre 77 minuti, tra le più estese del percorso): l'**imbalance**, cioè lo squilibrio che un movimento veloce lascia sul grafico; la coppia **premium/discount**, che dice se il prezzo è caro o a sconto rispetto a un intervallo; e una **strategia di trend following**, cioè di ingresso a favore di trend, che usa i primi due.
+
+### COS'È
+:::def Imbalance (squilibrio)
+Quando il prezzo si muove molto velocemente in una direzione, non tutti gli scambi hanno il tempo di avvenire: restano livelli attraversati «di corsa», dove compratori e venditori non si sono realmente incontrati. Sul grafico questo si vede come un'area lasciata scoperta da tre candele consecutive: l'ombra della prima e quella della terza non si toccano, e in mezzo resta un vuoto.
+
+L'idea operativa è che il mercato tende, prima o poi, a **tornare a riempire** quel vuoto, perché lì ci sono ordini rimasti inevasi. *(Integrazione: nel gergo internazionale questa area si chiama FVG - Fair Value Gap. Il termine non compare nei titoli della playlist, ma descrive lo stesso fenomeno dell'imbalance.)*
+:::
+
+:::def Premium e Discount
+Preso un intervallo di prezzo — un movimento da un minimo a un massimo — lo si divide a metà:
+- sopra la metà il prezzo è in **premium**: è caro. È l'area in cui conviene vendere, non comprare.
+- sotto la metà il prezzo è in **discount**: è a sconto. È l'area in cui conviene comprare, non vendere.
+Il concetto è banale ma cambia tutto: non basta avere ragione sulla direzione, bisogna entrare **dal lato giusto del prezzo**.
+:::
+
+La **strategia trend following** unisce i due: individuata la direzione, si aspetta che il prezzo ritracci in zona di sconto (per gli acquisti) o in zona premium (per le vendite), possibilmente dentro un'area di imbalance lasciata dal movimento precedente, e lì si cerca l'ingresso a favore di trend.
+
+### A COSA SERVE
+Serve a risolvere il problema più concreto di chi ha già capito la direzione: **il prezzo di ingresso**. Comprare un trend rialzista è facile; comprarlo dopo che è già salito del 70 percento del movimento significa avere ragione e perdere comunque, perché lo stop viene toccato dalla prima correzione normale.
+
+### QUANDO SI USA
+- Quando hai già stabilito la direzione (Moduli B e C) e cerchi il punto di ingresso.
+- Dopo un movimento impulsivo, per individuare l'area a cui il prezzo potrebbe tornare.
+- Quando il prezzo ritraccia e devi decidere se è un'occasione o l'inizio di un'inversione.
+
+### COME SI USA
+1. Individua il movimento impulsivo più recente e i suoi due estremi: minimo e massimo.
+2. Traccia la metà dell'intervallo: sopra è premium, sotto è discount.
+3. Cerca all'interno del movimento le aree di imbalance, cioè i vuoti lasciati dalle candele veloci.
+4. In un trend rialzista aspetta che il prezzo scenda in **discount** e arrivi su un'area di imbalance.
+5. Lì cerca la conferma (vedi video 9 sulla candela e video 8 sul momentum) e valuta l'ingresso.
+6. Se il prezzo attraversa l'imbalance senza reagire e continua oltre, l'ipotesi è invalidata: non insistere.
+
+:::rule Regola dei due filtri
+Non entrare mai solo perché il prezzo è a sconto, e non entrare mai solo perché c'è un imbalance. Servono **entrambi**, e servono **nella direzione della struttura**. Uno solo dei tre elementi produce operazioni casuali.
+:::
+
+### PERCHÉ È IMPORTANTE
+Perché cambia il rapporto tra rischio e rendimento. Entrare a sconto significa avere lo stop vicino (sotto il minimo del movimento) e l'obiettivo lontano (il massimo precedente). È lo stesso trade che, preso in premium, avrebbe uno stop lontano e un obiettivo vicino: identica analisi, matematica opposta.
+
+### ESEMPIO PRATICO
+**NASDAQ**, grafico a 15 minuti. L'indice sale con forza da 18.000 a 18.400 in poche candele. Durante quel movimento, tra 18.120 e 18.160 le candele si susseguono così velocemente da lasciare un vuoto: è un'area di imbalance.
+
+Metà del movimento: (18.000 + 18.400) / 2 = 18.200. Sopra 18.200 il prezzo è caro (premium), sotto è a sconto (discount).
+
+Il prezzo ritraccia e scende a 18.150: si trova **in discount** e **dentro l'imbalance**. Se lì compare una candela di rifiuto (vedi scheda 09), il quadro è completo: struttura rialzista, prezzo a sconto, area di squilibrio, conferma. Stop sotto 18.100, obiettivo verso 18.400: rischio piccolo, obiettivo ampio.
+
+Se invece si fosse comprato a 18.380, cioè in pieno premium, lo stop sarebbe stato lontanissimo e il primo ritracciamento normale avrebbe chiuso l'operazione in perdita, pur avendo indovinato la direzione.
+
+### COLLEGAMENTI
+- **Prima di questo:** i video 5 e 7 (struttura) per la direzione, il video 8 (momentum) per riconoscere il movimento impulsivo che crea l'imbalance.
+- **Dopo questo:** il video 11 (setup completo), che assembla tutti questi elementi in una procedura unica.
+- **Si collega a:** il video 12 (range operativo), perché premium e discount hanno senso solo dentro un intervallo definito; e al video 20 (IRL/ERL), perché l'imbalance è una forma di liquidità interna al range.
+
+### COSA CERCARE NEL VIDEO
+- Come definisce operativamente l'imbalance: quante candele, quale ampiezza minima?
+- Considera valido l'ingresso al primo tocco dell'area o richiede altro?
+- Su quale intervallo calcola premium e discount: l'ultimo movimento, il range giornaliero, la settimana?
+- Quali sono le regole precise della strategia trend following presentata?
+
+:::key
+- Un movimento veloce lascia squilibri che il prezzo tende a tornare a riempire.
+- La metà di un movimento divide il prezzo caro (premium) da quello a sconto (discount).
+- Si compra a sconto e si vende a premio, sempre nella direzione della struttura.
+- Entrare dal lato giusto migliora il rapporto rischio/rendimento senza cambiare l'analisi.
+- Se il prezzo attraversa l'imbalance senza reagire, l'idea è invalidata.
+:::
+
+:::err
+Comprare in premium perché «il trend è forte». È l'errore che trasforma analisi corrette in perdite: si entra in cima al movimento, con lo stop lontano, e la prima correzione fisiologica chiude l'operazione. Avere ragione sulla direzione e sbagliare il livello produce lo stesso risultato di avere torto — con in più la frustrazione di aver visto giusto.
+:::
+
+[[notes:3]]
+
+## MODULO F — RANGE OPERATIVO E LIQUIDITÀ INTERNA/ESTERNA
+
+Due lezioni (video 12 e 20) che rispondono alla domanda: **entro quali confini sto lavorando?** Il range definisce l'area, la coppia IRL/ERL descrive che cosa c'è dentro e che cosa c'è fuori.
+
+Nella playlist sono distanti otto lezioni, ma trattano la stessa geometria e conviene studiarle insieme.
+
+[[pagebreak]]
+## SCHEDA 12 — E11. RANGE OPERATIVO
+
+[[cols:16,12,14,16,42]]
+|Video playlist|Codice|Durata|Livello|Modulo|
+|12|E11|1:14:47|Intermedio|F - Range e liquidità|
+
+**Argomento principale.** Come definire il **range operativo**, cioè l'intervallo di prezzo entro cui si svolge il lavoro di analisi e di operatività. Il titolo, scritto in maiuscolo come quello del setup completo, segnala una lezione centrale del percorso.
+
+### COS'È
+:::def Range operativo
+Un range è un intervallo di prezzo delimitato da un massimo e un minimo di riferimento. «Operativo» significa che non è un range qualsiasi: è quello **che stai usando per prendere decisioni**, cioè l'area entro cui misuri tutto il resto — premium e discount, obiettivi, livelli di invalidazione.
+
+Il range può essere quello di una sessione, di una giornata, di una settimana, o quello formato da un movimento impulsivo. Ciò che conta è che sia **scelto in modo consapevole e dichiarato**, non trovato a caso.
+:::
+
+### A COSA SERVE
+Serve a dare un riferimento a tutti gli altri concetti. Premium e discount non esistono senza un intervallo; la liquidità si colloca sopra o sotto gli estremi di un intervallo; gli obiettivi si misurano dentro o fuori un intervallo. Il range è **il sistema di coordinate** dell'analisi.
+
+Ha anche una funzione psicologica: definire il range ti costringe a dichiarare in anticipo dove ti aspetti che il prezzo lavori, e quindi a riconoscere quando esce da quell'area e il tuo scenario non vale più.
+
+### QUANDO SI USA
+- All'inizio di ogni sessione operativa, come primo passo dopo la lettura della struttura.
+- Quando il mercato è laterale: il range diventa direttamente la strategia (si vende sull'estremo alto, si compra sull'estremo basso).
+- Quando devi misurare l'obiettivo di un'operazione: l'estremo opposto del range è il primo bersaglio naturale.
+
+### COME SI USA
+1. Scegli il riferimento temporale: sessione, giornata, settimana. Deve essere coerente con il tuo orizzonte operativo.
+2. Segna il massimo e il minimo di quel periodo: sono i due confini.
+3. Traccia la metà: separa premium e discount (video 10).
+4. Osserva **dove si trova il prezzo adesso** rispetto a questi tre livelli. È l'informazione che orienta tutte le decisioni successive.
+5. Definisci che cosa consideri una uscita reale dal range: una semplice ombra oltre l'estremo di solito è una presa di liquidità, non una rottura.
+6. Se il prezzo esce e **si mantiene** fuori con forza, il range è finito: ne va costruito uno nuovo.
+
+:::rule Le tre domande del range
+Ogni volta che apri il grafico, rispondi nell'ordine: **1)** Quale range sto usando? **2)** Dove si trova il prezzo dentro quel range? **3)** Quale dei due estremi è più probabile che venga attaccato per primo? Se non sai rispondere alla prima, non puoi rispondere alle altre due.
+:::
+
+### PERCHÉ È IMPORTANTE
+Perché rende l'analisi **misurabile**. Senza range, «il prezzo è alto» è un'impressione. Con il range, «il prezzo è nel 20 percento superiore dell'intervallo settimanale» è un dato. La differenza tra le due frasi è la differenza tra sensazione e metodo.
+
+### ESEMPIO PRATICO
+**EUR/USD.** La settimana ha fatto minimo a 1,0750 e massimo a 1,0890. Range operativo settimanale: 140 pip; metà a 1,0820.
+
+Lunedì mattina il prezzo è a 1,0870: si trova nella parte alta, in premium. Le decisioni cambiano di conseguenza: le vendite hanno lo stop vicino (sopra 1,0890) e l'obiettivo lontano (verso 1,0820 e poi 1,0750); gli acquisti avrebbero stop lontano e obiettivo vicino.
+
+Se durante la giornata il prezzo salisse a 1,0895 con una sola ombra e rientrasse subito, non sarebbe una rottura: sarebbe una presa della liquidità sopra il massimo settimanale, cioè un rafforzamento dello scenario ribassista di breve. Se invece il prezzo salisse a 1,0930 e vi restasse per ore, il range sarebbe da ridisegnare.
+
+### COLLEGAMENTI
+- **Prima di questo:** il video 10 (premium/discount), che senza range non è applicabile.
+- **Dopo questo:** il video 20 (IRL/ERL), che classifica la liquidità rispetto ai confini del range.
+- **Si collega a:** il video 6 (profili di mercato), perché il profilo laterale è un range; il video 13 (sessioni), perché ogni sessione produce il proprio range; il video 11 (setup completo).
+
+### COSA CERCARE NEL VIDEO
+- Quale range usa Giuliano come riferimento principale: sessione asiatica, giornata precedente, settimana, movimento impulsivo?
+- Come stabilisce che un range è stato rotto davvero?
+- Il range viene ridisegnato ogni giorno o si mantiene per più giorni?
+- Ci sono orari in cui il range va tracciato o aggiornato?
+
+:::key
+- Il range è il sistema di coordinate dell'analisi: senza, ogni altro concetto è approssimativo.
+- Va scelto consapevolmente e dichiarato, non trovato a posteriori.
+- Massimo, minimo e metà del range sono i tre livelli fondamentali.
+- Un'ombra oltre l'estremo è di solito una presa di liquidità, non una rottura.
+- Quando il prezzo si stabilizza fuori dal range, il range è finito.
+:::
+
+:::err
+Ridisegnare il range in continuazione per farlo coincidere con la posizione attuale del prezzo. È il modo perfetto per avere sempre ragione e non imparare mai nulla: se il range si adatta al prezzo, non misura più niente. Si traccia una volta, in base a un criterio fisso, e si aggiorna solo quando quel criterio lo richiede.
+:::
+
+[[notes:3]]
+
+[[pagebreak]]
+## SCHEDA 13 — E19. IRL > ERL / Direzionalità semplificata
+
+[[cols:16,12,14,16,42]]
+|Video playlist|Codice|Durata|Livello|Modulo|
+|20|E19|1:09:47|Avanzato|F - Range e liquidità|
+
+**Argomento principale.** Il passaggio dalla **liquidità interna** (IRL, Internal Range Liquidity) alla **liquidità esterna** (ERL, External Range Liquidity), presentato come chiave per semplificare la lettura della direzione. Il simbolo «>» nel titolo indica un movimento *da* interna *verso* esterna.
+
+### COS'È
+:::def IRL ed ERL
+Preso un range (massimo e minimo di riferimento):
+- **ERL - liquidità esterna:** si trova **agli estremi e oltre**: sopra il massimo e sotto il minimo del range. È fatta dagli stop di chi è posizionato e dagli ordini di rottura. È il bersaglio grosso.
+- **IRL - liquidità interna:** si trova **dentro** il range: sono le inefficienze, gli imbalance, le aree lasciate scoperte dai movimenti veloci. È il bersaglio intermedio.
+
+Il principio operativo, che il titolo esprime con «IRL > ERL», è che il prezzo tende ad alternare: va a riempire una zona interna, e da lì riparte verso un estremo esterno. Poi, superato l'estremo, quello diventa il confine di un nuovo range e il ciclo ricomincia.
+:::
+
+La «direzionalità semplificata» è la conseguenza: invece di chiedersi «dove va il prezzo?» in astratto, ci si chiede «qual è la prossima zona di liquidità che ha senso raggiungere?». La direzione diventa una sequenza di bersagli, non un'opinione.
+
+### A COSA SERVE
+Serve a costruire un **percorso atteso** invece di una previsione. È molto più realistico dire «il prezzo dovrebbe prima tornare su questa zona interna e poi puntare al massimo settimanale» che dire «il prezzo salirà». Il primo enunciato è verificabile passo per passo, il secondo no.
+
+Serve anche a definire gli **obiettivi**: se sai che il prezzo dopo aver riempito un'area interna punta a un estremo, sai dove mettere il tuo take profit.
+
+### QUANDO SI USA
+- Dopo aver definito il range operativo (video 12): senza range non esiste dentro e fuori.
+- Quando devi scegliere l'obiettivo di un'operazione.
+- Quando il prezzo è fermo e vuoi capire quale zona sta cercando.
+
+### COME SI USA
+1. Definisci il range e segna i due estremi: quella è la tua ERL.
+2. Dentro il range individua le aree di imbalance rimaste non riempite: quella è la tua IRL.
+3. Chiediti quale delle due il prezzo sta cercando adesso: se viene da un movimento impulsivo, spesso cerca prima l'interna.
+4. Costruisci la sequenza attesa: prima la zona interna, poi l'estremo esterno.
+5. Usa la zona interna come **area di ingresso** e l'estremo esterno come **obiettivo**.
+6. Quando l'estremo viene superato, aggiorna il range: hai un nuovo perimetro e nuove liquidità.
+
+:::rule Ingresso e obiettivo, in una riga
+Si entra dove il prezzo va a prendere la liquidità **interna** e si esce dove va a prendere quella **esterna**. Se stai facendo il contrario — entrando sugli estremi e uscendo a metà — la matematica del tuo trading rema contro di te.
+:::
+
+### PERCHÉ È IMPORTANTE
+Perché unifica in un solo schema quasi tutto quello che hai studiato prima: la liquidità (video 4), l'imbalance (video 10), il range (video 12), premium e discount (video 10). Non è un concetto in più: è la struttura che li tiene insieme.
+
+### ESEMPIO PRATICO
+**XAU/USD.** Range giornaliero: minimo 2320, massimo 2360. Durante la salita mattutina il prezzo ha lasciato un imbalance tra 2334 e 2338, mai riempito.
+
+Situazione: prezzo a 2352, dentro il range, sopra la metà (2340), quindi in premium.
+
+Percorso atteso: il prezzo scende a riempire l'imbalance tra 2338 e 2334 — questa è la **liquidità interna** — e da lì, se la struttura è rialzista, riparte verso il massimo di giornata a 2360 e oltre, dove si trova la **liquidità esterna**.
+
+Piano operativo che ne deriva: acquisto in zona 2336, stop sotto 2330, obiettivo 2360. Se invece il prezzo attraversa 2334 e continua a scendere fino a 2325, l'ipotesi è saltata: la liquidità interna non ha retto e il bersaglio diventa l'estremo inferiore.
+
+### COLLEGAMENTI
+- **Prima di questo:** i video 4 (liquidità), 10 (imbalance) e 12 (range), che sono i tre presupposti.
+- **Dopo questo:** i video 21-23 (strategia meccanica), che sembrano essere il tentativo di trasformare questa logica in regole fisse: nella playlist il video 20 precede immediatamente il 21, e la sequenza non è casuale.
+- **Si collega a:** il video 11 (setup completo).
+
+### COSA CERCARE NEL VIDEO
+- Quali sono i confini esatti del range che Giuliano usa per definire interna ed esterna?
+- Che cosa considera liquidità interna: solo imbalance o anche altro?
+- Esiste una regola su quando il prezzo cerca l'una piuttosto che l'altra?
+- In che senso questa lettura «semplifica» la direzionalità rispetto alle lezioni precedenti?
+
+:::key
+- ERL = liquidità agli estremi del range; IRL = liquidità dentro il range.
+- Il prezzo tende ad alternare: prima riempie l'interna, poi punta all'esterna.
+- La direzione diventa una sequenza di bersagli, non una previsione.
+- Si entra sull'interna, si esce sull'esterna.
+- Superato un estremo, il range va ridisegnato.
+:::
+
+:::err
+Inseguire l'ERL quando il prezzo è già a metà strada. La liquidità esterna è l'obiettivo, non il punto di ingresso: entrare quando il prezzo è già lanciato verso l'estremo significa prendersi tutto il rischio e la parte finale, più piccola, del movimento.
+:::
+
+[[notes:3]]
+
+## MODULO G — IL CONTESTO TEMPORALE
+
+Due lezioni (video 13 e 15) che aggiungono all'analisi la dimensione del tempo: **quando** si opera durante la giornata e **quando** conviene stare fermi perché sta per uscire una notizia.
+
+Sono lezioni apparentemente semplici, e proprio per questo spesso sottovalutate: molte perdite non nascono da un'analisi sbagliata, ma da un'analisi giusta applicata nell'ora sbagliata.
+
+[[pagebreak]]
+## SCHEDA 14 — E12. Sessioni di Trading
+
+[[cols:16,12,14,16,42]]
+|Video playlist|Codice|Durata|Livello|Modulo|
+|13|E12|1:11:37|Base / Intermedio|G - Contesto temporale|
+
+**Argomento principale.** Le sessioni di mercato: come la giornata di trading si divide in fasi con caratteristiche diverse e come questo cambia il modo di operare. È la prima lezione della playlist dedicata esplicitamente al fattore tempo.
+
+### COS'È
+:::def Le sessioni
+Il Forex è aperto 24 ore, ma l'attività si concentra dove sono aperte le grandi piazze finanziarie. Le tre sessioni principali sono:
+- **Asiatica** (indicativamente notte e prima mattina in Italia): volumi bassi, movimenti contenuti, spesso laterale. Costruisce un piccolo range che diventa un riferimento per il resto della giornata.
+- **Europea / Londra** (mattina italiana): aumento netto di volume e volatilità. È spesso qui che si formano i movimenti direzionali della giornata.
+- **Americana / New York** (pomeriggio italiano): la sessione più volatile, soprattutto nella fase di sovrapposizione con Londra e all'uscita dei dati macroeconomici statunitensi.
+*(Integrazione: la suddivisione e le caratteristiche generali sono standard; gli orari esatti e le sessioni che il metodo privilegia sono da verificare nel video.)*
+:::
+
+### A COSA SERVE
+Serve a **scegliere quando lavorare**. Le stesse regole di ingresso producono risultati completamente diversi a seconda dell'ora: in una fase a bassa volatilità gli obiettivi non vengono raggiunti e lo spread pesa di più; in una fase ad alta volatilità gli stop stretti vengono toccati dal rumore.
+
+Serve inoltre a interpretare correttamente i movimenti: un massimo rotto durante la sessione asiatica ha un peso molto diverso dallo stesso massimo rotto all'apertura americana.
+
+### QUANDO SI USA
+Ogni giorno, prima ancora di guardare il grafico: la prima domanda è «che ora è e quale sessione sta per aprire?». È particolarmente decisiva:
+- alle aperture delle sessioni, dove spesso avvengono le prese di liquidità;
+- nella sovrapposizione tra Londra e New York, il momento di massima attività;
+- nelle ore morte, in cui la scelta migliore è quasi sempre non operare.
+
+### COME SI USA
+1. Segna sul grafico gli orari di apertura e chiusura delle sessioni: molte piattaforme permettono di evidenziarli automaticamente.
+2. Traccia il range della sessione asiatica: massimo e minimo sono due livelli di liquidità che spesso vengono attaccati all'apertura di Londra.
+3. Decidi in quale finestra oraria operi e rispettala. *(Integrazione: la scelta di una finestra fissa è la conseguenza pratica del concetto.)*
+4. Verifica che il tuo orizzonte temporale sia coerente: uno scalper ha bisogno di volatilità, quindi delle sessioni attive.
+5. Registra nel diario a che ora hai operato e con quale risultato: dopo qualche settimana i numeri ti diranno da soli qual è la tua fascia migliore.
+
+### PERCHÉ È IMPORTANTE
+Perché il tempo è un filtro che costa zero e migliora immediatamente i risultati. Eliminare le ore in cui il tuo tipo di operatività non funziona è il modo più semplice di aumentare la qualità media delle operazioni senza cambiare una sola regola di ingresso.
+
+### ESEMPIO PRATICO
+**EUR/USD**, giornata tipo. Durante la notte il prezzo si muove tra 1,0840 e 1,0858: range asiatico di 18 pip.
+
+Alle 9:00, con l'apertura europea, il volume aumenta: il prezzo scende rapidamente a 1,0833, cioè sotto il minimo asiatico, prende la liquidità di chi aveva lo stop lì, e nel giro di mezz'ora risale sopra 1,0860.
+
+Alle 14:30, all'apertura americana e con l'uscita dei dati, il movimento si estende fino a 1,0910.
+
+Tre fasi, tre comportamenti: laterale, presa di liquidità con inversione, estensione direzionale. Chi opera con la stessa logica in tutte e tre le fasi ottiene un risultato mediocre nella prima e buono nelle altre due; chi opera solo dalle 9 alle 12 e dalle 14:30 alle 17 lavora meno e meglio.
+
+### COLLEGAMENTI
+- **Prima di questo:** il video 4 (liquidità), perché le aperture di sessione sono i momenti in cui la liquidità viene presa.
+- **Dopo questo:** il video 15 (calendario economico), che aggiunge il fattore notizie all'interno delle sessioni.
+- **Si collega a:** il video 12 (range operativo), perché il range asiatico è uno dei range operativi più usati; e ai video 17-19 (strategia scalping), che per definizione dipendono dall'orario.
+
+### COSA CERCARE NEL VIDEO
+- Quali orari esatti usa Giuliano per definire le sessioni (e in quale fuso orario)?
+- Individua finestre operative privilegiate all'interno delle sessioni?
+- Che uso fa del range asiatico?
+- Ci sono orari in cui consiglia esplicitamente di non operare?
+
+:::key
+- Il mercato è aperto 24 ore, ma non è ugualmente operabile in tutte le ore.
+- Asiatica: laterale e costruisce un range. Londra: direzionale. New York: massima volatilità.
+- Le aperture di sessione sono i momenti tipici delle prese di liquidità.
+- Scegliere una finestra oraria fissa e rispettarla è un filtro gratuito e potentissimo.
+- Il tuo diario ti dirà, dati alla mano, in quale fascia oraria funzioni meglio.
+:::
+
+:::err
+Operare a tutte le ore perché «il mercato è aperto». La disponibilità non è un'opportunità: nelle ore a bassa attività lo spread pesa di più, i movimenti sono brevi e i falsi segnali abbondano. Molti trader migliorano più chiudendo la piattaforma in certe ore che aggiungendo qualsiasi altro filtro tecnico.
+:::
+
+[[notes:3]]
+
+[[pagebreak]]
+## SCHEDA 15 — E14. Calendario Economico
+
+[[cols:16,12,14,16,42]]
+|Video playlist|Codice|Durata|Livello|Modulo|
+|15|E14|1:09:10|Base|G - Contesto temporale|
+
+**Argomento principale.** Il calendario economico: quali sono le notizie che muovono le valute, come si legge il calendario e come si gestisce il rischio legato agli eventi macroeconomici. È l'unica lezione della playlist dedicata esplicitamente ai fattori esterni al grafico.
+
+### COS'È
+:::def Calendario economico
+È l'elenco, ordinato per data e ora, delle pubblicazioni di dati economici e degli eventi che possono influenzare i mercati: decisioni sui tassi di interesse delle banche centrali, inflazione, occupazione, discorsi dei banchieri centrali. Ogni evento è classificato per **importanza** (alta, media, bassa) e per **valuta** interessata.
+
+Ciò che muove il prezzo non è il dato in sé, ma la **differenza tra il dato pubblicato e quello atteso**: se il mercato si aspettava un certo valore e ne esce uno diverso, il riprezzamento è immediato e violento.
+:::
+
+### A COSA SERVE
+Serve a evitare di essere colpiti da un evento prevedibile. Uno stop loss non protegge come si crede durante una notizia importante: il prezzo può saltare da un livello all'altro senza passare per quelli intermedi, e l'ordine viene eseguito peggio del previsto (*slippage*).
+
+Serve anche in positivo: sapere che alle 14:30 esce un dato importante spiega perché il mercato è immobile alle 14:00, e ti evita di interpretare quella calma come assenza di interesse.
+
+### QUANDO SI USA
+- **Ogni mattina**, prima di operare: due minuti per vedere gli eventi della giornata sulle valute che segui.
+- **La domenica sera o il lunedì**, per avere il quadro della settimana.
+- Prima di lasciare una posizione aperta per molte ore o durante la notte.
+
+### COME SI USA
+1. Apri il calendario e filtra per le valute che ti interessano (per EUR/USD: euro e dollaro).
+2. Considera in via prioritaria gli eventi a impatto alto: decisioni sui tassi, inflazione, dati sull'occupazione.
+3. Segna gli orari sul grafico o su un foglio: sono le finestre di rischio della giornata.
+4. Decidi in anticipo la regola. *(Integrazione: una regola prudente e diffusa è non aprire posizioni nei 15-30 minuti prima di un evento ad alto impatto e attendere che la volatilità iniziale si esaurisca prima di rientrare.)*
+5. Se hai una posizione aperta prima della notizia, decidi prima che cosa farne: chiuderla, ridurla o accettarne consapevolmente il rischio.
+6. Dopo la notizia, aspetta che il mercato si assesti: i primi minuti sono spesso movimenti erratici in entrambe le direzioni.
+
+:::rule La regola minima sulle notizie
+Non è obbligatorio operare le notizie, ma è obbligatorio **sapere che stanno per uscire**. Essere sorpresi da un evento pubblicato con settimane di anticipo non è sfortuna: è mancata preparazione.
+:::
+
+### PERCHÉ È IMPORTANTE
+Perché è il punto in cui l'analisi tecnica incontra i suoi limiti. Il grafico più pulito del mondo può essere annullato in trenta secondi da una decisione di banca centrale. Conoscere il calendario non ti rende un analista macroeconomico: ti rende semplicemente un trader che non viene travolto da eventi noti in anticipo.
+
+### ESEMPIO PRATICO
+**XAU/USD**, mercoledì di riunione della Federal Reserve. L'oro è compresso tra 2340 e 2350 per tutta la mattina, con candele minuscole: nessuno vuole prendere posizione prima dell'annuncio.
+
+Alle 20:00 esce la decisione sui tassi: in pochi minuti il prezzo scende a 2318, risale a 2352, poi si stabilizza a 2330. Uno stop posizionato a 2335 sarebbe stato toccato, e magari eseguito a un prezzo peggiore, pur essendo l'idea di fondo corretta.
+
+La lettura corretta della mattinata non era «mercato senza interesse», ma «mercato in attesa di un evento noto». Chi aveva il calendario aperto lo sapeva alle 8 del mattino.
+
+Lo stesso vale sul **NASDAQ**, particolarmente sensibile ai dati sull'inflazione e sull'occupazione statunitensi.
+
+### COLLEGAMENTI
+- **Prima di questo:** il video 13 (sessioni), perché gli eventi cadono dentro sessioni precise, in particolare quella americana.
+- **Dopo questo:** i video 17-19 e 21-23 (strategie e backtest): un backtest che non tiene conto delle notizie sovrastima la qualità della strategia.
+- **Si collega a:** il video 16 (profilo settimanale), perché la settimana va letta sapendo quali eventi contiene.
+
+### COSA CERCARE NEL VIDEO
+- Quale calendario e quale fonte usa Giuliano?
+- Quali eventi considera davvero rilevanti e quali ignora?
+- Consiglia di non operare in prossimità delle notizie o di operarle?
+- Come gestisce le posizioni già aperte quando esce un dato importante?
+
+:::key
+- Non è il dato a muovere il prezzo, ma la differenza rispetto alle attese.
+- Gli eventi ad alto impatto vanno controllati ogni mattina, e richiedono due minuti.
+- Durante le notizie lo stop può essere eseguito a un prezzo peggiore del previsto.
+- Un mercato immobile prima di un evento non è un mercato senza interesse: è in attesa.
+- Decidi prima che cosa fare con le posizioni aperte, non mentre il prezzo si muove.
+:::
+
+:::err
+Credere che lo stop loss protegga sempre allo stesso modo. Durante un evento ad alto impatto il prezzo può saltare oltre il livello del tuo stop, che viene eseguito più lontano: la perdita reale supera quella calcolata. Chi opera in leva senza guardare il calendario prima o poi incontra questa lezione nel modo costoso.
+:::
+
+[[notes:3]]
+
+## MODULO H — CONFERME ACCESSORIE
+
+Una sola lezione (video 14), dedicata alle divergenze. La colloco a parte perché il titolo stesso dice «in breve»: è un argomento presentato in modo sintetico, quindi verosimilmente uno strumento di supporto e non un pilastro del metodo.
+
+[[pagebreak]]
+## SCHEDA 16 — E13. Divergenze in breve
+
+[[cols:16,12,14,16,42]]
+|Video playlist|Codice|Durata|Livello|Modulo|
+|14|E13|1:08:28|Intermedio|H - Conferme accessorie|
+
+**Argomento principale.** Le divergenze: situazioni in cui il prezzo e un secondo elemento di riferimento raccontano storie diverse, segnalando che il movimento in corso sta perdendo forza. L'espressione «in breve» nel titolo suggerisce una trattazione sintetica, di supporto al metodo principale.
+
+### COS'È
+:::def Divergenza
+Si ha una divergenza quando il prezzo fa un nuovo estremo — un massimo più alto o un minimo più basso — ma il riferimento con cui lo confronti **non lo conferma**.
+
+Il riferimento può essere:
+- **un indicatore** (tipicamente RSI o MACD): il prezzo fa un massimo più alto, l'indicatore fa un massimo più basso;
+- **un altro strumento correlato**: due mercati che di solito si muovono insieme smettono di farlo. Per esempio EUR/USD fa un nuovo minimo e GBP/USD no: la debolezza non è generalizzata.
+*(Integrazione: il titolo non specifica quale tipo di divergenza sia trattato nel video. In un percorso di impianto Smart Money la divergenza tra strumenti correlati è frequente quanto quella con gli indicatori: verifica quale delle due viene usata.)*
+:::
+
+Il significato è sempre lo stesso: **il movimento continua ma la spinta si sta esaurendo**.
+
+### A COSA SERVE
+Serve come **conferma aggiuntiva**, non come segnale autonomo. È utile soprattutto in due momenti: quando devi decidere se prendere un'operazione contro il movimento in corso, e quando devi decidere se chiudere una posizione già in profitto perché il movimento sta perdendo forza.
+
+### QUANDO SI USA
+- Su un estremo di struttura, dopo una presa di liquidità, per rafforzare l'ipotesi di inversione.
+- Alla fine di un movimento esteso, come segnale di esaurimento.
+- Mai in mezzo a un movimento, dove le divergenze compaiono continuamente e non significano nulla.
+
+### COME SI USA
+1. Individua prima la zona che ti interessa con gli strumenti principali: struttura, liquidità, range.
+2. Solo a quel punto guarda se esiste una divergenza.
+3. Confronta gli estremi: il prezzo fa un nuovo massimo, il riferimento no (o viceversa).
+4. Considera la divergenza come **un punto in più** nel giudizio di qualità del setup (vedi scheda 09), non come motivo sufficiente per operare.
+5. Aspetta comunque la conferma sul prezzo: una divergenza può durare a lungo mentre il prezzo continua a salire.
+
+:::rule Il posto giusto della divergenza
+La divergenza **non apre** un'operazione: la **rafforza**. Se il tuo motivo per entrare è solo la divergenza, non hai un motivo per entrare.
+:::
+
+### PERCHÉ È IMPORTANTE
+Perché è uno dei pochi strumenti che ti avvisano che la forza sta cambiando **prima** che la struttura si rompa. Usata come conferma finale, alza la qualità media delle operazioni; usata come segnale principale, è uno dei modi più rapidi per perdere denaro andando contro un trend.
+
+### ESEMPIO PRATICO
+**GBP/USD**, grafico a 1 ora. Il prezzo sale e fa massimo a 1,2810, poi ritraccia e fa un nuovo massimo a 1,2835. Sul RSI, però, il primo massimo era a 74 e il secondo a 66: il prezzo sale, l'indicatore no. Divergenza ribassista.
+
+Da sola non basta. Ma se quel secondo massimo a 1,2835 ha anche **superato di poco un massimo precedente** (presa di liquidità), si trova in **premium** rispetto al range settimanale, e la candela oraria che lo forma è una Doji, allora hai quattro elementi convergenti. La divergenza è il quarto, non il primo.
+
+Esempio di divergenza tra strumenti: **EUR/USD** fa un nuovo minimo giornaliero mentre **GBP/USD** resta sopra il suo. La debolezza non è del blocco europeo in generale, ma specifica dell'euro: informazione utile per scegliere su quale coppia operare.
+
+### COLLEGAMENTI
+- **Prima di questo:** il video 8 (momentum), di cui la divergenza è una misura indiretta; e il video 4 (liquidità), per il contesto.
+- **Dopo questo:** il video 11 (setup completo), dove la divergenza può entrare come condizione aggiuntiva.
+- **Si collega a:** il video 9 (qualità del setup): la divergenza è tipicamente uno dei criteri che alzano il punteggio di qualità.
+
+### COSA CERCARE NEL VIDEO
+- Quale tipo di divergenza usa Giuliano: con indicatore, tra strumenti correlati, o entrambe?
+- Se usa un indicatore, quale e con quali impostazioni?
+- La considera condizione necessaria, opzionale o solo illustrativa?
+- Perché la lezione è «in breve»: è un argomento marginale nel metodo?
+
+:::key
+- Divergenza = il prezzo fa un nuovo estremo, il riferimento non lo conferma.
+- Segnala esaurimento della spinta, non inversione immediata.
+- Vale solo sugli estremi e dopo un movimento esteso.
+- È una conferma aggiuntiva: non apre mai un'operazione da sola.
+- Può durare a lungo: serve sempre la conferma del prezzo.
+:::
+
+:::err
+Vendere solo perché c'è una divergenza. In un trend forte le divergenze compaiono in continuazione e il prezzo continua a salire per giorni. Chi opera le divergenze da sole finisce per vendere sistematicamente il mercato più forte: è statisticamente il modo più veloce di accumulare perdite piccole e frequenti.
+:::
+
+[[notes:3]]

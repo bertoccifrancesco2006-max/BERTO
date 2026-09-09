@@ -1,0 +1,328 @@
+# PARTE VII — GLOSSARIO A-Z
+
+Ogni voce ha tre righe: che cos'è, un esempio, perché conta.
+
+Le voci contrassegnate con **(integrazione)** non compaiono nei titoli della playlist: le trovi qui perché sono termini che incontrerai comunque studiando price action e Smart Money.
+
+## A
+
+#### Accumulazione
+**Che cos'è.** La prima fase del ciclo AMD: il prezzo si muove poco dentro un'area ristretta mentre le grandi posizioni vengono costruite.
+**Esempio.** EUR/USD tra 1,0840 e 1,0858 per tutta la notte.
+**Perché conta.** I suoi estremi sono i livelli che verranno violati nella fase di manipolazione: senza accumulazione riconosciuta non riconosci nemmeno la presa di liquidità.
+
+#### AMD (Accumulation - Manipulation - Distribution)
+**Che cos'è.** Lo schema in tre fasi con cui il denaro istituzionale costruisce e poi realizza le posizioni.
+**Esempio.** Notte laterale, discesa improvvisa alle 9 sotto il minimo, salita per tutta la mattina.
+**Perché conta.** È la chiave di lettura che spiega perché il prezzo va spesso nella direzione sbagliata prima di partire.
+
+#### Analisi multi-timeframe *(integrazione)*
+**Che cos'è.** Studiare lo stesso strumento su più unità di tempo, dal contesto ampio all'esecuzione.
+**Esempio.** Settimanale per il quadro, giornaliero per la direzione, 15 minuti per la zona, 5 minuti per l'ingresso.
+**Perché conta.** Il timeframe alto dice dove vai, il basso dice quando entri. Invertirli è l'errore di impostazione più comune.
+
+## B
+
+#### Backtest
+**Che cos'è.** L'applicazione delle regole di una strategia a dati storici, operazione per operazione.
+**Esempio.** 120 operazioni su EUR/USD in tre mesi, con la parte destra del grafico coperta.
+**Perché conta.** È l'unico modo per sapere che cosa aspettarsi, soprattutto quanto può perdere di fila la strategia.
+
+#### Bias *(integrazione)*
+**Che cos'è.** L'idea direzionale motivata con cui affronti la giornata.
+**Esempio.** «Rialzista su EUR/USD finché resta sopra 1,0800.»
+**Perché conta.** Senza bias operi in entrambe le direzioni nello stesso giorno e le operazioni si annullano tra loro.
+
+#### Break-even *(integrazione)*
+**Che cos'è.** Spostare lo stop al prezzo di ingresso, per non poter più perdere sull'operazione.
+**Esempio.** Entrato a 1,0855 con stop a 1,0830, dopo 25 pip di guadagno sposto lo stop a 1,0855.
+**Perché conta.** Protegge, ma se fatto troppo presto ti fa uscire dal normale rumore del mercato.
+
+## C
+
+#### Calendario economico
+**Che cos'è.** L'elenco degli eventi macroeconomici programmati, con orario e impatto atteso.
+**Esempio.** Decisione sui tassi della Federal Reserve, mercoledì alle 20:00.
+**Perché conta.** Ti evita di essere sorpreso da un evento noto con settimane di anticipo.
+
+#### Candela
+**Che cos'è.** La rappresentazione grafica di apertura, massimo, minimo e chiusura in un intervallo di tempo.
+**Esempio.** Una candela settimanale riassume cinque giorni in quattro numeri.
+**Perché conta.** È l'unità minima di lettura del prezzo: la sua forma dice chi ha vinto lo scontro in quell'intervallo.
+
+#### Coppia valutaria
+**Che cos'è.** Due valute quotate insieme; la prima è la base, la seconda la quotata.
+**Esempio.** EUR/USD a 1,0850: servono 1,0850 dollari per un euro.
+**Perché conta.** Ogni operazione nel Forex è sempre simultaneamente un acquisto e una vendita.
+
+#### Conferma
+**Che cos'è.** Il segnale finale, tipicamente sulla candela, che autorizza l'ingresso dopo che tutte le altre condizioni sono soddisfatte.
+**Esempio.** Doji sulla zona di interesse seguita da una candela direzionale.
+**Perché conta.** È ciò che distingue l'attesa dall'anticipazione: entrare senza conferma significa indovinare.
+
+## D
+
+#### Direzionalità Smart Money
+**Che cos'è.** La direzione dedotta dall'osservazione di dove avvengono i movimenti impulsivi e dove quelli lenti.
+**Esempio.** Salite veloci e discese lente: direzionalità rialzista, anche se il prezzo per ore scende.
+**Perché conta.** Ti dice qual è la direzione vera anche quando il movimento in corso va dall'altra parte.
+
+#### Discount
+**Che cos'è.** La metà inferiore di un range: la zona in cui il prezzo è «a sconto».
+**Esempio.** Range 18.000-18.400: sotto 18.200 il prezzo è in discount.
+**Perché conta.** Si compra in discount, non in premium: è ciò che rende lo stop stretto e l'obiettivo ampio.
+
+#### Displacement *(integrazione)*
+**Che cos'è.** Movimento improvviso e ampio che rompe la struttura, spesso subito dopo una presa di liquidità.
+**Esempio.** Tre candele a 5 minuti che riportano EUR/USD da 1,0835 a 1,0868.
+**Perché conta.** È la reazione che conferma lo scenario e crea l'imbalance in cui si entra. Nel percorso il concetto è trattato come momentum.
+
+#### Distribuzione
+**Che cos'è.** La terza fase del ciclo AMD: il movimento direzionale vero.
+**Esempio.** La salita di tutta la mattinata dopo la falsa discesa delle 9.
+**Perché conta.** È la fase che produce il guadagno, ed è quella che si perde se si entra durante la manipolazione.
+
+#### Divergenza
+**Che cos'è.** Il prezzo fa un nuovo estremo, il riferimento (indicatore o strumento correlato) non lo conferma.
+**Esempio.** GBP/USD fa un massimo più alto, l'RSI un massimo più basso.
+**Perché conta.** Segnala esaurimento della spinta. Come conferma è utile; come segnale unico è pericolosa.
+
+#### Doji
+**Che cos'è.** Candela con apertura e chiusura quasi coincidenti: equilibrio tra compratori e venditori.
+**Esempio.** Apertura e chiusura a 1,0810 con lunga ombra inferiore.
+**Perché conta.** Su una zona significativa indica che la spinta precedente si è esaurita. Altrove non significa nulla.
+
+#### Drawdown *(integrazione)*
+**Che cos'è.** La discesa del conto dal punto più alto a quello più basso successivo.
+**Esempio.** Da 5.000 a 4.600 euro: drawdown dell'8 percento.
+**Perché conta.** Determina se riuscirai a seguire la strategia. Quasi tutti abbandonano per drawdown, non per perdite singole.
+
+## E
+
+#### ERL (External Range Liquidity)
+**Che cos'è.** La liquidità che si trova agli estremi del range e oltre.
+**Esempio.** Sopra il massimo settimanale di 1,0890.
+**Perché conta.** È il bersaglio grosso: tipicamente è lì che si colloca il take profit.
+
+#### Espansione
+**Che cos'è.** Profilo di mercato in cui l'ampiezza delle candele aumenta bruscamente dopo una fase compressa.
+**Esempio.** Candela oraria da 60 pip dopo ore da 15 pip.
+**Perché conta.** Le strategie da range perdono molto in espansione: riconoscerla è un filtro difensivo.
+
+## F
+
+#### Forex
+**Che cos'è.** Il mercato di scambio delle valute, aperto 24 ore dal lunedì al venerdì.
+**Esempio.** EUR/USD, GBP/USD, e per estensione strumenti come XAU/USD.
+**Perché conta.** È il campo di gioco: capire che è decentralizzato e continuo spiega perché gli orari contano tanto.
+
+#### Forze e interessi di mercato
+**Che cos'è.** L'insieme dei soggetti che agiscono sul prezzo con motivazioni diverse: speculazione, copertura, politica monetaria, necessità commerciali.
+**Esempio.** Un'azienda che cambia valuta non guarda i grafici, ma i suoi ordini muovono il prezzo.
+**Perché conta.** Il prezzo è la risultante di interessi in conflitto, non il risultato di un disegno unico.
+
+#### FVG - Fair Value Gap *(integrazione)*
+**Che cos'è.** Il nome internazionale dell'imbalance: l'area lasciata scoperta da tre candele consecutive durante un movimento veloce.
+**Esempio.** Tra 18.120 e 18.160 sul NASDAQ, non riempita.
+**Perché conta.** È lo stesso concetto che la playlist chiama imbalance: utile saperlo per non confondersi leggendo altre fonti.
+
+## I
+
+#### Imbalance
+**Che cos'è.** Lo squilibrio lasciato da un movimento troppo veloce perché tutti gli ordini venissero eseguiti.
+**Esempio.** L'area 1,0850-1,0856 attraversata in tre candele.
+**Perché conta.** È la zona in cui è ragionevole attendere il ritorno del prezzo: cioè il punto di ingresso.
+
+#### Invalidazione
+**Che cos'è.** Il livello oltre il quale la tua lettura non è più valida.
+**Esempio.** «Rialzista finché il prezzo resta sopra 18.050.»
+**Perché conta.** Un'analisi senza livello di invalidazione non è un'analisi: è un'opinione.
+
+#### IRL (Internal Range Liquidity)
+**Che cos'è.** La liquidità interna al range: tipicamente le aree di imbalance non ancora riempite.
+**Esempio.** L'imbalance a 2334-2338 dentro il range 2320-2360.
+**Perché conta.** È il bersaglio intermedio e il punto in cui si entra, prima che il prezzo punti all'esterno.
+
+## J
+
+#### Journal (diario di trading)
+**Che cos'è.** Il registro sistematico di tutte le operazioni, con motivo, esito in R e rispetto delle regole.
+**Esempio.** 32 operazioni in un mese: 21 conformi (+6R), 11 fuori regola (-8R).
+**Perché conta.** Produce i dati con cui si migliora. Senza, si procede a sensazione per anni.
+
+## L
+
+#### Leva finanziaria
+**Che cos'è.** Il meccanismo che consente di controllare posizioni maggiori del capitale versato.
+**Esempio.** Con leva 1:30 servono circa 350 euro di margine per un mini-lotto su EUR/USD.
+**Perché conta.** Non è la leva a determinare il rischio, ma la dimensione della posizione unita alla distanza dello stop.
+
+#### Liquidità
+**Che cos'è.** La quantità di ordini disponibili a un certo livello di prezzo; si concentra sopra i massimi e sotto i minimi.
+**Esempio.** Tre massimi allineati a 1,0910: sopra c'è una massa di stop.
+**Perché conta.** Il prezzo si muove verso gli ordini. Sapere dove sono è il primo vero elemento di anticipo.
+
+#### Lotto
+**Che cos'è.** L'unità di misura della dimensione della posizione.
+**Esempio.** 0,10 lotti su EUR/USD valgono circa 1 dollaro per pip.
+**Perché conta.** Determina quanto vale in denaro ogni movimento: è la variabile che controlli davvero.
+
+## M
+
+#### Manipolazione
+**Che cos'è.** La seconda fase del ciclo AMD: movimento rapido nella direzione opposta a quella finale, che prende gli stop.
+**Esempio.** GBP/USD scende a 1,2685 sotto il minimo, poi risale e sale tutto il giorno.
+**Perché conta.** È l'evento che attiva lo scenario e fornisce il livello per lo stop loss.
+
+#### Momentum
+**Che cos'è.** La forza e la velocità del movimento, indipendentemente dalla direzione.
+**Esempio.** Corpi ampi e ombre corte: momentum forte. Candele sovrapposte: momentum debole.
+**Perché conta.** Distingue i movimenti veri da quelli finti, cioè la distribuzione dalla manipolazione.
+
+## O
+
+#### Order block *(integrazione, non presente nei titoli)*
+**Che cos'è.** L'ultima candela di direzione opposta prima di un movimento impulsivo che rompe la struttura.
+**Esempio.** L'ultima candela ribassista prima della salita che rompe il massimo.
+**Perché conta.** È un concetto vicino all'imbalance e lo incontrerai altrove: la playlist però usa esplicitamente l'imbalance.
+
+#### Overfitting *(integrazione)*
+**Che cos'è.** Regole talmente calibrate su uno storico specifico da funzionare solo su quello.
+**Esempio.** Cambiare i parametri finché anche il secondo backtest dà buoni risultati.
+**Perché conta.** È il motivo per cui esistono strategie perfette sul passato e inutili sul futuro.
+
+## P
+
+#### Pip
+**Che cos'è.** L'unità minima di movimento tradizionale di una coppia valutaria.
+**Esempio.** Da 1,0850 a 1,0851 su EUR/USD è un pip.
+**Perché conta.** È l'unità con cui misuri stop, obiettivi e rischio.
+
+#### Premium
+**Che cos'è.** La metà superiore di un range: la zona in cui il prezzo è «caro».
+**Esempio.** Sopra 1,0820 in un range 1,0750-1,0890.
+**Perché conta.** Si vende in premium. Comprare qui significa stop lontano e obiettivo vicino.
+
+#### Presa di liquidità
+**Che cos'è.** Il superamento di un livello che contiene ordini, seguito dal mancato proseguimento del movimento.
+**Esempio.** Il prezzo supera tre massimi allineati a 1,0910, arriva a 1,0925 e torna sotto 1,0900.
+**Perché conta.** È l'evento scatenante della catena operativa: senza, non c'è setup.
+
+#### Profilo di mercato
+**Che cos'è.** Il carattere del mercato in un dato momento: direzionale, laterale, in espansione, in ritracciamento, in inversione.
+**Esempio.** Lunedì laterale, martedì in espansione, mercoledì direzionale.
+**Perché conta.** Determina quale strategia ha senso oggi, o se conviene non operare.
+
+## Q
+
+#### QLT / QNT
+**Che cos'è.** Due criteri contrapposti di valutazione dei setup. Interpretazione più probabile: qualità e quantità *(da verificare nel video 9)*.
+**Esempio.** Tre operazioni con quattro condizioni su quattro, invece di quattordici con due su quattro.
+**Perché conta.** Definire il livello di selettività è ciò che separa un metodo da un'abitudine costosa.
+
+## R
+
+#### R (multiplo del rischio) *(integrazione)*
+**Che cos'è.** Unità di misura del risultato espressa in multipli del rischio iniziale.
+**Esempio.** Rischiando 50 euro e guadagnandone 100: +2R.
+**Perché conta.** Rende confrontabili operazioni fatte con capitali e strumenti diversi.
+
+#### Range operativo
+**Che cos'è.** L'intervallo di prezzo, delimitato da massimo e minimo di riferimento, entro cui svolgi l'analisi.
+**Esempio.** Range settimanale 1,0750-1,0890, metà a 1,0820.
+**Perché conta.** È il sistema di coordinate: senza, premium, discount e obiettivi non sono definibili.
+
+#### Rischio per operazione *(integrazione)*
+**Che cos'è.** La percentuale del capitale che accetti di perdere in una singola operazione.
+**Esempio.** 1 percento di 5.000 euro: 50 euro.
+**Perché conta.** Deve essere sostenibile per la peggiore serie di perdite consecutive della tua strategia.
+
+#### Ritracciamento
+**Che cos'è.** Movimento contrario alla direzione principale, all'interno di un trend.
+**Esempio.** Due giorni di salita dentro un ribasso settimanale.
+**Perché conta.** Scambiare un ritracciamento per un'inversione è l'errore direzionale più frequente.
+
+## S
+
+#### Scalping
+**Che cos'è.** Stile operativo con molte operazioni brevi e obiettivi contenuti.
+**Esempio.** Operazioni da 10-15 pip nella finestra 9:00-11:00.
+**Perché conta.** Amplifica il peso dei costi e richiede regole rapidissime e grande disciplina.
+
+#### Sessione
+**Che cos'è.** La fascia oraria in cui è attiva una grande piazza finanziaria: asiatica, europea, americana.
+**Esempio.** Il range asiatico spesso viene violato all'apertura di Londra.
+**Perché conta.** Lo stesso movimento ha significati diversi a seconda della sessione in cui avviene.
+
+#### Setup
+**Che cos'è.** L'insieme delle condizioni che devono verificarsi contemporaneamente perché un'operazione sia valida.
+**Esempio.** Contesto, presa di liquidità, momentum, imbalance in discount, conferma di candela.
+**Perché conta.** Rende le decisioni ripetibili, quindi misurabili, quindi migliorabili.
+
+#### Slippage *(integrazione)*
+**Che cos'è.** La differenza tra il prezzo atteso e quello effettivamente eseguito.
+**Esempio.** Stop a 2335 eseguito a 2331 durante una notizia.
+**Perché conta.** Rende la perdita reale superiore a quella calcolata: va messo in conto prima.
+
+#### Smart Money
+**Che cos'è.** Il denaro istituzionale: banche, fondi, grandi operatori.
+**Esempio.** Chi deve costruire una posizione enorme non può comprare tutto in una volta.
+**Perché conta.** Da questo vincolo pratico nasce lo schema AMD e l'intera logica del percorso.
+
+#### Spread
+**Che cos'è.** La differenza tra prezzo di acquisto e di vendita.
+**Esempio.** 1,0850 / 1,0851: spread di 1 pip.
+**Perché conta.** È un costo certo e immediato, e su obiettivi piccoli pesa in proporzione moltissimo.
+
+#### Stop loss *(integrazione)*
+**Che cos'è.** L'ordine che chiude l'operazione al livello che rende sbagliata la tua idea.
+**Esempio.** Sotto il minimo raggiunto durante la presa di liquidità.
+**Perché conta.** Trasforma una perdita potenzialmente illimitata in un costo pianificato.
+
+#### Struttura
+**Che cos'è.** La sequenza dei massimi e minimi rilevanti che descrive lo scheletro del movimento.
+**Esempio.** Massimi crescenti e minimi crescenti: struttura rialzista.
+**Perché conta.** È l'unico elemento che ti dice, in anticipo, quando avrai torto.
+
+#### Swing *(integrazione)*
+**Che cos'è.** Un punto di svolta rilevante del prezzo: un massimo o un minimo visibile a occhio nudo.
+**Esempio.** Il minimo a 18.050 che regge la struttura rialzista.
+**Perché conta.** Gli swing sono i mattoni della struttura e i luoghi in cui si accumula la liquidità.
+
+## T
+
+#### Take profit *(integrazione)*
+**Che cos'è.** Il livello a cui chiudi l'operazione in guadagno.
+**Esempio.** Il massimo settimanale a 1,0890, dove si trova la liquidità esterna.
+**Perché conta.** Un obiettivo deve essere un luogo dove il prezzo ha un motivo per andare, non un numero scelto a caso.
+
+#### Timeframe
+**Che cos'è.** L'unità di tempo rappresentata da ogni candela del grafico.
+**Esempio.** Settimanale, giornaliero, 1 ora, 5 minuti.
+**Perché conta.** Timeframe diversi possono mostrare direzioni opposte contemporaneamente: è normale, e va gestito con ordine.
+
+#### Trend
+**Che cos'è.** La direzione dominante, descritta dalla sequenza di massimi e minimi.
+**Esempio.** 17.200 -> 18.000 -> 17.600 -> 18.400: trend rialzista.
+**Perché conta.** Stabilisce da che lato puoi operare e riduce a metà le operazioni da considerare.
+
+#### Trend following
+**Che cos'è.** Approccio che opera a favore della direzione dominante, entrando sui ritracciamenti.
+**Esempio.** Acquistare in discount dentro un trend rialzista.
+**Perché conta.** È l'approccio con il miglior rapporto tra semplicità e affidabilità per chi inizia.
+
+## V
+
+#### Volatilità *(integrazione)*
+**Che cos'è.** L'ampiezza media dei movimenti in un dato periodo.
+**Esempio.** XAU/USD si muove in punti molto più ampi di EUR/USD.
+**Perché conta.** Determina la distanza corretta dello stop e quindi la dimensione della posizione: gli stessi «20 punti» non significano la stessa cosa su strumenti diversi.
+
+## X
+
+#### XAU/USD
+**Che cos'è.** La quotazione dell'oro in dollari.
+**Esempio.** 2340 dollari per oncia.
+**Perché conta.** È molto più volatile delle principali coppie valutarie: richiede stop più ampi e posizioni più piccole a parità di rischio.
+
+[[notes:4]]

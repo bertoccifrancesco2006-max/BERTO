@@ -1,0 +1,301 @@
+# PARTE II — LE 25 SCHEDE
+
+Questa è la parte centrale del manuale. Ogni lezione ha la sua scheda, costruita sempre con la stessa struttura, così che tu possa consultarla rapidamente anche a distanza di mesi.
+
+Le schede sono ordinate per **modulo tematico**, non per data di pubblicazione: in alto a ogni scheda trovi comunque il numero del video nella playlist originale, così puoi passare dall'uno all'altro ordine senza perderti.
+
+## Come è fatta una scheda
+
+|Sezione|Che cosa ci trovi|
+|Argomento principale|Di che cosa parla la lezione, in poche righe|
+|Cos'è|La definizione del concetto, in linguaggio semplice|
+|A cosa serve|Il problema pratico che risolve|
+|Quando si usa|In quali condizioni di mercato è utile|
+|Come si usa|Il procedimento passo per passo|
+|Perché è importante|Che cosa cambia nella tua analisi|
+|Esempio pratico|Un caso concreto su EUR/USD, GBP/USD, XAU/USD o NASDAQ|
+|Collegamenti|Che cosa studiare prima e che cosa dopo|
+|Cosa cercare nel video|Le domande a cui solo la lezione può rispondere: compilale a mano|
+|Cosa devo ricordare|I punti da fissare|
+|Errore da evitare|La trappola tipica del principiante|
+
+:::note Sugli esempi pratici
+Gli esempi con EUR/USD, GBP/USD, XAU/USD e NASDAQ sono **costruiti da me** per rendere concreto il concetto: prezzi e scenari sono verosimili ma inventati a scopo didattico, non sono operazioni reali mostrate nei video. Servono a farti visualizzare la meccanica, non a fornirti livelli da usare.
+:::
+
+## MODULO A — LE FONDAMENTA
+
+Un solo video, ma è quello che regge tutto il resto: se non sai che cosa stai comprando e vendendo, ogni concetto successivo diventa un rituale senza senso.
+
+[[pagebreak]]
+## SCHEDA 01 — E1. Introduzione al Forex
+
+[[cols:16,12,14,16,42]]
+|Video playlist|Codice|Durata|Livello|Modulo|
+|1|E1|1:04:32|Base|A - Fondamenta|
+
+**Argomento principale.** La lezione di apertura del percorso: che cos'è il mercato Forex, come funziona lo scambio tra valute, con quali strumenti si opera e con quale linguaggio. È l'unico video del percorso che non presuppone nulla, e l'unico da cui non si può prescindere.
+
+### COS'È
+Il Forex (contrazione di *Foreign Exchange*) è il mercato in cui si scambiano valute. Non esiste una sede fisica: è una rete di banche, istituzioni e broker collegati tra loro, aperta 24 ore su 24 dal lunedì mattina al venerdì sera.
+
+Ogni operazione riguarda sempre **due valute contemporaneamente**, perché una valuta ha valore solo rispetto a un'altra. Per questo si parla di *coppie*: EUR/USD significa «quanti dollari servono per comprare un euro».
+
+:::def Le parole minime per non perdersi
+- **Coppia valutaria:** due valute quotate insieme, ad esempio EUR/USD. La prima si chiama valuta *base*, la seconda valuta *quotata*.
+- **Comprare EUR/USD** significa scommettere che l'euro si rafforzi rispetto al dollaro; **venderlo** significa il contrario. Nel Forex si può guadagnare anche al ribasso: non devi possedere nulla per venderlo.
+- **Pip:** l'unità minima di movimento tradizionale di una coppia. Su EUR/USD è la quarta cifra decimale (da 1,0850 a 1,0851 è un pip).
+- **Spread:** la differenza tra prezzo di acquisto e prezzo di vendita. È il costo immediato dell'operazione: appena entri sei leggermente in perdita, ed è normale.
+- **Lotto:** la misura della posizione. Determina quanto vale ogni pip in euro o dollari, quindi quanto rischi davvero.
+- **Leva finanziaria:** il meccanismo che ti permette di controllare una posizione più grande del capitale versato. Moltiplica i guadagni e nella stessa identica misura le perdite.
+:::
+
+### A COSA SERVE
+Serve a darti il vocabolario e le regole del gioco. Senza questa base non puoi nemmeno valutare se un'operazione è sensata: sapere «dove entrare» non ha valore se non sai quanti soldi mette a rischio la dimensione della posizione che hai scelto.
+
+### QUANDO SI USA
+Sempre, ma soprattutto **prima di aprire un conto**, anche demo. Ogni volta che in una lezione successiva senti un termine e devi fermarti a pensare, sei di nuovo qui.
+
+### COME SI USA
+1. Impara a leggere una quotazione: prezzo bid, prezzo ask, spread.
+2. Impara a calcolare quanto vale un pip sulla dimensione che stai usando.
+3. Impara che cosa significa margine e leva sul tuo conto specifico.
+4. Distingui i tipi di ordine: a mercato (entri subito al prezzo attuale) e pendenti (entri solo se il prezzo raggiunge un livello scelto). *(Integrazione)*
+5. Apri una piattaforma e ripeti tutto questo su un conto demo, senza strategia, solo per prendere confidenza.
+
+### PERCHÉ È IMPORTANTE
+Perché sposta la domanda giusta. Il principiante chiede «dove entro?»; chi ha capito le fondamenta chiede «quanto rischio in euro, con quale strumento, in quale mercato e con quale costo?». Tutto il percorso «Da Base a Pro» risponde alla prima domanda; ma senza la seconda, la prima è pericolosa.
+
+### ESEMPIO PRATICO
+Su **EUR/USD** vedi la quotazione 1,0850 / 1,0851. Compri 0,10 lotti (un micro-lotto vale circa 1 dollaro per pip): entri a 1,0851 e sei già a -1 dollaro per via dello spread. Se il prezzo sale a 1,0871, hai guadagnato 20 pip, cioè circa 20 dollari; se scende a 1,0831 hai perso circa 20 dollari. Stesso movimento in pip, importi diversi se cambi la dimensione: raddoppiando i lotti raddoppi entrambi i risultati.
+
+Su **XAU/USD** (oro) e sul **NASDAQ** la meccanica è la stessa, ma il valore per punto e la volatilità sono molto diversi: 20 punti sull'oro non sono 20 pip su EUR/USD. Questo è il motivo per cui la dimensione della posizione va ricalcolata su ogni strumento.
+
+### COLLEGAMENTI
+- **Prima di questo:** nulla. È il punto di partenza assoluto.
+- **Dopo questo:** i video 2 e 3 (Smart Money e AMD), che rispondono alla domanda successiva: chi muove davvero questi prezzi.
+- **Si collega a:** il video 15 (calendario economico), perché le valute si muovono in base a tassi di interesse e dati macroeconomici; e al video 13 (sessioni), perché un mercato aperto 24 ore non è ugualmente attivo in tutte le ore.
+
+### COSA CERCARE NEL VIDEO
+Il titolo dice l'argomento ma non i dettagli. Compila tu:
+- Quali coppie o strumenti consiglia di seguire Giuliano, e quali esclude?
+- Quale piattaforma e quale tipo di broker usa nelle lezioni?
+- Consiglia una dimensione di partenza o una regola di rischio già in questa lezione?
+- Che cosa dice sulla leva finanziaria: la considera uno strumento o un pericolo?
+
+:::key
+- Il Forex è uno scambio tra due valute: si guadagna sia al rialzo che al ribasso.
+- Il pip misura il movimento, il lotto misura quanto quel movimento vale in denaro.
+- Lo spread è un costo certo e immediato, la leva è un moltiplicatore in entrambe le direzioni.
+- Il mercato è aperto 24 ore, ma «aperto» non vuol dire «buono da operare».
+- Prima di studiare qualsiasi strategia devi saper calcolare quanto stai rischiando in euro.
+:::
+
+:::err
+Confondere la leva con il rischio. Molti principianti pensano che leva alta significhi rischio alto: in realtà il rischio lo decide **la dimensione della posizione e la distanza dello stop**, non la leva in sé. La leva ti permette solo di aprire posizioni grandi con poco margine: è il tuo autocontrollo sulla dimensione che determina se sopravvivi.
+:::
+
+[[notes:3]]
+
+## MODULO B — SMART MONEY, LIQUIDITÀ E AMD
+
+Tre lezioni (video 2, 3 e 4) che rispondono a una sola domanda: **perché il prezzo si muove come si muove?** È il cuore concettuale del percorso e il punto in cui il modo di guardare il grafico cambia in modo permanente.
+
+[[pagebreak]]
+## SCHEDA 02 — E2 (1 di 2). SmartMoney / AMD
+
+[[cols:16,12,14,16,42]]
+|Video playlist|Codice|Durata|Livello|Modulo|
+|2|E2 parte 1|28:32|Base|B - Smart Money e AMD|
+
+**Argomento principale.** Introduce due idee legate tra loro: il concetto di *Smart Money*, cioè il denaro istituzionale che muove davvero i mercati, e lo schema **AMD** (Accumulation - Manipulation - Distribution) con cui quel denaro opera. È la lezione più breve del percorso (meno di mezz'ora) ed è la prima parte di un blocco unico che prosegue nel video successivo.
+
+### COS'È
+**Smart Money** è il nome che si dà agli operatori con capitali enormi: banche, fondi, istituzioni. Non è una setta segreta né un complotto: è semplicemente il fatto che chi deve movimentare centinaia di milioni non può comprare tutto in una volta, altrimenti farebbe schizzare il prezzo contro sé stesso.
+
+Da questo vincolo pratico nasce lo schema **AMD**, tre fasi che si ripetono:
+
+:::def AMD - Accumulation, Manipulation, Distribution
+- **Accumulazione (A):** il prezzo si muove poco, dentro un'area ristretta. Chi ha capitali grandi costruisce la posizione lentamente, senza farsi notare. Sul grafico è una fase noiosa e laterale.
+- **Manipolazione (M):** un movimento rapido nella direzione *sbagliata* rispetto a quella finale. Rompe l'area di accumulazione, fa scattare gli stop di chi era posizionato e attira nuovi ordini nella direzione errata. Serve a trovare la controparte necessaria per completare la posizione.
+- **Distribuzione (D):** il movimento vero, ampio e direzionale, quello che «si vede» sul grafico e che sui giornali viene spiegato con la notizia del giorno.
+:::
+
+### A COSA SERVE
+Serve a smettere di interpretare il movimento come casuale o dispettoso. Il classico «appena entro il mercato va contro di me, poi parte senza di me» smette di essere sfortuna e diventa **una fase riconoscibile e prevedibile**: quasi sempre sei entrato durante la manipolazione, nella direzione in cui la manipolazione voleva spingerti.
+
+### QUANDO SI USA
+Come chiave di lettura permanente, in qualsiasi momento della giornata e su qualsiasi timeframe. In particolare quando il prezzo:
+- è fermo da ore dentro un'area stretta (probabile accumulazione);
+- fa un movimento improvviso che rompe quell'area e subito rientra (probabile manipolazione);
+- parte deciso in una direzione dopo quel falso movimento (probabile distribuzione).
+
+### COME SI USA
+1. Individua un'area in cui il prezzo si è mosso poco e ha lasciato massimi e minimi ravvicinati: è la candidata all'accumulazione.
+2. Segna i suoi estremi: sopra e sotto ci sono gli stop degli altri, cioè il carburante della fase successiva.
+3. Aspetta che uno dei due estremi venga rotto **senza che il prezzo prosegua**: è il segnale di manipolazione.
+4. La direzione della distribuzione attesa è **opposta** a quella della manipolazione.
+5. Non anticipare: prima si osserva il ciclo completo, poi si cerca l'ingresso. *(Integrazione: le regole precise di ingresso arrivano nelle lezioni successive del percorso.)*
+
+### PERCHÉ È IMPORTANTE
+Perché ribalta l'ordine delle domande. Senza AMD guardi il grafico e chiedi «dove va?». Con AMD chiedi «in che fase siamo?». La seconda domanda ha una risposta osservabile; la prima quasi mai.
+
+### ESEMPIO PRATICO
+**GBP/USD**, giornata tipica. Dalle 2 alle 8 del mattino il prezzo oscilla tra 1,2700 e 1,2730: sei ore di noia, massimi e minimi quasi identici. Questa è la possibile **accumulazione**.
+Alle 9 il prezzo scende improvvisamente a 1,2685, buca il minimo, prende gli stop di chi era comprato e attira i venditori convinti che stia partendo un ribasso: **manipolazione**.
+Nel giro di venti minuti rientra sopra 1,2700 e nella mattinata sale fino a 1,2790: **distribuzione**. Chi ha venduto sotto 1,2690 si trova intrappolato e i suoi stop alimentano la salita.
+
+### COLLEGAMENTI
+- **Prima di questo:** video 1, per il vocabolario di base.
+- **Subito dopo:** video 3, che è la seconda parte della stessa lezione.
+- **Si collega a:** il video 4 (liquidità), che spiega *perché* la manipolazione va proprio in quel punto e non altrove; e al video 8 (momentum), che aiuta a distinguere un movimento manipolativo da uno vero.
+
+### COSA CERCARE NEL VIDEO
+- Come definisce esattamente Giuliano la fase di accumulazione: quante candele, quanta ampiezza, su quale timeframe?
+- Su quale unità di tempo osserva il ciclo AMD: giornaliero, sessione, orario?
+- Usa il termine «manipolazione» come sinonimo di presa di liquidità o li distingue?
+- Perché la lezione è divisa in due parti: che cosa lascia in sospeso qui?
+
+:::key
+- Chi muove grandi capitali non può entrare tutto in una volta: da qui nasce lo schema AMD.
+- Accumulazione = noia; Manipolazione = falso movimento; Distribuzione = movimento vero.
+- La direzione finale è tipicamente opposta a quella della manipolazione.
+- La domanda giusta non è «dove va il prezzo» ma «in quale fase siamo».
+- AMD è uno schema ricorrente, non una garanzia: descrive un comportamento frequente, non una legge.
+:::
+
+:::err
+Vedere l'AMD ovunque, a posteriori. Su un grafico già formato è facilissimo cerchiare le tre fasi e sentirsi bravi. La verifica onesta è un'altra: sapresti indicare la fase in corso **adesso**, con la candela a destra ancora aperta, e scrivere prima che cosa ti aspetti? Finché non lo fai per iscritto, non stai leggendo il mercato: lo stai raccontando dopo.
+:::
+
+[[notes:3]]
+
+[[pagebreak]]
+## SCHEDA 03 — E2 (2 di 2). SmartMoney e AMD
+
+[[cols:16,12,14,16,42]]
+|Video playlist|Codice|Durata|Livello|Modulo|
+|3|E2 parte 2|41:44|Base / Intermedio|B - Smart Money e AMD|
+
+**Argomento principale.** La seconda metà della lezione E2, più lunga della prima. Prosegue e completa il discorso su Smart Money e AMD. Il fatto che l'argomento occupi in totale settanta minuti divisi in due parti indica che è considerato una base non comprimibile del percorso.
+
+:::note Che cosa distingue le due parti
+Dal solo titolo **non è possibile sapere** come il contenuto sia diviso tra parte 1 e parte 2. La ripartizione più naturale in una lezione di questo tipo è: teoria e definizioni nella prima parte (che infatti è breve), applicazione sul grafico ed esempi nella seconda (che è lunga il doppio). Trattala come un'ipotesi, non come un dato.
+:::
+
+### COS'È
+È il passaggio dal «capire l'idea» al «vederla sul grafico». Il ciclo AMD, quando lo si osserva sul serio, non si presenta mai in forma pulita da manuale: le fasi si sovrappongono, l'accumulazione può essere lunga o brevissima, la manipolazione può avvenire su uno solo dei due lati o su entrambi.
+
+### A COSA SERVE
+Serve a costruire il **riconoscimento**, che è una competenza diversa dalla comprensione. Capire l'AMD richiede dieci minuti; riconoscerlo in tempo reale richiede settimane di osservazione. Questa è la lezione che avvia quel lavoro.
+
+### QUANDO SI USA
+Ogni volta che il grafico non è chiaro. Quando non sai se il movimento in corso è «quello buono», tornare a chiederti in quale fase del ciclo sei ti rimette in carreggiata.
+
+### COME SI USA
+1. Scegli un solo strumento e un solo orizzonte temporale (per esempio EUR/USD, grafico a 15 minuti).
+2. Ogni giorno segna le tre fasi sul grafico del giorno precedente: dove è avvenuta l'accumulazione, dove la manipolazione, dove la distribuzione.
+3. Annota i casi in cui lo schema **non** ha funzionato: sono i più istruttivi, perché ti insegnano i limiti del modello.
+4. Dopo un paio di settimane prova a marcare le fasi in diretta, prima che il movimento sia completo, e verifica a fine giornata.
+5. Solo quando la percentuale di riconoscimenti corretti è stabile passi all'operatività.
+
+### PERCHÉ È IMPORTANTE
+Perché in questa fase si forma l'abitudine mentale che regge tutto il resto del percorso: **aspettare**. Chi ha assimilato l'AMD non entra durante la manipolazione, perché ha imparato che quel movimento serve proprio ad attirarlo.
+
+### ESEMPIO PRATICO
+**XAU/USD** (oro). Il prezzo passa la mattinata tra 2340 e 2352 dollari, senza direzione: accumulazione. Alle 14:30, all'uscita di un dato macroeconomico, sale di colpo a 2361, supera di poco il massimo della mattinata e si ferma: molti comprano pensando che sia iniziata la salita. Nell'ora successiva il prezzo torna dentro l'area e poi scende fino a 2318: la manipolazione era al rialzo, la distribuzione è al ribasso. Chi ha comprato sopra 2355 alimenta la discesa quando esce dalla posizione.
+
+### COLLEGAMENTI
+- **Prima di questo:** il video 2, di cui è la continuazione diretta: non ha senso separarli.
+- **Dopo questo:** il video 4, che aggiunge il pezzo mancante, cioè **dove** si concentrano gli ordini che rendono possibile la manipolazione.
+- **Si collega a:** il video 12 (range operativo), perché l'accumulazione, quando è ben delimitata, diventa un range di lavoro; e ai video 17-23 (strategie e backtest), che sono in sostanza tentativi di trasformare questa lettura in regole ripetibili.
+
+### COSA CERCARE NEL VIDEO
+- Quali esempi grafici concreti mostra: su quali strumenti e su quali timeframe?
+- Indica un'ora del giorno in cui l'accumulazione si forma tipicamente?
+- Dà un criterio per capire se la manipolazione è finita?
+- Che cosa dice sui casi in cui lo schema fallisce?
+
+:::key
+- La teoria dell'AMD si impara in un'ora, il riconoscimento in settimane.
+- Le fasi non sono mai perfette: vanno riconosciute, non pretese.
+- I casi in cui lo schema fallisce insegnano più di quelli in cui funziona.
+- L'abitudine mentale che devi acquisire qui è aspettare la fine della manipolazione.
+- Marcare le fasi in diretta e verificare a fine giornata è l'esercizio chiave.
+:::
+
+:::err
+Saltare questa seconda parte perché «l'AMD l'ho già capito nella prima». La prima parte dà la definizione, questa dà l'occhio. È esattamente come conoscere le regole degli scacchi e credere di saper giocare.
+:::
+
+[[notes:3]]
+
+[[pagebreak]]
+## SCHEDA 04 — E3. Forze e Interessi di Mercato / Liquidità e AMD
+
+[[cols:16,12,14,16,42]]
+|Video playlist|Codice|Durata|Livello|Modulo|
+|4|E3|1:05:18|Intermedio|B - Smart Money e AMD|
+
+**Argomento principale.** La lezione che collega tre cose: le **forze e gli interessi** che agiscono sul mercato, la **liquidità** e lo schema **AMD** già visto. In pratica risponde alla domanda rimasta aperta nelle due lezioni precedenti: perché la manipolazione avviene esattamente in un certo punto del grafico e non in un altro.
+
+### COS'È
+:::def Liquidità
+La liquidità è la **quantità di ordini disponibili a un certo prezzo**: chi vuole comprare o vendere in grande quantità ha bisogno di qualcuno che stia facendo l'operazione opposta. Sul grafico la liquidità non si vede direttamente, ma si deduce: si concentra dove è ragionevole che moltissimi trader abbiano messo i loro ordini di stop, cioè **appena sopra i massimi e appena sotto i minimi evidenti**.
+:::
+
+L'espressione «forze e interessi di mercato» aggiunge la dimensione motivazionale: sul mercato non ci sono solo speculatori, ci sono anche aziende che devono cambiare valuta, banche centrali con obiettivi di politica monetaria, fondi che coprono rischi. Ognuno di questi soggetti ha un *interesse* diverso, e il prezzo è la risultante di queste forze in conflitto. *(Integrazione: il titolo nomina il concetto, la sua articolazione è mia.)*
+
+### A COSA SERVE
+Serve a trasformare l'AMD da schema descrittivo a **strumento predittivo**. Se sai che la manipolazione ha bisogno di liquidità, e sai dove la liquidità si accumula, allora puoi ipotizzare in anticipo **dove** il prezzo andrà a fare il falso movimento.
+
+### QUANDO SI USA
+- Quando vedi due o più massimi quasi allo stesso livello (o due minimi): sono un magnete, perché sopra o sotto di essi c'è una massa di stop.
+- Prima dell'apertura di una sessione importante, per marcare i livelli che il prezzo potrebbe andare a colpire.
+- Quando il prezzo si avvicina al massimo o al minimo del giorno o della settimana precedente.
+
+### COME SI USA
+1. Sul grafico segna i massimi e i minimi più evidenti delle ultime sedute: sono i punti in cui la liquidità si accumula.
+2. Presta attenzione ai **massimi o minimi allineati** (livelli quasi identici toccati più volte): sono le zone più cariche.
+3. Chiediti: se il prezzo salisse ancora un po', chi verrebbe stoppato? La risposta indica dove sta il carburante.
+4. Aspetta che il prezzo raggiunga quel livello e osserva la reazione: se lo supera e **non prosegue**, hai una presa di liquidità, cioè la M dell'AMD.
+5. Se invece lo supera e continua con forza, non era manipolazione: era continuazione. Il tuo scenario va abbandonato, non difeso.
+
+:::rule Regola operativa della liquidità
+La liquidità **presa** cambia lo scenario; la liquidità **superata con forza** lo conferma nella direzione opposta alla tua ipotesi. Prendersi il tempo di distinguere i due casi vale più di qualunque indicatore.
+:::
+
+### PERCHÉ È IMPORTANTE
+Perché ti dà il primo vero elemento di **anticipo**. Prima di questa lezione osservi ciò che è successo; dopo, sai indicare le due o tre zone che il prezzo probabilmente visiterà nelle prossime ore, indipendentemente dalla direzione finale. È il passaggio dall'inseguire il prezzo all'aspettarlo.
+
+### ESEMPIO PRATICO
+**EUR/USD.** Nelle ultime tre sedute il prezzo ha fatto massimo a 1,0910, poi a 1,0912, poi di nuovo a 1,0909: tre massimi praticamente allineati. Sopra quel livello ci sono gli stop di tutti i venditori che hanno protetto le loro posizioni, più gli ordini di acquisto di chi compra sulla rottura. È una zona ad alta liquidità.
+
+Il giorno dopo il prezzo sale fino a 1,0925, cioè oltre i tre massimi, e nel giro di poche candele torna sotto 1,0900: la liquidità sopra i massimi è stata presa e il prezzo non è riuscito a mantenere il nuovo livello. Questo è lo scenario tipico di manipolazione al rialzo seguita da distribuzione al ribasso.
+
+Se invece dopo 1,0925 il prezzo fosse salito con decisione fino a 1,0980, l'interpretazione corretta sarebbe stata l'opposta: rottura vera, non presa di liquidità.
+
+### COLLEGAMENTI
+- **Prima di questo:** video 2 e 3, altrimenti manca il concetto di manipolazione.
+- **Dopo questo:** video 5 (trend e strutture), per collocare la liquidità dentro una direzione di fondo.
+- **Si collega a:** il video 20 (IRL/ERL), che classifica la liquidità in interna ed esterna; il video 12 (range operativo), che ne definisce i confini; il video 13 (sessioni), perché le prese di liquidità tendono a concentrarsi in orari precisi.
+
+### COSA CERCARE NEL VIDEO
+- Quali tipi di liquidità distingue Giuliano e con quali nomi?
+- Considera più affidabili i massimi e minimi giornalieri, di sessione o di struttura?
+- Che cosa intende esattamente per «forze e interessi»: operatori, ordini, o entrambi?
+- Dà un criterio numerico per dire che la liquidità è stata «presa»?
+
+:::key
+- La liquidità è ciò che rende possibile la manipolazione: senza controparte non c'è movimento grande.
+- Si accumula sopra i massimi e sotto i minimi, soprattutto se allineati.
+- La domanda operativa è sempre: «se il prezzo va lì, chi viene stoppato?».
+- Presa di liquidità + mancata prosecuzione = probabile inversione; rottura con forza = continuazione.
+- Questa lezione ti dà anticipo: sai dove guardare prima che accada.
+:::
+
+:::err
+Comprare la rottura di un massimo solo perché è una rottura. È il singolo comportamento che alimenta la manipolazione: il tuo ordine di acquisto sopra il massimo è esattamente la liquidità che serve a chi sta vendendo in grande. Prima di operare su una rottura, chiediti sempre se stai comprando forza o se stai fornendo carburante.
+:::
+
+[[notes:3]]

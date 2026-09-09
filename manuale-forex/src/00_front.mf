@@ -1,0 +1,174 @@
+[[cover]]
+# INDICE
+[[toc]]
+
+# COME USARE QUESTO MANUALE
+
+Questo non è un riassunto della playlist e non è una trascrizione dei video. È un **manuale di studio**: un documento che ti spiega **che cosa sono** i concetti trattati nel percorso «Da Base a Pro», **a cosa servono**, **quando** si usano, **come** si usano e soprattutto **come si incastrano tra loro** per formare un metodo di analisi del mercato.
+
+L'obiettivo è che tu possa aprire un grafico e sapere che cosa guardare, in che ordine e perché.
+
+## Da dove arrivano le informazioni di questo manuale
+
+È fondamentale che tu lo sappia fin dalla prima pagina, perché cambia il modo in cui devi usare il documento.
+
+Il materiale di partenza che ho ricevuto è composto **solo dai titoli, dalle durate e dalle date dei 25 video**. Non ho avuto le descrizioni estese, né l'audio, né le slide, né i grafici mostrati a schermo.
+
+Di conseguenza in questo manuale convivono tre tipi di informazione, sempre distinguibili:
+
+|Marcatore|Che cosa significa|Quanto ti puoi fidare|
+|DAL TITOLO|L'argomento è dichiarato esplicitamente nel titolo del video (esempio: «Sessioni di Trading» -> il video parla di sessioni).|Certo|
+|INTEGRAZIONE|Spiegazione didattica standard del concetto, aggiunta da me perché il titolo nomina il concetto ma non lo spiega. È la definizione condivisa nel mondo del price action / Smart Money, non necessariamente la definizione usata da Giuliano.|Attendibile ma da confrontare con il video|
+|DA VERIFICARE|Dettagli che solo il video può darti: regole precise, parametri, orari esatti, percentuali, condizioni di ingresso. Qui non invento nulla: ti lascio le domande a cui rispondere mentre guardi.|Da compilare tu|
+
+:::warn Regola d'oro di questo manuale
+Dove il titolo non dice, io non invento. Se leggi una regola operativa molto precisa (un orario, una percentuale, un livello esatto), è perché **te la sto suggerendo come ipotesi di lavoro segnalata come INTEGRAZIONE**, oppure perché è una domanda aperta segnalata come DA VERIFICARE. La versione ufficiale del metodo è nei video: questo manuale ti serve per capirli, non per sostituirli.
+:::
+
+## I box che troverai nelle pagine
+
+|Box|Quando compare|
+|DEFINIZIONE|Il significato preciso di un termine tecnico. Sono i box da rileggere prima di un esame o prima di analizzare un grafico.|
+|REGOLA OPERATIVA|Una regola pratica da applicare al grafico. Ha valore di procedura, non di teoria.|
+|ERRORE DA EVITARE|L'errore tipico del principiante su quel concetto. Ogni errore evitato vale più di una strategia in più.|
+|INTEGRAZIONE DIDATTICA|Contenuto aggiunto da me, non ricavabile dal titolo del video. Da confrontare sempre con la lezione.|
+|DA RICORDARE|I punti essenziali da fissare in memoria.|
+|ATTENZIONE|Avvertenze metodologiche o di rischio.|
+
+## Come è organizzato il documento
+
+1. **Parte I — Mappa del percorso.** Che cosa contiene la playlist, in che ordine conviene guardarla, che cosa copre e che cosa non copre.
+2. **Parte II — Le 25 schede.** Una scheda per video, riordinate in ordine didattico e raggruppate in moduli tematici.
+3. **Parte III — Come si collegano tutti i concetti.** La logica completa dell'analisi, passaggio per passaggio.
+4. **Parte IV — Il percorso di studio in 5 fasi.** Che cosa guardare e in quale ordine, con obiettivi di fase.
+5. **Parte V — Checklist operativa.** Da stampare e tenere accanto al monitor.
+6. **Parte VI — Errori comuni e integrazioni.** Gli argomenti che la playlist non tratta esplicitamente ma che servono comunque (rischio, stop loss, gestione del trade), chiaramente segnalati come integrazioni.
+7. **Parte VII — Glossario A-Z, cheat sheet finale e pagine per gli appunti.**
+
+## Come studiare con questo manuale (metodo consigliato)
+
+:::rule Il metodo delle tre passate
+**Prima passata (senza grafico).** Leggi la scheda del video *prima* di guardarlo. Ti serve per sapere che cosa stai per ascoltare: capirai il triplo.
+
+**Seconda passata (con il video).** Guarda la lezione e compila a mano la sezione «Cosa cercare nel video» della scheda. Quelle risposte sono il vero valore: trasformano la teoria generica nelle regole specifiche del metodo.
+
+**Terza passata (con il grafico).** Apri il grafico e cerca il concetto almeno 10 volte in giorni diversi, senza operare. Un concetto si possiede quando lo riconosci in tempo reale, non quando lo sai spiegare.
+:::
+
+:::err L'errore che rovina il 90% dei percorsi
+Guardare tutti i 25 video di fila in una settimana, sentirsi «pronti» e aprire un conto reale. Sono più di 28 ore di lezione: senza applicazione sul grafico restano intrattenimento. Un concetto alla volta, applicato per giorni, vale più di venti concetti ascoltati una volta sola.
+:::
+
+## Avvertenza importante
+
+Questo documento è materiale di studio a uso personale. Non è consulenza finanziaria, non è una raccomandazione di investimento e non promette risultati. I titoli dei video citano percentuali di rendimento ottenute **in backtest** (cioè su dati storici): un backtest non è un risultato reale e non garantisce prestazioni future. Il trading con leva finanziaria può portare alla perdita totale del capitale.
+
+[[notes:5]]
+
+# PARTE I — MAPPA DEL PERCORSO
+
+Prima di studiare i singoli concetti serve una mappa: sapere quante lezioni ci sono, come sono distribuite, dove si trova ogni argomento e — non meno importante — che cosa il percorso **non** tratta.
+
+## I numeri della playlist
+
+|Dato|Valore|
+|Numero di lezioni|25 video (E1 - E24, con E2 diviso in due parti)|
+|Durata totale|28 ore e 20 minuti circa|
+|Durata media per lezione|circa 68 minuti|
+|Lezione più breve|E2 (1 di 2) - 28:32|
+|Lezione più lunga|E23 - Q&A e dettagli tecnici sul prezzo - 1:18:02|
+|Periodo di pubblicazione|dal 4 novembre al 17 dicembre 2024|
+|Autore|Giuliano|
+|Struttura|percorso progressivo unico, dichiarato dal titolo comune «Da Base a Pro» (DBAP)|
+
+Le date seguono un ritmo regolare (lunedì-mercoledì a novembre, fino a cinque giorni a settimana a dicembre): è la traccia di un **percorso a puntate**, non di video indipendenti. Questo è importante: significa che ogni lezione presuppone la precedente, e che saltare una puntata lascia un buco che si sente nelle successive.
+
+## La playlist in ordine originale
+
+[[cols:8,34,12,14,32]]
+|N.|Titolo|Durata|Livello|Argomento in una riga|
+|1|E1. Introduzione al Forex|1:04:32|Base|Che cos'è il Forex e come funziona|
+|2|E2 (1/2). SmartMoney / AMD|28:32|Base|Chi muove il mercato e il ciclo AMD|
+|3|E2 (2/2). SmartMoney e AMD|41:44|Base|Seconda parte dello stesso tema|
+|4|E3. Forze e Interessi di Mercato / Liquidità e AMD|1:05:18|Intermedio|Perché il prezzo si muove: liquidità|
+|5|E4. Trend e Strutture|1:06:23|Base|Leggere trend e struttura del mercato|
+|6|E5. Profili di Mercato, letture dettagliate|1:06:25|Intermedio|Riconoscere il tipo di mercato in corso|
+|7|E6. Applicazione Concetti di Trend|1:07:52|Intermedio|Mettere in pratica il trend sul grafico|
+|8|E7. Momentum e Direzionalità SM|1:06:20|Intermedio|Forza del movimento e direzione|
+|9|E8. QLT/QNT e Strategia Doji|1:06:22|Intermedio|Qualità del setup e lettura della candela|
+|10|E9. Imbalance - Premium/Discount - Trend Following|1:17:16|Intermedio|Inefficienze e prezzo caro o a sconto|
+|11|E10. SETUP COMPLETO|1:15:14|Interm./Avanz.|Tutti i pezzi uniti in un setup|
+|12|E11. RANGE OPERATIVO|1:14:47|Intermedio|Definire l'area di lavoro del prezzo|
+|13|E12. Sessioni di Trading|1:11:37|Base/Interm.|Quando operare durante la giornata|
+|14|E13. Divergenze in breve|1:08:28|Intermedio|Conferme e segnali di indebolimento|
+|15|E14. Calendario Economico|1:09:10|Base|Notizie, volatilità e rischio evento|
+|16|E15. Trading Pro per Profilo Candela (settimanale)|1:13:18|Avanzato|Lettura della candela settimanale|
+|17|E16. Strategia FX Scalping Pro - Backtest 1|1:06:26|Avanzato|Strategia intraday e prima verifica|
+|18|E17. Backtest 2 Strategia PRO|1:08:59|Avanzato|Seconda verifica storica|
+|19|E18. +18% con Scalping PRO e Trading Journal|1:14:05|Avanzato|Risultati di backtest e diario di trading|
+|20|E19. IRL > ERL / Direzionalità semplificata|1:09:47|Avanzato|Da liquidità interna a liquidità esterna|
+|21|E20. Nuova Strategia Meccanica Semplificata|1:17:46|Interm./Avanz.|Strategia a regole fisse|
+|22|E21. +4% con Strategia Meccanica, backtest settembre|1:12:23|Avanzato|Verifica mensile della strategia|
+|23|E22. +12% backtest trimestrale, Strategia Meccanica 2.0|1:15:07|Avanzato|Verifica trimestrale della versione 2.0|
+|24|E23. Q&A e Dettagli Tecnici sul Prezzo|1:18:02|Avanzato|Domande, risposte e rifiniture|
+|25|E24. FINE PERCORSO|1:14:32|-|Chiusura e sintesi del percorso|
+
+## L'ordine didattico consigliato (l'ordine di questo manuale)
+
+L'ordine della playlist è cronologico: rispecchia il calendario delle dirette, non necessariamente la strada più semplice per chi parte da zero. Riordinando per **famiglie di concetti** si ottiene un percorso più lineare, in cui ogni blocco poggia sul precedente.
+
+Le schede di questo manuale seguono quindi dieci moduli tematici:
+
+[[cols:26,44,30]]
+|Modulo|Contenuto|Video (numero di playlist)|
+|A. Fondamenta|Che cos'è il mercato e come funziona|1|
+|B. Smart Money, liquidità e AMD|Chi muove il prezzo e perché|2, 3, 4|
+|C. Trend e struttura|Direzione e scheletro del mercato|5, 7, 6, 8|
+|D. Price action e candele|Lettura fine del movimento|9, 16|
+|E. Inefficienze e posizione del prezzo|Imbalance, premium e discount|10|
+|F. Range e liquidità interna/esterna|Dove lavora il prezzo e dove va a prenderla|12, 20|
+|G. Contesto temporale|Sessioni e notizie|13, 15|
+|H. Conferme accessorie|Divergenze|14|
+|I. Setup, strategie e verifica|Setup completo, strategie, backtest, journal|11, 17, 18, 19, 21, 22, 23|
+|J. Consolidamento|Q&A e chiusura del percorso|24, 25|
+
+:::note Perché ho spostato alcune lezioni
+Tre spostamenti meritano una spiegazione, così puoi decidere se seguirli o no.
+- **Video 7 (E6, applicazione del trend) prima del video 6 (E5, profili di mercato):** applicare subito il concetto di trend appena studiato nel video 5 consolida molto più di aggiungere subito una seconda classificazione teorica.
+- **Video 16 (E15, profilo candela settimanale) accanto al video 9 (E8, lettura della candela):** sono due lezioni sullo stesso oggetto, la candela, a due gradi di difficoltà diversi. Vederle vicine chiarisce il salto di scala.
+- **Video 20 (E19, IRL/ERL) accanto al video 12 (E11, range operativo):** la liquidità interna ed esterna si definisce rispetto a un range. Studiare i due concetti insieme evita di imparare due volte la stessa idea con nomi diversi.
+Se preferisci restare fedele alle dirette, guarda pure in ordine cronologico: le schede sono numerate anche con il numero di playlist.
+:::
+
+## Che cosa la playlist copre e che cosa non copre
+
+Questa tabella è probabilmente la pagina più utile del manuale: ti dice dove hai una fonte e dove invece devi cercare altrove.
+
+[[cols:38,17,45]]
+|Argomento|Copertura|Dove si trova / nota|
+|Fondamenta del Forex|Esplicita|Video 1|
+|Struttura del mercato|Esplicita|Video 5, 6, 7|
+|Price action / lettura candele|Esplicita|Video 9, 16|
+|Liquidità|Esplicita|Video 4, e ripreso nel 20|
+|Order flow / movimento del prezzo|Esplicita|Video 8 (momentum e direzionalità), video 24 (dettagli tecnici sul prezzo)|
+|Premium e Discount|Esplicita|Video 10|
+|Manipolazione|Esplicita|Video 2, 3, 4 (la M di AMD)|
+|AMD|Esplicita|Video 2, 3, 4|
+|Imbalance (inefficienze)|Esplicita|Video 10. Il termine «FVG» non compare nei titoli: nel manuale lo tratto come sinonimo tecnico, segnalandolo|
+|Order block e zone|Non esplicita|Nessun titolo cita «order block». Ne parlo solo come integrazione, nella Parte VI|
+|Timeframe e multi-timeframe|Non esplicita nei titoli|Implicita nel video 16 (settimanale) e nelle strategie intraday. Integrazione nella Parte VI|
+|Sessioni e orari|Esplicita|Video 13|
+|Notizie e calendario economico|Esplicita|Video 15|
+|Entry e setup operativi|Esplicita|Video 11, 17, 18, 21, 22, 23|
+|Stop loss e take profit|Non esplicita|Nessun titolo li cita. Sono impliciti in ogni strategia e backtest: integrazione nella Parte VI|
+|Gestione del rischio|Parziale|I titoli citano percentuali di rendimento e il trading journal (video 19). Il resto è integrazione|
+|Gestione del trade|Non esplicita|Integrazione nella Parte VI|
+|Backtest e statistica|Esplicita e insistita|Video 17, 18, 19, 22, 23 - cinque lezioni su ventiquattro|
+|Divergenze|Esplicita|Video 14|
+|Psicologia e disciplina|Indiretta|Emerge dal journal (video 19) e dalla natura «meccanica» delle strategie (video 21)|
+
+:::key
+Cinque lezioni su venticinque sono dedicate al **backtest** e una al **trading journal**. È il segnale più forte che il titolo della playlist ti manda sul metodo: il percorso non vende un segreto, insiste sulla **verifica statistica di regole ripetibili**. Se dovessi dedurre una sola filosofia dai titoli, sarebbe questa.
+:::
+
+[[notes:4]]

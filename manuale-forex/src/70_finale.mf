@@ -1,0 +1,115 @@
+# SE DOVESSI RICORDARE SOLO QUESTO
+
+Due pagine e mezzo. Se hai poco tempo prima di aprire un grafico, leggi solo queste.
+
+## 1. L'idea di fondo del percorso
+
+Il prezzo non si muove a caso e non si muove «perché sale». Si muove **verso gli ordini**. Chi deve movimentare grandi capitali ha bisogno di controparti, e le controparti si trovano dove ci sono gli stop degli altri: sopra i massimi e sotto i minimi evidenti.
+
+Da qui discende tutto:
+- il mercato accumula in silenzio (**A**);
+- poi va a prendere gli ordini nella direzione sbagliata (**M**);
+- e infine si muove davvero (**D**).
+
+Il tuo lavoro non è indovinare la direzione. È **riconoscere in quale fase ti trovi** e agire solo quando la fase di manipolazione è finita.
+
+## 2. Le sette domande, nell'ordine
+
+:::flow
+CHE ORA È E CHE COSA ESCE OGGI? | sessione e calendario
+
+QUAL È LA DIREZIONE DEL TIMEFRAME ALTO? | struttura e trend
+
+QUAL È IL RANGE E DOVE SONO DENTRO? | premium o discount
+
+DOVE SONO GLI ORDINI DEGLI ALTRI? | liquidità interna ed esterna
+
+È GIÀ STATA PRESA LA LIQUIDITÀ? | l'evento scatenante
+
+LA REAZIONE HA AVUTO FORZA? | momentum e imbalance
+
+C'È LA CONFERMA NELLA ZONA? | la candela, il grilletto
+:::
+
+Sette sì: si valuta l'ingresso. Un solo no: si aspetta.
+
+## 3. Le dieci frasi da tenere a mente
+
+1. **Il prezzo va dove ci sono gli ordini**, non dove ti sembra ragionevole che vada.
+2. **La domanda giusta non è «dove va» ma «in che fase siamo».**
+3. **Una rottura senza forza è quasi sempre una trappola.** Aspetta il rientro, non la rottura.
+4. **Si compra a sconto e si vende a premio**, sempre nella direzione della struttura.
+5. **Il timeframe alto dice dove vai, il basso dice quando entri.** Se li inverti, entri con precisione nella direzione sbagliata.
+6. **Un'analisi senza livello di invalidazione è un'opinione.** Scrivi sempre: «rialzista finché resta sopra X».
+7. **Lo stop lo decide il grafico, la dimensione della posizione la decidi tu.** Mai il contrario.
+8. **Se manca un anello della catena, l'operazione non si fa.** Non esistono setup «quasi validi».
+9. **Decisione e risultato sono cose diverse.** Un'operazione perfetta può perdere; una fuori regola può guadagnare, ed è la più pericolosa.
+10. **Senza diario non c'è miglioramento**, solo sensazioni che cambiano con l'umore.
+
+## 4. La catena, in dieci parole
+
+Struttura. Range. Liquidità. Presa. Forza. Zona. Conferma. Ingresso. Stop. Obiettivo.
+
+Se davanti al grafico ti perdi, ripeti questa sequenza dall'inizio: la posizione in cui ti blocchi indica esattamente che cosa non hai ancora osservato.
+
+[[pagebreak]]
+## 5. La tabella da appendere
+
+[[cols:26,37,37]]
+|Situazione|Che cosa fare|Che cosa NON fare|
+|Mercato laterale e compresso|Aspettare, tracciare gli estremi|Operare le micro-rotture|
+|Il prezzo rompe un massimo con forza|Considerare continuazione|Vendere «perché è troppo alto»|
+|Il prezzo rompe un massimo e rientra subito|Cercare l'inversione: è una presa di liquidità|Comprare la rottura|
+|Il prezzo è nella metà alta del range|Cercare vendite, non acquisti|Comprare perché «sta salendo»|
+|Movimento veloce già avvenuto|Aspettare il ritorno nell'imbalance|Inseguire a mercato|
+|La zona viene attraversata senza reazione|Abbandonare lo scenario|Aggiungere posizione o allargare lo stop|
+|Notizia ad alto impatto tra 20 minuti|Restare fuori|Entrare «tanto ho lo stop»|
+|Due perdite consecutive nella giornata|Chiudere la piattaforma|Raddoppiare per recuperare|
+|Operazione in guadagno che rallenta|Seguire il piano deciso prima|Improvvisare una nuova gestione|
+|Setup con tre condizioni su quattro|Non operare|Operare «perché è quasi tutto a posto»|
+
+## 6. I numeri da conoscere del proprio metodo
+
+Se non sai rispondere a queste cinque domande, non conosci ancora la tua strategia:
+
+[] Quante operazioni produce in un mese?
+[] Qual è la sua percentuale di successo?
+[] Qual è il rapporto rischio/rendimento medio?
+[] Qual è la peggiore serie di perdite consecutive registrata?
+[] Quanto rischio per operazione, e qual è il mio limite di perdita mensile?
+
+:::key L'ultima cosa
+Il percorso «Da Base a Pro» dedica cinque lezioni su venticinque al backtest e una al diario di trading. È il messaggio più forte dell'intera playlist: **non esiste un segreto, esiste un procedimento**. Scrivi le regole, verificale, misurale, correggine una alla volta, ripeti.
+
+Chi cerca la strategia perfetta continua a cambiare metodo. Chi impara il procedimento smette di cercarla.
+:::
+
+[[pagebreak]]
+# PAGINE PER GLI APPUNTI
+
+Usa queste pagine per le risposte alle sezioni «Cosa cercare nel video» delle schede: sono le informazioni che solo le lezioni possono darti, e sono la parte più preziosa di questo manuale una volta compilata.
+
+## Le mie regole in una pagina
+
+Strumenti, orari, condizioni di ingresso, stop, obiettivo, rischio per operazione, limite di perdita.
+
+[[notes:22]]
+
+[[pagebreak]]
+## Le risposte trovate nei video
+
+Concetto, lezione, che cosa dice esattamente Giuliano.
+
+[[notes:26]]
+
+[[pagebreak]]
+## I miei errori ricorrenti e i rimedi
+
+Da rileggere ogni domenica, insieme al diario.
+
+[[notes:26]]
+
+[[pagebreak]]
+## Appunti liberi
+
+[[notes:26]]
