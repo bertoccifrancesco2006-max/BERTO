@@ -49,6 +49,18 @@
       <div class="card kpi"><span class="muted">Spese del mese</span><strong id="k-out" class="neg"></strong></div>
       <div class="card kpi"><span class="muted">Risparmio del mese</span><strong id="k-save"></strong></div>
     </div>
+    <div class="card">
+      <h2>Obiettivo</h2>
+      <form id="goal-form" class="goal-form">
+        <input id="goal-target" type="number" step="0.01" min="1" placeholder="Obiettivo patrimonio €" required>
+        <input id="goal-date" type="date" required aria-label="Scadenza">
+        <button class="btn" type="submit">Salva</button>
+      </form>
+      <div id="goal-info" hidden>
+        <div class="bar"><div id="goal-fill"></div></div>
+        <p id="goal-text" class="muted"></p>
+      </div>
+    </div>
     <div class="card"><h2>Andamento del patrimonio</h2><div class="chart"><canvas id="ch-history"></canvas></div></div>
     <div class="grid2">
       <div class="card"><h2>Patrimonio per sezione</h2><div class="chart"><canvas id="ch-assets"></canvas></div></div>

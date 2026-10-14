@@ -41,6 +41,11 @@ th, td { padding: 8px 6px; border-bottom: 1px solid var(--line); text-align: lef
 th { color: var(--muted); font-weight: 500; font-size: 13px; }
 .r { text-align: right; }
 
+.goal-form { display: flex; gap: 10px; flex-wrap: wrap; }
+.goal-form input { flex: 1; min-width: 160px; }
+.bar { height: 10px; border-radius: 99px; background: var(--line); margin-top: 14px; overflow: hidden; }
+#goal-fill { height: 100%; width: 0; background: var(--accent); transition: width .4s; }
+
 .asset { display: grid; grid-template-columns: 1fr 140px auto; gap: 10px; align-items: center; padding: 8px 0; border-top: 1px solid var(--line); }
 
 .pos { color: var(--pos); } .neg { color: var(--neg); }

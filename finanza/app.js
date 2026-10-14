@@ -59,12 +59,13 @@ const store = CLOUD
 let tx = [];
 let assets = [];
 let snapshots = [];
+let goals = [];
 let charts = {};
 
 async function refresh(saveSnapshot = false) {
   [tx, assets] = await Promise.all([store.list("transactions"), store.list("assets")]);
   if (saveSnapshot) await store.snapshot({ date: today(), total: sum(assets, "value") });
-  snapshots = await store.list("snapshots");
+  [snapshots, goals] = await Promise.all([store.list("snapshots"), store.list("goals")]);
   render();
 }
 
@@ -112,6 +113,8 @@ function renderDashboard() {
   $("#k-save").textContent = eur.format(save);
   $("#k-save").className = signClass(save);
 
+  renderGoal(net);
+
   const keys = Object.keys(SEZIONI);
   setChart("ch-assets", {
     type: "doughnut",
@@ -127,9 +130,12 @@ function renderDashboard() {
     type: "line",
     data: {
       labels: hist.map((h) => h.date),
-      datasets: [{ label: "Patrimonio netto", data: hist.map((h) => Number(h.total)), borderColor: "#4f46e5", backgroundColor: "rgba(79,70,229,.12)", fill: true, tension: 0.25 }],
+      datasets: [
+        { label: "Patrimonio netto", data: hist.map((h) => Number(h.total)), borderColor: "#4f46e5", backgroundColor: "rgba(79,70,229,.12)", fill: true, tension: 0.25 },
+        ...(goals[0] ? [{ label: "Obiettivo", data: hist.map(() => Number(goals[0].target)), borderColor: "#f59e0b", borderDash: [6, 6], pointRadius: 0, fill: false }] : []),
+      ],
     },
-    options: { maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { label: (c) => eur.format(c.parsed.y) } } } },
+    options: { maintainAspectRatio: false, plugins: { legend: { display: !!goals[0] }, tooltip: { callbacks: { label: (c) => eur.format(c.parsed.y) } } } },
   });
 
   const months = [-5, -4, -3, -2, -1, 0].map(monthKey);
@@ -145,6 +151,25 @@ function renderDashboard() {
     },
     options: { maintainAspectRatio: false, scales: { y: { beginAtZero: true } } },
   });
+}
+
+function renderGoal(net) {
+  const g = goals[0];
+  $("#goal-info").hidden = !g;
+  if (!g) return;
+  const target = Number(g.target);
+  $("#goal-target").value = target;
+  $("#goal-date").value = g.deadline;
+  const pct = Math.max(0, Math.min(100, Math.round((net / target) * 100)));
+  $("#goal-fill").style.width = pct + "%";
+  const missing = target - net;
+  const days = Math.ceil((new Date(g.deadline) - new Date()) / 864e5);
+  let text = `${pct}% · mancano ${eur.format(missing)}`;
+  if (missing <= 0) text = "🎯 Obiettivo raggiunto!";
+  else if (days <= 0) text += " · scadenza passata";
+  else if (days < 30) text += ` · scade tra ${days} giorni`;
+  else text += ` · servono ${eur.format(missing / (days / 30.44))}/mese`;
+  $("#goal-text").textContent = text;
 }
 
 function renderMovimenti() {
@@ -227,6 +252,16 @@ function init() {
       $("#as-name").value = "";
       $("#as-value").value = "";
       await refresh(true);
+    });
+  });
+
+  $("#goal-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    run(async () => {
+      const row = { target: Number($("#goal-target").value), deadline: $("#goal-date").value };
+      if (goals[0]) await store.set("goals", goals[0].id, row);
+      else await store.add("goals", row);
+      await refresh();
     });
   });
 
