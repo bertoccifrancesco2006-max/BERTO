@@ -21,11 +21,24 @@ create table assets (
   value      numeric(14,2) not null
 );
 
+-- Storico patrimonio netto: un punto al giorno, salvato dall'app ad ogni modifica.
+create table snapshots (
+  id         uuid primary key default gen_random_uuid(),
+  user_id    uuid not null default auth.uid() references auth.users on delete cascade,
+  created_at timestamptz not null default now(),
+  date       date not null,
+  total      numeric(14,2) not null,
+  unique (user_id, date)
+);
+
 -- Ogni utente vede e modifica solo le proprie righe.
 alter table transactions enable row level security;
 alter table assets enable row level security;
+alter table snapshots enable row level security;
 
 create policy "own rows" on transactions for all
   using (auth.uid() = user_id) with check (auth.uid() = user_id);
 create policy "own rows" on assets for all
+  using (auth.uid() = user_id) with check (auth.uid() = user_id);
+create policy "own rows" on snapshots for all
   using (auth.uid() = user_id) with check (auth.uid() = user_id);

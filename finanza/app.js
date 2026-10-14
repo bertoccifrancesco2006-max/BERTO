@@ -43,20 +43,28 @@ const store = CLOUD
         const { error } = await sb.from(t).delete().eq("id", id);
         if (error) throw error;
       },
+      async snapshot(row) {
+        const { error } = await sb.from("snapshots").upsert(row, { onConflict: "user_id,date" });
+        if (error) throw error;
+      },
     }
   : {
       async list(t) { return local.read(t); },
       async add(t, row) { local.write(t, [...local.read(t), { id: crypto.randomUUID(), ...row }]); },
       async set(t, id, patch) { local.write(t, local.read(t).map((r) => (r.id === id ? { ...r, ...patch } : r))); },
       async del(t, id) { local.write(t, local.read(t).filter((r) => r.id !== id)); },
+      async snapshot(row) { local.write("snapshots", [...local.read("snapshots").filter((r) => r.date !== row.date), { id: crypto.randomUUID(), ...row }]); },
     };
 
 let tx = [];
 let assets = [];
+let snapshots = [];
 let charts = {};
 
-async function refresh() {
+async function refresh(saveSnapshot = false) {
   [tx, assets] = await Promise.all([store.list("transactions"), store.list("assets")]);
+  if (saveSnapshot) await store.snapshot({ date: today(), total: sum(assets, "value") });
+  snapshots = await store.list("snapshots");
   render();
 }
 
@@ -112,6 +120,16 @@ function renderDashboard() {
       datasets: [{ data: keys.map((k) => Math.max(0, sum(assets.filter((a) => a.section === k), "value"))), backgroundColor: ["#f59e0b", "#3b82f6", "#10b981"] }],
     },
     options: { maintainAspectRatio: false, plugins: { tooltip: { callbacks: { label: (c) => `${c.label}: ${eur.format(c.parsed)}` } } } },
+  });
+
+  const hist = [...snapshots].sort((a, b) => a.date.localeCompare(b.date));
+  setChart("ch-history", {
+    type: "line",
+    data: {
+      labels: hist.map((h) => h.date),
+      datasets: [{ label: "Patrimonio netto", data: hist.map((h) => Number(h.total)), borderColor: "#4f46e5", backgroundColor: "rgba(79,70,229,.12)", fill: true, tension: 0.25 }],
+    },
+    options: { maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { label: (c) => eur.format(c.parsed.y) } } } },
   });
 
   const months = [-5, -4, -3, -2, -1, 0].map(monthKey);
@@ -208,7 +226,7 @@ function init() {
       });
       $("#as-name").value = "";
       $("#as-value").value = "";
-      await refresh();
+      await refresh(true);
     });
   });
 
@@ -216,12 +234,12 @@ function init() {
     const txId = e.target.dataset.delTx;
     const asId = e.target.dataset.delAsset;
     if (txId && confirm("Eliminare questo movimento?")) run(async () => { await store.del("transactions", txId); await refresh(); });
-    if (asId && confirm("Eliminare questa voce?")) run(async () => { await store.del("assets", asId); await refresh(); });
+    if (asId && confirm("Eliminare questa voce?")) run(async () => { await store.del("assets", asId); await refresh(true); });
   });
 
   document.addEventListener("change", (e) => {
     const id = e.target.dataset.setAsset;
-    if (id && e.target.value !== "") run(async () => { await store.set("assets", id, { value: Number(e.target.value) }); await refresh(); });
+    if (id && e.target.value !== "") run(async () => { await store.set("assets", id, { value: Number(e.target.value) }); await refresh(true); });
   });
 }
 
