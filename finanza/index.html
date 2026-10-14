@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finanza — Contabilità personale</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.0/dist/umd/supabase.min.js"></script>
+  <script src="config.js"></script>
+</head>
+<body>
+
+<!-- LOGIN (solo modalità cloud) -->
+<main id="login" class="login" hidden>
+  <form id="login-form" class="card">
+    <h1>Finanza</h1>
+    <p class="muted">Accedi per vedere i tuoi dati.</p>
+    <input id="email" type="email" placeholder="Email" required autocomplete="email">
+    <input id="password" type="password" placeholder="Password (min 6 caratteri)" required minlength="6" autocomplete="current-password">
+    <div class="row">
+      <button type="submit" class="btn">Accedi</button>
+      <button type="button" class="btn ghost" id="signup">Registrati</button>
+    </div>
+    <p id="login-msg" class="msg"></p>
+  </form>
+</main>
+
+<!-- APP -->
+<div id="app" hidden>
+  <header class="header">
+    <strong class="logo">Finanza</strong>
+    <nav class="nav">
+      <button class="nav-btn active" data-view="dashboard">Dashboard</button>
+      <button class="nav-btn" data-view="movimenti">Movimenti</button>
+      <button class="nav-btn" data-view="patrimonio">Patrimonio</button>
+    </nav>
+    <span class="muted small" id="mode"></span>
+    <button class="btn ghost small" id="logout" hidden>Esci</button>
+  </header>
+
+  <p id="msg" class="msg wrap"></p>
+
+  <!-- DASHBOARD -->
+  <section id="view-dashboard" class="wrap">
+    <div class="kpis">
+      <div class="card kpi"><span class="muted">Patrimonio netto</span><strong id="k-net"></strong></div>
+      <div class="card kpi"><span class="muted">Entrate del mese</span><strong id="k-in" class="pos"></strong></div>
+      <div class="card kpi"><span class="muted">Spese del mese</span><strong id="k-out" class="neg"></strong></div>
+      <div class="card kpi"><span class="muted">Risparmio del mese</span><strong id="k-save"></strong></div>
+    </div>
+    <div class="grid2">
+      <div class="card"><h2>Patrimonio per sezione</h2><div class="chart"><canvas id="ch-assets"></canvas></div></div>
+      <div class="card"><h2>Entrate vs spese (6 mesi)</h2><div class="chart"><canvas id="ch-months"></canvas></div></div>
+    </div>
+  </section>
+
+  <!-- MOVIMENTI -->
+  <section id="view-movimenti" class="wrap" hidden>
+    <form id="tx-form" class="card form">
+      <h2>Nuovo movimento</h2>
+      <select id="tx-type"><option value="spesa">Spesa</option><option value="entrata">Entrata</option></select>
+      <select id="tx-cat" required></select>
+      <input id="tx-amount" type="number" step="0.01" min="0.01" placeholder="Importo €" required>
+      <input id="tx-date" type="date" required>
+      <input id="tx-note" type="text" placeholder="Nota (opzionale)" maxlength="200">
+      <button class="btn" type="submit">Aggiungi</button>
+    </form>
+    <div class="card">
+      <div class="row between">
+        <h2>Elenco</h2>
+        <input id="tx-month" type="month" aria-label="Mese">
+      </div>
+      <p class="muted">Entrate <strong class="pos" id="m-in"></strong> · Spese <strong class="neg" id="m-out"></strong> · Saldo <strong id="m-bal"></strong></p>
+      <table>
+        <thead><tr><th>Data</th><th>Categoria</th><th>Nota</th><th class="r">Importo</th><th></th></tr></thead>
+        <tbody id="tx-body"></tbody>
+      </table>
+      <p id="tx-empty" class="muted" hidden>Nessun movimento in questo mese.</p>
+    </div>
+  </section>
+
+  <!-- PATRIMONIO -->
+  <section id="view-patrimonio" class="wrap" hidden>
+    <form id="as-form" class="card form">
+      <h2>Nuova voce di patrimonio</h2>
+      <select id="as-section"></select>
+      <select id="as-type"></select>
+      <input id="as-name" type="text" placeholder="Nome (es. Fineco, Bitcoin)" required maxlength="80">
+      <input id="as-value" type="number" step="0.01" placeholder="Valore € (debito: -)" required>
+      <button class="btn" type="submit">Aggiungi</button>
+    </form>
+    <div id="as-sections"></div>
+  </section>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
