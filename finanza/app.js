@@ -97,9 +97,22 @@ function totalsOf(month) {
   };
 }
 
+const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+
 function setChart(id, config) {
   if (charts[id]) charts[id].destroy();
-  if (window.Chart) charts[id] = new Chart($("#" + id), config);
+  if (!window.Chart) return;
+  Chart.defaults.color = css("--muted");
+  Chart.defaults.borderColor = css("--line");
+  Chart.defaults.font.family = getComputedStyle(document.body).fontFamily;
+  charts[id] = new Chart($("#" + id), config);
+}
+
+function gradient(ctx, area, color) {
+  const g = ctx.createLinearGradient(0, area.top, 0, area.bottom);
+  g.addColorStop(0, color + "66");
+  g.addColorStop(1, color + "00");
+  return g;
 }
 
 function renderDashboard() {
@@ -120,9 +133,9 @@ function renderDashboard() {
     type: "doughnut",
     data: {
       labels: keys.map((k) => SEZIONI[k].label),
-      datasets: [{ data: keys.map((k) => Math.max(0, sum(assets.filter((a) => a.section === k), "value"))), backgroundColor: ["#f59e0b", "#3b82f6", "#10b981"] }],
+      datasets: [{ data: keys.map((k) => Math.max(0, sum(assets.filter((a) => a.section === k), "value"))), backgroundColor: [css("--warn"), css("--accent2"), css("--pos")], borderColor: css("--card"), borderWidth: 3 }],
     },
-    options: { maintainAspectRatio: false, plugins: { tooltip: { callbacks: { label: (c) => `${c.label}: ${eur.format(c.parsed)}` } } } },
+    options: { maintainAspectRatio: false, cutout: "68%", plugins: { legend: { position: "bottom", labels: { usePointStyle: true } }, tooltip: { callbacks: { label: (c) => `${c.label}: ${eur.format(c.parsed)}` } } } },
   });
 
   const hist = [...snapshots].sort((a, b) => a.date.localeCompare(b.date));
@@ -131,11 +144,11 @@ function renderDashboard() {
     data: {
       labels: hist.map((h) => h.date),
       datasets: [
-        { label: "Patrimonio netto", data: hist.map((h) => Number(h.total)), borderColor: "#4f46e5", backgroundColor: "rgba(79,70,229,.12)", fill: true, tension: 0.25 },
-        ...(goals[0] ? [{ label: "Obiettivo", data: hist.map(() => Number(goals[0].target)), borderColor: "#f59e0b", borderDash: [6, 6], pointRadius: 0, fill: false }] : []),
+        { label: "Patrimonio netto", data: hist.map((h) => Number(h.total)), borderColor: css("--accent"), backgroundColor: (c) => (c.chart.chartArea ? gradient(c.chart.ctx, c.chart.chartArea, css("--accent")) : "transparent"), borderWidth: 3, pointRadius: 3, pointBackgroundColor: css("--accent"), fill: true, tension: 0.35 },
+        ...(goals[0] ? [{ label: "Obiettivo", data: hist.map(() => Number(goals[0].target)), borderColor: css("--warn"), borderDash: [6, 6], pointRadius: 0, fill: false }] : []),
       ],
     },
-    options: { maintainAspectRatio: false, plugins: { legend: { display: !!goals[0] }, tooltip: { callbacks: { label: (c) => eur.format(c.parsed.y) } } } },
+    options: { maintainAspectRatio: false, plugins: { legend: { display: !!goals[0], labels: { usePointStyle: true } } , tooltip: { callbacks: { label: (c) => eur.format(c.parsed.y) } } } },
   });
 
   const months = [-5, -4, -3, -2, -1, 0].map(monthKey);
@@ -145,11 +158,11 @@ function renderDashboard() {
     data: {
       labels: months,
       datasets: [
-        { label: "Entrate", data: data.map((d) => d.entrate), backgroundColor: "#10b981" },
-        { label: "Spese", data: data.map((d) => d.spese), backgroundColor: "#ef4444" },
+        { label: "Entrate", data: data.map((d) => d.entrate), backgroundColor: css("--pos"), borderRadius: 6 },
+        { label: "Spese", data: data.map((d) => d.spese), backgroundColor: css("--neg"), borderRadius: 6 },
       ],
     },
-    options: { maintainAspectRatio: false, scales: { y: { beginAtZero: true } } },
+    options: { maintainAspectRatio: false, plugins: { legend: { labels: { usePointStyle: true } } }, scales: { y: { beginAtZero: true } } },
   });
 }
 

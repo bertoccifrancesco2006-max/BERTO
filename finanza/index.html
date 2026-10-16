@@ -31,9 +31,9 @@
   <header class="header">
     <strong class="logo">Finanza</strong>
     <nav class="nav">
-      <button class="nav-btn active" data-view="dashboard">Dashboard</button>
-      <button class="nav-btn" data-view="movimenti">Movimenti</button>
-      <button class="nav-btn" data-view="patrimonio">Patrimonio</button>
+      <button class="nav-btn active" data-view="dashboard"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg><span>Dashboard</span></button>
+      <button class="nav-btn" data-view="movimenti"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h13M7 7l3-3M7 7l3 3M17 17H4M17 17l-3-3M17 17l-3 3"/></svg><span>Movimenti</span></button>
+      <button class="nav-btn" data-view="patrimonio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg><span>Patrimonio</span></button>
     </nav>
     <span class="muted small" id="mode"></span>
     <button class="btn ghost small" id="logout" hidden>Esci</button>
@@ -44,7 +44,7 @@
   <!-- DASHBOARD -->
   <section id="view-dashboard" class="wrap">
     <div class="kpis">
-      <div class="card kpi"><span class="muted">Patrimonio netto</span><strong id="k-net"></strong></div>
+      <div class="card kpi hero"><span class="muted">Patrimonio netto</span><strong id="k-net"></strong></div>
       <div class="card kpi"><span class="muted">Entrate del mese</span><strong id="k-in" class="pos"></strong></div>
       <div class="card kpi"><span class="muted">Spese del mese</span><strong id="k-out" class="neg"></strong></div>
       <div class="card kpi"><span class="muted">Risparmio del mese</span><strong id="k-save"></strong></div>
