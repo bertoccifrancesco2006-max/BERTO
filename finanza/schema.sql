@@ -20,7 +20,9 @@ create table assets (
   name       text not null,
   value      numeric(14,2) not null,
   -- solo per la sezione 'debiti': se true pesa sul patrimonio netto (debito = meno, credito = più)
-  counted    boolean not null default true
+  counted    boolean not null default true,
+  -- solo per 'debiti': conto/investimento da cui arrivano (debito) o a cui vanno (credito) i soldi
+  source_id  uuid references assets(id) on delete set null
 );
 
 -- Conto (contanti/banca) a cui è collegato il movimento: l'app ne aggiorna il saldo.
@@ -65,3 +67,4 @@ create policy "own rows" on goals for all
 -- alter table assets drop constraint assets_section_check;
 -- alter table assets add constraint assets_section_check check (section in ('contanti', 'banche', 'investimenti', 'debiti'));
 -- alter table assets add column counted boolean not null default true;
+-- alter table assets add column source_id uuid references assets(id) on delete set null;

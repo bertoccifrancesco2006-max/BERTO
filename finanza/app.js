@@ -222,14 +222,20 @@ function renderMovimenti() {
     </tr>`).join("");
 }
 
+function sourceLabel(a) {
+  const src = a.section === "debiti" && assets.find((x) => x.id === a.source_id);
+  return src ? ` · ${a.type === "Debito" ? "ricevuto su" : "prestato da"} ${esc(src.name)}` : "";
+}
+
 function renderPatrimonio() {
+  fillFrom();
   $("#as-sections").innerHTML = Object.entries(SEZIONI).map(([key, s]) => {
     const rows = assets.filter((a) => a.section === key);
     const tot = netTotal(rows);
     return `<div class="card">
       <div class="row between"><h2>${s.label}</h2><strong class="${signClass(tot)}">${eur.format(tot)}</strong></div>
       ${rows.length ? rows.map((a) => `<div class="asset">
-        <div><strong>${esc(a.name)}</strong><br><span class="muted small">${esc(a.type)}</span>${key === "debiti" ? `<label class="check small"><input type="checkbox" data-count-asset="${esc(a.id)}" ${a.counted === false ? "" : "checked"}> Conta nel patrimonio</label>` : ""}</div>
+        <div><strong>${esc(a.name)}</strong><br><span class="muted small">${esc(a.type)}${sourceLabel(a)}</span>${key === "debiti" ? `<label class="check small"><input type="checkbox" data-count-asset="${esc(a.id)}" ${a.counted === false ? "" : "checked"}> Conta nel patrimonio</label>` : ""}</div>
         <input type="number" step="0.01" value="${Number(a.value)}" data-set-asset="${esc(a.id)}" aria-label="Valore ${esc(a.name)}">
         <button class="btn ghost small" data-del-asset="${esc(a.id)}" aria-label="Elimina">✕</button>
       </div>`).join("") : `<p class="muted">Nessuna voce.</p>`}
@@ -257,8 +263,11 @@ function toggleTxMode() {
   $("#tx-who").placeholder = $("#tx-type").value === "credito" ? "A chi hai prestato (es. Mario)" : "Da chi hai ricevuto (es. Mario)";
   $("#tx-cat").required = !debt;
   $("#tx-date").required = !debt;
+  $("#tx-hint").hidden = !debt;
+  $("#tx-hint").textContent = debtHint($("#tx-type").value);
   if (debt) $("#tx-newcat").hidden = true;
   else fillCats();
+  fillAccounts();
 }
 
 function fillCats(selected) {
@@ -276,35 +285,65 @@ function adaptAssetName() {
   $("#as-name").required = !cash;
   const debt = $("#as-section").value === "debiti";
   $("#as-name").placeholder = cash ? "Nota (opzionale)" : debt ? "Nome (es. Mario)" : "Nome (es. Fineco, Bitcoin)";
-  $("#as-counted-wrap").hidden = !debt;
+  $("#as-counted-wrap").hidden = $("#as-from").hidden = $("#as-hint").hidden = !debt;
+  $("#as-hint").textContent = debtHint($("#as-type").value);
   $("#as-value").min = debt ? "0.01" : "";
   $("#as-value").placeholder = debt ? "Importo €" : "Valore € (debito: -)";
 }
 
-// conti selezionabili: contanti e banche
+// conti selezionabili, raggruppati per sezione; il tipo si mostra solo per distinguere nomi uguali
+function accountOptions(sections, noneLabel) {
+  const accs = assets.filter((a) => sections.includes(a.section));
+  const opt = (a) => `<option value="${esc(a.id)}">${esc(accs.filter((x) => x.name === a.name).length > 1 ? `${a.name} · ${a.type}` : a.name)}</option>`;
+  return sections
+    .map((k) => ({ k, rows: accs.filter((a) => a.section === k) }))
+    .filter((g) => g.rows.length)
+    .map((g) => `<optgroup label="${SEZIONI[g.k].label}">${g.rows.map(opt).join("")}</optgroup>`).join("")
+    + `<option value="">${noneLabel}</option>`;
+}
+
+const DEBT_SOURCES = ["contanti", "banche", "investimenti"];
+
+// movimenti normali: contanti e banche; debiti/crediti: anche gli investimenti (es. BTC)
 function fillAccounts() {
   const sel = $("#tx-asset");
   const prev = sel.value;
-  const accs = assets.filter((a) => a.section === "contanti" || a.section === "banche");
-  const dup = (a) => accs.filter((x) => x.name === a.name).length > 1; // il tipo serve solo a distinguere nomi uguali
-  sel.innerHTML = accs.map((a) => `<option value="${esc(a.id)}">${esc(dup(a) ? `${a.name} · ${a.type}` : a.name)}</option>`).join("")
-    + `<option value="">Nessun conto</option>`;
-  sel.value = accs.some((a) => a.id === prev) ? prev : accs.length ? accs[0].id : "";
+  const debt = isDebtType($("#tx-type").value);
+  sel.innerHTML = accountOptions(debt ? DEBT_SOURCES : ["contanti", "banche"], debt ? "Nessun conto collegato" : "Nessun conto");
+  const first = sel.querySelector("option[value]:not([value=''])");
+  sel.value = [...sel.options].some((o) => o.value && o.value === prev) ? prev : first ? first.value : "";
+}
+
+function fillFrom() {
+  const sel = $("#as-from");
+  const prev = sel.value;
+  sel.innerHTML = accountOptions(DEBT_SOURCES, "Nessun conto collegato");
+  sel.value = [...sel.options].some((o) => o.value && o.value === prev) ? prev : "";
+}
+
+const debtHint = (type) => (type === "Credito" || type === "credito"
+  ? "Credito: i soldi escono dal conto o investimento scelto."
+  : "Debito: i soldi entrano nel conto o investimento scelto.");
+
+// registra il debito/credito: aggiorna il conto collegato (debito = entrata, credito = uscita)
+async function linkDebt(type, amount, accId) {
+  if (accId) await applyToAsset(accId, type === "Debito" ? "entrata" : "spesa", amount);
 }
 
 // debito = soldi ricevuti (entrano nel conto); credito = soldi prestati (escono dal conto)
 function submitDebt() {
   run(async () => {
-    const debito = $("#tx-type").value === "debito";
+    const type = $("#tx-type").value === "debito" ? "Debito" : "Credito";
     const amount = Number($("#tx-amount").value);
-    await store.add("assets", {
-      section: "debiti", type: debito ? "Debito" : "Credito", name: $("#tx-who").value.trim(),
-      value: amount, counted: $("#tx-counted").checked,
-    });
     const accId = $("#tx-asset").value;
-    if (accId) await applyToAsset(accId, debito ? "entrata" : "spesa", amount);
+    await store.add("assets", {
+      section: "debiti", type, name: $("#tx-who").value.trim(),
+      value: amount, counted: $("#tx-counted").checked, source_id: accId || null,
+    });
+    await linkDebt(type, amount, accId);
     $("#tx-amount").value = "";
     $("#tx-who").value = "";
+    $("#tx-counted").checked = true;
     await refresh(true);
   });
 }
@@ -340,6 +379,7 @@ function init() {
 
   $("#tx-type").addEventListener("change", toggleTxMode);
   $("#tx-cat").addEventListener("change", toggleNewCat);
+  $("#as-type").addEventListener("change", adaptAssetName);
   $("#as-section").addEventListener("change", (e) => {
     fillOptions($("#as-type"), SEZIONI[e.target.value].tipi);
     adaptAssetName();
@@ -369,13 +409,18 @@ function init() {
   $("#as-form").addEventListener("submit", (e) => {
     e.preventDefault();
     run(async () => {
+      const debt = $("#as-section").value === "debiti";
+      const type = $("#as-type").value, value = Number($("#as-value").value);
+      const from = debt ? $("#as-from").value : "";
       await store.add("assets", {
-        section: $("#as-section").value, type: $("#as-type").value,
-        name: $("#as-name").value.trim() || "Contanti", value: Number($("#as-value").value),
-        ...($("#as-section").value === "debiti" ? { counted: $("#as-counted").checked } : {}),
+        section: $("#as-section").value, type,
+        name: $("#as-name").value.trim() || "Contanti", value,
+        ...(debt ? { counted: $("#as-counted").checked, source_id: from || null } : {}),
       });
+      await linkDebt(type, value, from);
       $("#as-name").value = "";
       $("#as-value").value = "";
+      $("#as-counted").checked = true;
       await refresh(true);
     });
   });
