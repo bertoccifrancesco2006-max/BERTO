@@ -200,6 +200,10 @@ function renderGoal(net) {
 
 function accountLabel(t) {
   const a = assets.find((x) => x.id === t.asset_id);
+  if (t.type === "giroconto") {
+    const b = assets.find((x) => x.id === t.to_asset_id);
+    return `<br><span class="muted small">${esc(a ? a.name : "?")} → ${esc(b ? b.name : "?")}</span>`;
+  }
   return a ? `<br><span class="muted small">${esc(a.name)}</span>` : "";
 }
 
@@ -217,7 +221,7 @@ function renderMovimenti() {
     .sort((a, b) => b.date.localeCompare(a.date))
     .map((t) => `<tr>
       <td>${esc(t.date)}</td><td>${esc(t.category)}${accountLabel(t)}</td><td>${esc(t.note)}</td>
-      <td class="r ${t.type === "entrata" ? "pos" : "neg"}">${t.type === "entrata" ? "+" : "−"}${eur.format(t.amount)}</td>
+      <td class="r ${t.type === "giroconto" ? "xfer" : t.type === "entrata" ? "pos" : "neg"}">${t.type === "giroconto" ? "⇄ " : t.type === "entrata" ? "+" : "−"}${eur.format(t.amount)}</td>
       <td class="r"><button class="btn ghost small" data-del-tx="${esc(t.id)}" aria-label="Elimina">✕</button></td>
     </tr>`).join("");
 }
@@ -256,22 +260,25 @@ const isDebtType = (t) => t === "debito" || t === "credito";
 
 // debito/credito: niente categoria, si indica con chi; il movimento crea una voce in Patrimonio
 function toggleTxMode() {
-  const debt = isDebtType($("#tx-type").value);
-  ["#tx-cat", "#tx-date", "#tx-note"].forEach((id) => ($(id).hidden = debt));
+  const type = $("#tx-type").value;
+  const debt = isDebtType(type), xfer = type === "giroconto";
+  $("#tx-cat").hidden = debt || xfer;
+  ["#tx-date", "#tx-note"].forEach((id) => ($(id).hidden = debt));
   $("#tx-who").hidden = $("#tx-counted-wrap").hidden = !debt;
+  $("#tx-to").hidden = !xfer;
   $("#tx-who").required = debt;
-  $("#tx-who").placeholder = $("#tx-type").value === "credito" ? "A chi hai prestato (es. Mario)" : "Da chi hai ricevuto (es. Mario)";
-  $("#tx-cat").required = !debt;
+  $("#tx-who").placeholder = type === "credito" ? "A chi hai prestato (es. Mario)" : "Da chi hai ricevuto (es. Mario)";
+  $("#tx-cat").required = !(debt || xfer);
   $("#tx-date").required = !debt;
-  $("#tx-hint").hidden = !debt;
-  $("#tx-hint").textContent = debtHint($("#tx-type").value);
-  if (debt) $("#tx-newcat").hidden = true;
+  $("#tx-hint").hidden = !(debt || xfer);
+  $("#tx-hint").textContent = xfer ? "Giroconto: sposta soldi da un conto all'altro. Non conta come entrata o spesa." : debtHint(type);
+  if (debt || xfer) $("#tx-newcat").hidden = true;
   else fillCats();
   fillAccounts();
 }
 
 function fillCats(selected) {
-  if (isDebtType($("#tx-type").value)) return;
+  if (!CATEGORIE[$("#tx-type").value]) return;
   const sel = $("#tx-cat");
   const list = catList($("#tx-type").value);
   sel.innerHTML = list.map((v) => `<option>${esc(v)}</option>`).join("") + `<option value="${NEW_CAT}">➕ Nuova categoria…</option>`;
@@ -292,26 +299,37 @@ function adaptAssetName() {
 }
 
 // conti selezionabili, raggruppati per sezione; il tipo si mostra solo per distinguere nomi uguali
-function accountOptions(sections, noneLabel) {
+function accountOptions(sections, noneLabel, prefix = "") {
   const accs = assets.filter((a) => sections.includes(a.section));
-  const opt = (a) => `<option value="${esc(a.id)}">${esc(accs.filter((x) => x.name === a.name).length > 1 ? `${a.name} · ${a.type}` : a.name)}</option>`;
+  const opt = (a) => `<option value="${esc(a.id)}">${esc(prefix + (accs.filter((x) => x.name === a.name).length > 1 ? `${a.name} · ${a.type}` : a.name))}</option>`;
   return sections
     .map((k) => ({ k, rows: accs.filter((a) => a.section === k) }))
     .filter((g) => g.rows.length)
     .map((g) => `<optgroup label="${SEZIONI[g.k].label}">${g.rows.map(opt).join("")}</optgroup>`).join("")
-    + `<option value="">${noneLabel}</option>`;
+    + (noneLabel ? `<option value="">${noneLabel}</option>` : "");
 }
 
 const DEBT_SOURCES = ["contanti", "banche", "investimenti"];
 
-// movimenti normali: contanti e banche; debiti/crediti: anche gli investimenti (es. BTC)
+// movimenti normali: contanti e banche; debiti/crediti e giroconti: anche gli investimenti (es. BTC)
 function fillAccounts() {
-  const sel = $("#tx-asset");
-  const prev = sel.value;
-  const debt = isDebtType($("#tx-type").value);
+  const sel = $("#tx-asset"), to = $("#tx-to");
+  const type = $("#tx-type").value;
+  const keep = (el, prev, fallback) => ([...el.options].some((o) => o.value && o.value === prev) ? prev : fallback);
+  const prev = sel.value, prevTo = to.value;
+  if (type === "giroconto") {
+    sel.innerHTML = accountOptions(DEBT_SOURCES, "", "Da ");
+    to.innerHTML = accountOptions(DEBT_SOURCES, "", "A ");
+    sel.value = keep(sel, prev, sel.options[0]?.value ?? "");
+    const other = [...to.options].find((o) => o.value !== sel.value);
+    to.value = keep(to, prevTo, other ? other.value : "");
+    if (to.value === sel.value && other) to.value = other.value;
+    return;
+  }
+  const debt = isDebtType(type);
   sel.innerHTML = accountOptions(debt ? DEBT_SOURCES : ["contanti", "banche"], debt ? "Nessun conto collegato" : "Nessun conto");
   const first = sel.querySelector("option[value]:not([value=''])");
-  sel.value = [...sel.options].some((o) => o.value && o.value === prev) ? prev : first ? first.value : "";
+  sel.value = keep(sel, prev, first ? first.value : "");
 }
 
 function fillFrom() {
@@ -348,6 +366,24 @@ function submitDebt() {
   });
 }
 
+// giroconto: sposta l'importo da un conto all'altro, senza toccare entrate/spese del mese
+function submitTransfer() {
+  run(async () => {
+    const from = $("#tx-asset").value, to = $("#tx-to").value, amount = Number($("#tx-amount").value);
+    if (!from || !to) throw new Error("Servono almeno due conti: aggiungili in Patrimonio.");
+    if (from === to) throw new Error("Scegli due conti diversi.");
+    await store.add("transactions", {
+      date: $("#tx-date").value, type: "giroconto", category: "Giroconto", amount,
+      note: $("#tx-note").value.trim() || null, asset_id: from, to_asset_id: to,
+    });
+    await applyToAsset(from, "spesa", amount);
+    await applyToAsset(to, "entrata", amount);
+    $("#tx-amount").value = "";
+    $("#tx-note").value = "";
+    await refresh(true);
+  });
+}
+
 function toggleNewCat() {
   const isNew = $("#tx-cat").value === NEW_CAT;
   $("#tx-newcat").hidden = !isNew;
@@ -379,6 +415,12 @@ function init() {
 
   $("#tx-type").addEventListener("change", toggleTxMode);
   $("#tx-cat").addEventListener("change", toggleNewCat);
+  $("#tx-asset").addEventListener("change", () => {
+    if ($("#tx-type").value === "giroconto" && $("#tx-to").value === $("#tx-asset").value) {
+      const other = [...$("#tx-to").options].find((o) => o.value !== $("#tx-asset").value);
+      if (other) $("#tx-to").value = other.value;
+    }
+  });
   $("#as-type").addEventListener("change", adaptAssetName);
   $("#as-section").addEventListener("change", (e) => {
     fillOptions($("#as-type"), SEZIONI[e.target.value].tipi);
@@ -389,6 +431,7 @@ function init() {
   $("#tx-form").addEventListener("submit", (e) => {
     e.preventDefault();
     if (isDebtType($("#tx-type").value)) return submitDebt();
+    if ($("#tx-type").value === "giroconto") return submitTransfer();
     run(async () => {
       const category = $("#tx-cat").value === NEW_CAT ? $("#tx-newcat").value.trim() : $("#tx-cat").value;
       const row = {
@@ -441,7 +484,12 @@ function init() {
     if (txId && confirm("Eliminare questo movimento? Il saldo del conto collegato verrà ripristinato.")) run(async () => {
       const t = tx.find((x) => x.id === txId);
       await store.del("transactions", txId);
-      const touched = t && t.asset_id ? await applyToAsset(t.asset_id, t.type, t.amount, -1) : false;
+      let touched = false;
+      if (t && t.type === "giroconto") {
+        const a = await applyToAsset(t.asset_id, "spesa", t.amount, -1);
+        const b = await applyToAsset(t.to_asset_id, "entrata", t.amount, -1);
+        touched = a || b;
+      } else if (t && t.asset_id) touched = await applyToAsset(t.asset_id, t.type, t.amount, -1);
       await refresh(touched);
     });
     if (asId && confirm("Eliminare questa voce?")) run(async () => { await store.del("assets", asId); await refresh(true); });

@@ -72,10 +72,11 @@
   <section id="view-movimenti" class="wrap" hidden>
     <form id="tx-form" class="card form">
       <h2>Nuovo movimento</h2>
-      <select id="tx-type"><option value="spesa">Spesa</option><option value="entrata">Entrata</option><option value="debito">Debito</option><option value="credito">Credito</option></select>
+      <select id="tx-type"><option value="spesa">Spesa</option><option value="entrata">Entrata</option><option value="debito">Debito</option><option value="credito">Credito</option><option value="giroconto">Giroconto</option></select>
       <select id="tx-asset" aria-label="Conto"></select>
       <select id="tx-cat" required></select>
       <input id="tx-newcat" type="text" placeholder="Nome categoria" maxlength="40" hidden>
+      <select id="tx-to" aria-label="Conto di arrivo" hidden></select>
       <input id="tx-who" type="text" placeholder="Da chi (es. Mario)" maxlength="80" hidden>
       <p id="tx-hint" class="hint muted small" hidden></p>
       <label id="tx-counted-wrap" class="check" hidden><input id="tx-counted" type="checkbox" checked> Conta nel patrimonio</label>

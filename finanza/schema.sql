@@ -5,7 +5,7 @@ create table transactions (
   user_id    uuid not null default auth.uid() references auth.users on delete cascade,
   created_at timestamptz not null default now(),
   date       date not null,
-  type       text not null check (type in ('entrata', 'spesa')),
+  type       text not null check (type in ('entrata', 'spesa', 'giroconto')),
   category   text not null,
   amount     numeric(12,2) not null check (amount > 0),
   note       text
@@ -28,6 +28,8 @@ create table assets (
 -- Conto (contanti/banca) a cui è collegato il movimento: l'app ne aggiorna il saldo.
 -- Se hai già eseguito uno schema precedente, esegui solo questa riga.
 alter table transactions add column asset_id uuid references assets(id) on delete set null;
+-- Solo per i giroconti: conto di arrivo (asset_id è quello di partenza).
+alter table transactions add column to_asset_id uuid references assets(id) on delete set null;
 
 -- Storico patrimonio netto: un punto al giorno, salvato dall'app ad ogni modifica.
 create table snapshots (
@@ -68,3 +70,10 @@ create policy "own rows" on goals for all
 -- alter table assets add constraint assets_section_check check (section in ('contanti', 'banche', 'investimenti', 'debiti'));
 -- alter table assets add column counted boolean not null default true;
 -- alter table assets add column source_id uuid references assets(id) on delete set null;
+-- Conti collegati ai movimenti (se avevi già uno schema precedente):
+-- alter table transactions add column asset_id uuid references assets(id) on delete set null;
+--
+-- Giroconti (se avevi già uno schema precedente):
+-- alter table transactions drop constraint transactions_type_check;
+-- alter table transactions add constraint transactions_type_check check (type in ('entrata', 'spesa', 'giroconto'));
+-- alter table transactions add column to_asset_id uuid references assets(id) on delete set null;

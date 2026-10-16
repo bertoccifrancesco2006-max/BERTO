@@ -8,6 +8,6 @@ Apri `index.html` nel browser: funziona subito in **modalità locale** (dati sal
 3. Project Settings → API: copia **Project URL** e chiave **anon public** in `config.js`.
 4. (Consigliato) Authentication → Providers → Email: disattiva "Confirm email" se vuoi accedere subito dopo la registrazione.
 
-Se avevi già eseguito una versione precedente di `schema.sql`, esegui solo la riga `alter table transactions add column asset_id ...` (collega i movimenti ai conti) e le quattro righe `alter table assets ...` in fondo a `schema.sql` (debiti e crediti).
+Se avevi già eseguito una versione precedente di `schema.sql`, esegui le righe `alter table ...` indicate in fondo al file (conti collegati ai movimenti, debiti e crediti, giroconti).
 
 Non usare mai la chiave `service_role` nel frontend.
