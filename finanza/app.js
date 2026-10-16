@@ -186,6 +186,7 @@ function renderGoal(net) {
 }
 
 function renderMovimenti() {
+  fillCats($("#tx-cat").value);
   const m = totalsOf($("#tx-month").value);
   const bal = m.entrate - m.spese;
   $("#m-in").textContent = eur.format(m.entrate);
@@ -218,15 +219,46 @@ function renderPatrimonio() {
 }
 
 // ===== Form helpers =====
+const NEW_CAT = "__new";
+
+// categorie predefinite + quelle create dall'utente (ricavate dai movimenti esistenti)
+function catList(type) {
+  const extra = [...new Set(tx.filter((t) => t.type === type).map((t) => t.category))].filter((c) => !CATEGORIE[type].includes(c));
+  return [...CATEGORIE[type], ...extra.sort((a, b) => a.localeCompare(b))];
+}
+
+function fillCats(selected) {
+  const sel = $("#tx-cat");
+  const list = catList($("#tx-type").value);
+  sel.innerHTML = list.map((v) => `<option>${esc(v)}</option>`).join("") + `<option value="${NEW_CAT}">➕ Nuova categoria…</option>`;
+  sel.value = list.includes(selected) || selected === NEW_CAT ? selected : list[0];
+  toggleNewCat();
+}
+
+// contanti: nessun nome obbligatorio, solo una nota facoltativa
+function adaptAssetName() {
+  const cash = $("#as-section").value === "contanti";
+  $("#as-name").required = !cash;
+  $("#as-name").placeholder = cash ? "Nota (opzionale)" : "Nome (es. Fineco, Bitcoin)";
+}
+
+function toggleNewCat() {
+  const isNew = $("#tx-cat").value === NEW_CAT;
+  $("#tx-newcat").hidden = !isNew;
+  $("#tx-newcat").required = isNew;
+  if (isNew) $("#tx-newcat").focus();
+}
+
 function fillOptions(sel, list) {
   sel.innerHTML = list.map((v) => `<option>${esc(v)}</option>`).join("");
 }
 
 // ===== Eventi (registrati una sola volta) =====
 function init() {
-  fillOptions($("#tx-cat"), CATEGORIE.spesa);
+  fillCats();
   fillOptions($("#as-type"), SEZIONI.contanti.tipi);
   $("#as-section").innerHTML = Object.entries(SEZIONI).map(([k, s]) => `<option value="${k}">${s.label}</option>`).join("");
+  adaptAssetName();
   $("#tx-date").value = today();
   $("#tx-month").value = monthKey();
 
@@ -238,20 +270,27 @@ function init() {
     })
   );
 
-  $("#tx-type").addEventListener("change", (e) => fillOptions($("#tx-cat"), CATEGORIE[e.target.value]));
-  $("#as-section").addEventListener("change", (e) => fillOptions($("#as-type"), SEZIONI[e.target.value].tipi));
+  $("#tx-type").addEventListener("change", () => fillCats());
+  $("#tx-cat").addEventListener("change", toggleNewCat);
+  $("#as-section").addEventListener("change", (e) => {
+    fillOptions($("#as-type"), SEZIONI[e.target.value].tipi);
+    adaptAssetName();
+  });
   $("#tx-month").addEventListener("change", renderMovimenti);
 
   $("#tx-form").addEventListener("submit", (e) => {
     e.preventDefault();
     run(async () => {
+      const category = $("#tx-cat").value === NEW_CAT ? $("#tx-newcat").value.trim() : $("#tx-cat").value;
       await store.add("transactions", {
-        date: $("#tx-date").value, type: $("#tx-type").value, category: $("#tx-cat").value,
+        date: $("#tx-date").value, type: $("#tx-type").value, category,
         amount: Number($("#tx-amount").value), note: $("#tx-note").value.trim() || null,
       });
       $("#tx-amount").value = "";
       $("#tx-note").value = "";
+      $("#tx-newcat").value = "";
       await refresh();
+      fillCats(category);
     });
   });
 
@@ -260,7 +299,7 @@ function init() {
     run(async () => {
       await store.add("assets", {
         section: $("#as-section").value, type: $("#as-type").value,
-        name: $("#as-name").value.trim(), value: Number($("#as-value").value),
+        name: $("#as-name").value.trim() || "Contanti", value: Number($("#as-value").value),
       });
       $("#as-name").value = "";
       $("#as-value").value = "";
