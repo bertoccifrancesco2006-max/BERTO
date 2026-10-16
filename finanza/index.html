@@ -73,6 +73,7 @@
     <form id="tx-form" class="card form">
       <h2>Nuovo movimento</h2>
       <select id="tx-type"><option value="spesa">Spesa</option><option value="entrata">Entrata</option></select>
+      <select id="tx-asset" aria-label="Conto"></select>
       <select id="tx-cat" required></select>
       <input id="tx-newcat" type="text" placeholder="Nome nuova categoria" maxlength="40" hidden>
       <input id="tx-amount" type="number" step="0.01" min="0.01" placeholder="Importo €" required>

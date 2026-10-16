@@ -69,6 +69,15 @@ async function refresh(saveSnapshot = false) {
   render();
 }
 
+// aggiorna il saldo del conto collegato: entrata = +, spesa = -; sign -1 annulla l'effetto
+async function applyToAsset(assetId, type, amount, sign = 1) {
+  const a = assets.find((x) => x.id === assetId);
+  if (!a) return false;
+  const delta = (type === "entrata" ? 1 : -1) * sign * Number(amount);
+  await store.set("assets", a.id, { value: Math.round((Number(a.value) + delta) * 100) / 100 });
+  return true;
+}
+
 async function run(fn) {
   $("#msg").textContent = "";
   try { await fn(); } catch (e) { $("#msg").textContent = "Errore: " + (e.message || e); }
@@ -185,8 +194,14 @@ function renderGoal(net) {
   $("#goal-text").textContent = text;
 }
 
+function accountLabel(t) {
+  const a = assets.find((x) => x.id === t.asset_id);
+  return a ? `<br><span class="muted small">${esc(a.name)}</span>` : "";
+}
+
 function renderMovimenti() {
   fillCats($("#tx-cat").value);
+  fillAccounts();
   const m = totalsOf($("#tx-month").value);
   const bal = m.entrate - m.spese;
   $("#m-in").textContent = eur.format(m.entrate);
@@ -197,7 +212,7 @@ function renderMovimenti() {
   $("#tx-body").innerHTML = m.rows
     .sort((a, b) => b.date.localeCompare(a.date))
     .map((t) => `<tr>
-      <td>${esc(t.date)}</td><td>${esc(t.category)}</td><td>${esc(t.note)}</td>
+      <td>${esc(t.date)}</td><td>${esc(t.category)}${accountLabel(t)}</td><td>${esc(t.note)}</td>
       <td class="r ${t.type === "entrata" ? "pos" : "neg"}">${t.type === "entrata" ? "+" : "−"}${eur.format(t.amount)}</td>
       <td class="r"><button class="btn ghost small" data-del-tx="${esc(t.id)}" aria-label="Elimina">✕</button></td>
     </tr>`).join("");
@@ -242,6 +257,16 @@ function adaptAssetName() {
   $("#as-name").placeholder = cash ? "Nota (opzionale)" : "Nome (es. Fineco, Bitcoin)";
 }
 
+// conti selezionabili: contanti e banche
+function fillAccounts() {
+  const sel = $("#tx-asset");
+  const prev = sel.value;
+  const accs = assets.filter((a) => a.section !== "investimenti");
+  sel.innerHTML = accs.map((a) => `<option value="${esc(a.id)}">${esc(a.name === a.type ? a.name : `${a.name} · ${a.type}`)}</option>`).join("")
+    + `<option value="">Nessun conto</option>`;
+  sel.value = accs.some((a) => a.id === prev) ? prev : accs.length ? accs[0].id : "";
+}
+
 function toggleNewCat() {
   const isNew = $("#tx-cat").value === NEW_CAT;
   $("#tx-newcat").hidden = !isNew;
@@ -282,14 +307,17 @@ function init() {
     e.preventDefault();
     run(async () => {
       const category = $("#tx-cat").value === NEW_CAT ? $("#tx-newcat").value.trim() : $("#tx-cat").value;
-      await store.add("transactions", {
+      const row = {
         date: $("#tx-date").value, type: $("#tx-type").value, category,
         amount: Number($("#tx-amount").value), note: $("#tx-note").value.trim() || null,
-      });
+        asset_id: $("#tx-asset").value || null,
+      };
+      await store.add("transactions", row);
+      const touched = row.asset_id ? await applyToAsset(row.asset_id, row.type, row.amount) : false;
       $("#tx-amount").value = "";
       $("#tx-note").value = "";
       $("#tx-newcat").value = "";
-      await refresh();
+      await refresh(touched);
       fillCats(category);
     });
   });
@@ -320,7 +348,12 @@ function init() {
   document.addEventListener("click", (e) => {
     const txId = e.target.dataset.delTx;
     const asId = e.target.dataset.delAsset;
-    if (txId && confirm("Eliminare questo movimento?")) run(async () => { await store.del("transactions", txId); await refresh(); });
+    if (txId && confirm("Eliminare questo movimento? Il saldo del conto collegato verrà ripristinato.")) run(async () => {
+      const t = tx.find((x) => x.id === txId);
+      await store.del("transactions", txId);
+      const touched = t && t.asset_id ? await applyToAsset(t.asset_id, t.type, t.amount, -1) : false;
+      await refresh(touched);
+    });
     if (asId && confirm("Eliminare questa voce?")) run(async () => { await store.del("assets", asId); await refresh(true); });
   });
 

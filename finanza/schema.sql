@@ -21,6 +21,10 @@ create table assets (
   value      numeric(14,2) not null
 );
 
+-- Conto (contanti/banca) a cui è collegato il movimento: l'app ne aggiorna il saldo.
+-- Se hai già eseguito uno schema precedente, esegui solo questa riga.
+alter table transactions add column asset_id uuid references assets(id) on delete set null;
+
 -- Storico patrimonio netto: un punto al giorno, salvato dall'app ad ogni modifica.
 create table snapshots (
   id         uuid primary key default gen_random_uuid(),
