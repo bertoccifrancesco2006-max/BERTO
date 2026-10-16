@@ -10,6 +10,7 @@ const SEZIONI = {
   contanti: { label: "Contanti", tipi: ["Contanti"] },
   banche: { label: "Banche", tipi: ["Conto corrente", "Conto risparmio", "Conto deposito", "Carta prepagata", "Carta di credito"] },
   investimenti: { label: "Investimenti", tipi: ["Crypto", "Trading", "Altro"] },
+  debiti: { label: "Debiti e crediti", tipi: ["Debito", "Credito"] },
 };
 
 const eur = new Intl.NumberFormat("it-IT", { style: "currency", currency: "EUR" });
@@ -17,6 +18,9 @@ const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const today = () => new Date().toISOString().slice(0, 10);
 const sum = (rows, key) => rows.reduce((t, r) => t + Number(r[key]), 0);
+// valore che pesa sul patrimonio: debito = negativo, credito = positivo, 0 se escluso dal conteggio
+const effective = (a) => (a.section === "debiti" ? (a.counted === false ? 0 : (a.type === "Debito" ? -1 : 1) * Number(a.value)) : Number(a.value));
+const netTotal = (rows) => rows.reduce((t, a) => t + effective(a), 0);
 const signClass = (n) => (n < 0 ? "neg" : "pos");
 
 // ===== Storage: Supabase se configurato, altrimenti localStorage =====
@@ -64,7 +68,7 @@ let charts = {};
 
 async function refresh(saveSnapshot = false) {
   [tx, assets] = await Promise.all([store.list("transactions"), store.list("assets")]);
-  if (saveSnapshot) await store.snapshot({ date: today(), total: sum(assets, "value") });
+  if (saveSnapshot) await store.snapshot({ date: today(), total: netTotal(assets) });
   [snapshots, goals] = await Promise.all([store.list("snapshots"), store.list("goals")]);
   render();
 }
@@ -125,7 +129,7 @@ function gradient(ctx, area, color) {
 }
 
 function renderDashboard() {
-  const net = sum(assets, "value");
+  const net = netTotal(assets);
   const m = totalsOf(monthKey());
   $("#k-net").textContent = eur.format(net);
   $("#k-net").className = signClass(net);
@@ -142,7 +146,7 @@ function renderDashboard() {
     type: "doughnut",
     data: {
       labels: keys.map((k) => SEZIONI[k].label),
-      datasets: [{ data: keys.map((k) => Math.max(0, sum(assets.filter((a) => a.section === k), "value"))), backgroundColor: [css("--warn"), css("--accent2"), css("--pos")], borderColor: css("--card"), borderWidth: 3 }],
+      datasets: [{ data: keys.map((k) => Math.max(0, netTotal(assets.filter((a) => a.section === k)))), backgroundColor: [css("--warn"), css("--accent2"), css("--pos"), css("--accent")], borderColor: css("--card"), borderWidth: 3 }],
     },
     options: { maintainAspectRatio: false, cutout: "68%", plugins: { legend: { position: "bottom", labels: { usePointStyle: true } }, tooltip: { callbacks: { label: (c) => `${c.label}: ${eur.format(c.parsed)}` } } } },
   });
@@ -221,11 +225,11 @@ function renderMovimenti() {
 function renderPatrimonio() {
   $("#as-sections").innerHTML = Object.entries(SEZIONI).map(([key, s]) => {
     const rows = assets.filter((a) => a.section === key);
-    const tot = sum(rows, "value");
+    const tot = netTotal(rows);
     return `<div class="card">
       <div class="row between"><h2>${s.label}</h2><strong class="${signClass(tot)}">${eur.format(tot)}</strong></div>
       ${rows.length ? rows.map((a) => `<div class="asset">
-        <div><strong>${esc(a.name)}</strong><br><span class="muted small">${esc(a.type)}</span></div>
+        <div><strong>${esc(a.name)}</strong><br><span class="muted small">${esc(a.type)}</span>${key === "debiti" ? `<label class="check small"><input type="checkbox" data-count-asset="${esc(a.id)}" ${a.counted === false ? "" : "checked"}> Conta nel patrimonio</label>` : ""}</div>
         <input type="number" step="0.01" value="${Number(a.value)}" data-set-asset="${esc(a.id)}" aria-label="Valore ${esc(a.name)}">
         <button class="btn ghost small" data-del-asset="${esc(a.id)}" aria-label="Elimina">✕</button>
       </div>`).join("") : `<p class="muted">Nessuna voce.</p>`}
@@ -242,7 +246,23 @@ function catList(type) {
   return [...CATEGORIE[type], ...extra.sort((a, b) => a.localeCompare(b))];
 }
 
+const isDebtType = (t) => t === "debito" || t === "credito";
+
+// debito/credito: niente categoria, si indica con chi; il movimento crea una voce in Patrimonio
+function toggleTxMode() {
+  const debt = isDebtType($("#tx-type").value);
+  ["#tx-cat", "#tx-date", "#tx-note"].forEach((id) => ($(id).hidden = debt));
+  $("#tx-who").hidden = $("#tx-counted-wrap").hidden = !debt;
+  $("#tx-who").required = debt;
+  $("#tx-who").placeholder = $("#tx-type").value === "credito" ? "A chi hai prestato (es. Mario)" : "Da chi hai ricevuto (es. Mario)";
+  $("#tx-cat").required = !debt;
+  $("#tx-date").required = !debt;
+  if (debt) $("#tx-newcat").hidden = true;
+  else fillCats();
+}
+
 function fillCats(selected) {
+  if (isDebtType($("#tx-type").value)) return;
   const sel = $("#tx-cat");
   const list = catList($("#tx-type").value);
   sel.innerHTML = list.map((v) => `<option>${esc(v)}</option>`).join("") + `<option value="${NEW_CAT}">➕ Nuova categoria…</option>`;
@@ -254,17 +274,39 @@ function fillCats(selected) {
 function adaptAssetName() {
   const cash = $("#as-section").value === "contanti";
   $("#as-name").required = !cash;
-  $("#as-name").placeholder = cash ? "Nota (opzionale)" : "Nome (es. Fineco, Bitcoin)";
+  const debt = $("#as-section").value === "debiti";
+  $("#as-name").placeholder = cash ? "Nota (opzionale)" : debt ? "Nome (es. Mario)" : "Nome (es. Fineco, Bitcoin)";
+  $("#as-counted-wrap").hidden = !debt;
+  $("#as-value").min = debt ? "0.01" : "";
+  $("#as-value").placeholder = debt ? "Importo €" : "Valore € (debito: -)";
 }
 
 // conti selezionabili: contanti e banche
 function fillAccounts() {
   const sel = $("#tx-asset");
   const prev = sel.value;
-  const accs = assets.filter((a) => a.section !== "investimenti");
-  sel.innerHTML = accs.map((a) => `<option value="${esc(a.id)}">${esc(a.name === a.type ? a.name : `${a.name} · ${a.type}`)}</option>`).join("")
+  const accs = assets.filter((a) => a.section === "contanti" || a.section === "banche");
+  const dup = (a) => accs.filter((x) => x.name === a.name).length > 1; // il tipo serve solo a distinguere nomi uguali
+  sel.innerHTML = accs.map((a) => `<option value="${esc(a.id)}">${esc(dup(a) ? `${a.name} · ${a.type}` : a.name)}</option>`).join("")
     + `<option value="">Nessun conto</option>`;
   sel.value = accs.some((a) => a.id === prev) ? prev : accs.length ? accs[0].id : "";
+}
+
+// debito = soldi ricevuti (entrano nel conto); credito = soldi prestati (escono dal conto)
+function submitDebt() {
+  run(async () => {
+    const debito = $("#tx-type").value === "debito";
+    const amount = Number($("#tx-amount").value);
+    await store.add("assets", {
+      section: "debiti", type: debito ? "Debito" : "Credito", name: $("#tx-who").value.trim(),
+      value: amount, counted: $("#tx-counted").checked,
+    });
+    const accId = $("#tx-asset").value;
+    if (accId) await applyToAsset(accId, debito ? "entrata" : "spesa", amount);
+    $("#tx-amount").value = "";
+    $("#tx-who").value = "";
+    await refresh(true);
+  });
 }
 
 function toggleNewCat() {
@@ -284,6 +326,7 @@ function init() {
   fillOptions($("#as-type"), SEZIONI.contanti.tipi);
   $("#as-section").innerHTML = Object.entries(SEZIONI).map(([k, s]) => `<option value="${k}">${s.label}</option>`).join("");
   adaptAssetName();
+  toggleTxMode();
   $("#tx-date").value = today();
   $("#tx-month").value = monthKey();
 
@@ -295,7 +338,7 @@ function init() {
     })
   );
 
-  $("#tx-type").addEventListener("change", () => fillCats());
+  $("#tx-type").addEventListener("change", toggleTxMode);
   $("#tx-cat").addEventListener("change", toggleNewCat);
   $("#as-section").addEventListener("change", (e) => {
     fillOptions($("#as-type"), SEZIONI[e.target.value].tipi);
@@ -305,6 +348,7 @@ function init() {
 
   $("#tx-form").addEventListener("submit", (e) => {
     e.preventDefault();
+    if (isDebtType($("#tx-type").value)) return submitDebt();
     run(async () => {
       const category = $("#tx-cat").value === NEW_CAT ? $("#tx-newcat").value.trim() : $("#tx-cat").value;
       const row = {
@@ -328,6 +372,7 @@ function init() {
       await store.add("assets", {
         section: $("#as-section").value, type: $("#as-type").value,
         name: $("#as-name").value.trim() || "Contanti", value: Number($("#as-value").value),
+        ...($("#as-section").value === "debiti" ? { counted: $("#as-counted").checked } : {}),
       });
       $("#as-name").value = "";
       $("#as-value").value = "";
@@ -358,6 +403,8 @@ function init() {
   });
 
   document.addEventListener("change", (e) => {
+    const cid = e.target.dataset.countAsset;
+    if (cid) run(async () => { await store.set("assets", cid, { counted: e.target.checked }); await refresh(true); });
     const id = e.target.dataset.setAsset;
     if (id && e.target.value !== "") run(async () => { await store.set("assets", id, { value: Number(e.target.value) }); await refresh(true); });
   });

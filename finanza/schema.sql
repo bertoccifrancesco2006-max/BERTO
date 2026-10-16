@@ -15,10 +15,12 @@ create table assets (
   id         uuid primary key default gen_random_uuid(),
   user_id    uuid not null default auth.uid() references auth.users on delete cascade,
   created_at timestamptz not null default now(),
-  section    text not null check (section in ('contanti', 'banche', 'investimenti')),
+  section    text not null check (section in ('contanti', 'banche', 'investimenti', 'debiti')),
   type       text not null,
   name       text not null,
-  value      numeric(14,2) not null
+  value      numeric(14,2) not null,
+  -- solo per la sezione 'debiti': se true pesa sul patrimonio netto (debito = meno, credito = più)
+  counted    boolean not null default true
 );
 
 -- Conto (contanti/banca) a cui è collegato il movimento: l'app ne aggiorna il saldo.
@@ -58,3 +60,8 @@ create policy "own rows" on snapshots for all
   using (auth.uid() = user_id) with check (auth.uid() = user_id);
 create policy "own rows" on goals for all
   using (auth.uid() = user_id) with check (auth.uid() = user_id);
+
+-- Se avevi già eseguito uno schema precedente, esegui anche questo (debiti e crediti):
+-- alter table assets drop constraint assets_section_check;
+-- alter table assets add constraint assets_section_check check (section in ('contanti', 'banche', 'investimenti', 'debiti'));
+-- alter table assets add column counted boolean not null default true;

@@ -72,10 +72,12 @@
   <section id="view-movimenti" class="wrap" hidden>
     <form id="tx-form" class="card form">
       <h2>Nuovo movimento</h2>
-      <select id="tx-type"><option value="spesa">Spesa</option><option value="entrata">Entrata</option></select>
+      <select id="tx-type"><option value="spesa">Spesa</option><option value="entrata">Entrata</option><option value="debito">Debito</option><option value="credito">Credito</option></select>
       <select id="tx-asset" aria-label="Conto"></select>
       <select id="tx-cat" required></select>
-      <input id="tx-newcat" type="text" placeholder="Nome nuova categoria" maxlength="40" hidden>
+      <input id="tx-newcat" type="text" placeholder="Nome categoria" maxlength="40" hidden>
+      <input id="tx-who" type="text" placeholder="Da chi (es. Mario)" maxlength="80" hidden>
+      <label id="tx-counted-wrap" class="check" hidden><input id="tx-counted" type="checkbox" checked> Conta nel patrimonio</label>
       <input id="tx-amount" type="number" step="0.01" min="0.01" placeholder="Importo €" required>
       <input id="tx-date" type="date" required>
       <input id="tx-note" type="text" placeholder="Nota (opzionale)" maxlength="200">
@@ -103,6 +105,7 @@
       <select id="as-type"></select>
       <input id="as-name" type="text" placeholder="Nome (es. Fineco, Bitcoin)" required maxlength="80">
       <input id="as-value" type="number" step="0.01" placeholder="Valore € (debito: -)" required>
+      <label id="as-counted-wrap" class="check" hidden><input id="as-counted" type="checkbox" checked> Conta nel patrimonio</label>
       <button class="btn" type="submit">Aggiungi</button>
     </form>
     <div id="as-sections"></div>
