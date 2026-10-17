@@ -29,88 +29,135 @@
 <!-- APP -->
 <div id="app" hidden>
   <header class="header">
-    <strong class="logo">Finanza</strong>
+    <div class="brand-block">
+      <div class="brand">
+        <span class="brand-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H18a2 2 0 0 1 2 2v1.5"/><path d="M3 7.5V17a2 2 0 0 0 2 2h13.5a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 18.5 8H5.5A2.5 2.5 0 0 1 3 5.5"/><circle cx="16.5" cy="13.5" r="1"/></svg></span>
+        <strong class="logo">Finanza</strong>
+      </div>
+      <p class="sub" id="mode-sub">Dati memorizzati esclusivamente in questo browser</p>
+    </div>
     <nav class="nav">
       <button class="nav-btn active" data-view="dashboard"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg><span>Dashboard</span></button>
       <button class="nav-btn" data-view="movimenti"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h13M7 7l3-3M7 7l3 3M17 17H4M17 17l-3-3M17 17l-3 3"/></svg><span>Movimenti</span></button>
       <button class="nav-btn" data-view="patrimonio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg><span>Patrimonio</span></button>
     </nav>
-    <span class="muted small" id="mode"></span>
-    <button class="btn ghost small" id="logout" hidden>Esci</button>
+    <div class="head-right">
+      <span class="mode"><i></i><span id="mode">Locale</span></span>
+      <button class="btn ghost small" id="logout" hidden>Esci</button>
+    </div>
   </header>
 
   <p id="msg" class="msg wrap"></p>
 
   <!-- DASHBOARD -->
   <section id="view-dashboard" class="wrap">
-    <div class="kpis">
-      <div class="card kpi hero"><span class="muted">Patrimonio netto</span><strong id="k-net"></strong></div>
-      <div class="card kpi"><span class="muted">Entrate del mese</span><strong id="k-in" class="pos"></strong></div>
-      <div class="card kpi"><span class="muted">Spese del mese</span><strong id="k-out" class="neg"></strong></div>
-      <div class="card kpi"><span class="muted">Risparmio del mese</span><strong id="k-save"></strong></div>
+    <div class="card hero">
+      <div class="hero-top"><span class="lbl">Patrimonio netto</span><span id="k-trend" class="chip" hidden></span></div>
+      <strong id="k-net" class="big"></strong>
+      <div class="hero-cols">
+        <div><span class="lbl">Liquidità</span><b id="k-liq"></b></div>
+        <div><span class="lbl">Investiti</span><b id="k-inv"></b></div>
+        <div><span class="lbl">Mese prec.</span><b id="k-prev"></b></div>
+      </div>
+    </div>
+    <div class="duo">
+      <div class="card kpi">
+        <div class="kpi-top"><span class="lbl">Entrate mese</span><span class="ico pos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7L7 17M7 17h8M7 17V9"/></svg></span></div>
+        <strong id="k-in" class="pos"></strong><small id="k-in-sub" class="muted"></small>
+      </div>
+      <div class="card kpi">
+        <div class="kpi-top"><span class="lbl">Spese mese</span><span class="ico neg"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg></span></div>
+        <strong id="k-out" class="neg"></strong><small id="k-out-sub" class="muted"></small>
+      </div>
+    </div>
+    <div class="card saving">
+      <span class="ico mint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M17 8c0-1.7-2.2-3-5-3S7 6.3 7 8s2.2 3 5 3 5 1.3 5 3-2.2 3-5 3-5-1.3-5-3"/></svg></span>
+      <div><span class="lbl">Risparmio del mese</span><strong id="k-save"></strong></div>
+      <span id="k-rate" class="chip"></span>
     </div>
     <div class="card">
-      <h2>Obiettivo</h2>
+      <div class="card-h"><h2 class="bar-h" style="--bar: var(--mint)">Obiettivo di risparmio</h2><span id="goal-pct" class="pct"></span></div>
       <form id="goal-form" class="goal-form">
-        <input id="goal-target" type="number" step="0.01" min="1" placeholder="Obiettivo patrimonio €" required>
-        <input id="goal-date" type="date" required aria-label="Scadenza">
+        <label class="fld"><span>Target (€)</span><input id="goal-target" type="number" step="0.01" min="1" placeholder="Obiettivo patrimonio" required></label>
+        <label class="fld"><span>Data target</span><input id="goal-date" type="date" required></label>
         <button class="btn" type="submit">Salva</button>
       </form>
       <div id="goal-info" hidden>
         <div class="bar"><div id="goal-fill"></div></div>
-        <p id="goal-text" class="muted"></p>
+        <p id="goal-text" class="goal-meta"><span id="goal-left"></span><span id="goal-right"></span></p>
       </div>
     </div>
-    <div class="card"><h2>Andamento del patrimonio</h2><div class="chart"><canvas id="ch-history"></canvas></div></div>
+    <div class="card">
+      <div class="card-h"><h2 class="bar-h" style="--bar: var(--indigo)">Andamento del patrimonio</h2>
+        <div class="lg"><span style="--c: var(--pos)"><i></i>Patrimonio</span><span id="lg-goal" style="--c: var(--warn)" hidden><i class="dash"></i>Obiettivo</span></div></div>
+      <div class="chart"><canvas id="ch-history"></canvas></div>
+    </div>
     <div class="grid2">
-      <div class="card"><h2>Patrimonio per sezione</h2><div class="chart"><canvas id="ch-assets"></canvas></div></div>
-      <div class="card"><h2>Entrate vs spese (6 mesi)</h2><div class="chart"><canvas id="ch-months"></canvas></div></div>
+      <div class="card">
+        <div class="card-h"><h2 class="bar-h" style="--bar: var(--mint)">Patrimonio per sezione</h2><span class="lbl" id="sec-total"></span></div>
+        <div class="sec-wrap">
+          <div class="donut"><canvas id="ch-assets"></canvas><div class="donut-c"><small>Attivi</small><b id="donut-n"></b></div></div>
+          <ul id="sec-legend"></ul>
+        </div>
+      </div>
+      <div class="card bars">
+        <div class="card-h"><h2 class="bar-h" style="--bar: var(--pos)">Entrate vs spese (6 mesi)</h2>
+          <div class="lg"><span style="--c: var(--pos)"><i></i>Entrate</span><span style="--c: var(--neg)"><i></i>Spese</span></div></div>
+        <div class="chart"><canvas id="ch-months"></canvas></div>
+      </div>
     </div>
   </section>
 
   <!-- MOVIMENTI -->
   <section id="view-movimenti" class="wrap" hidden>
     <form id="tx-form" class="card form">
-      <h2>Nuovo movimento</h2>
-      <select id="tx-type"><option value="spesa">Spesa</option><option value="entrata">Entrata</option><option value="debito">Debito</option><option value="credito">Credito</option><option value="giroconto">Giroconto</option></select>
-      <select id="tx-asset" aria-label="Conto"></select>
-      <select id="tx-cat" required></select>
-      <input id="tx-newcat" type="text" placeholder="Nome categoria" maxlength="40" hidden>
-      <select id="tx-to" aria-label="Conto di arrivo" hidden></select>
-      <input id="tx-who" type="text" placeholder="Da chi (es. Mario)" maxlength="80" hidden>
-      <p id="tx-hint" class="hint muted small" hidden></p>
+      <h2 class="bar-h">Nuovo movimento</h2>
+      <div class="seg" id="tx-seg">
+        <button type="button" data-type="entrata">Entrata</button>
+        <button type="button" data-type="spesa" class="on">Spesa</button>
+        <button type="button" data-type="giroconto">Giroconto</button>
+      </div>
+      <div class="seg seg2" id="tx-seg2">
+        <button type="button" data-type="debito">Debito</button>
+        <button type="button" data-type="credito">Credito</button>
+      </div>
+      <select id="tx-type" class="sr" tabindex="-1" aria-label="Tipo movimento"><option value="spesa">Spesa</option><option value="entrata">Entrata</option><option value="debito">Debito</option><option value="credito">Credito</option><option value="giroconto">Giroconto</option></select>
+      <label class="fld"><span>Conto</span><select id="tx-asset" aria-label="Conto"></select></label>
+      <label class="fld"><span>Categoria</span><select id="tx-cat" required></select></label>
+      <label class="fld w2"><span>Nuova categoria</span><input id="tx-newcat" type="text" placeholder="Nome categoria" maxlength="40" hidden></label>
+      <label class="fld"><span>Conto di arrivo</span><select id="tx-to" aria-label="Conto di arrivo" hidden></select></label>
+      <label class="fld w2"><span>Con chi</span><input id="tx-who" type="text" placeholder="Da chi (es. Mario)" maxlength="80" hidden></label>
+      <p id="tx-hint" class="hint" hidden></p>
       <label id="tx-counted-wrap" class="check" hidden><input id="tx-counted" type="checkbox" checked> Conta nel patrimonio</label>
-      <input id="tx-amount" type="number" step="0.01" min="0.01" placeholder="Importo €" required>
-      <input id="tx-date" type="date" required>
-      <input id="tx-note" type="text" placeholder="Nota (opzionale)" maxlength="200">
-      <button class="btn" type="submit">Aggiungi</button>
+      <label class="fld"><span>Importo</span><div class="money"><i>€</i><input id="tx-amount" type="number" step="0.01" min="0.01" placeholder="0,00" required></div></label>
+      <label class="fld"><span>Data</span><input id="tx-date" type="date" required></label>
+      <label class="fld wide"><span>Nota</span><input id="tx-note" type="text" placeholder="Descrizione o nota (opzionale)" maxlength="200"></label>
+      <button class="btn cta" type="submit">+ Aggiungi movimento</button>
     </form>
     <div class="card">
-      <div class="row between">
-        <h2>Elenco</h2>
-        <input id="tx-month" type="month" aria-label="Mese">
+      <div class="card-h"><h2 class="bar-h" style="--bar: var(--warn)">Movimenti</h2><input id="tx-month" type="month" aria-label="Mese" style="width:auto"></div>
+      <div class="msum">
+        <div><span class="lbl">Entrate</span><strong class="pos" id="m-in"></strong></div>
+        <div><span class="lbl">Uscite</span><strong class="neg" id="m-out"></strong></div>
+        <div><span class="lbl">Saldo</span><strong id="m-bal"></strong></div>
       </div>
-      <p class="muted">Entrate <strong class="pos" id="m-in"></strong> · Spese <strong class="neg" id="m-out"></strong> · Saldo <strong id="m-bal"></strong></p>
-      <table>
-        <thead><tr><th>Data</th><th>Categoria</th><th>Nota</th><th class="r">Importo</th><th></th></tr></thead>
-        <tbody id="tx-body"></tbody>
-      </table>
-      <p id="tx-empty" class="muted" hidden>Nessun movimento in questo mese.</p>
+      <div id="tx-body"></div>
+      <p id="tx-empty" class="empty" hidden>Nessun movimento in questo mese.</p>
     </div>
   </section>
 
   <!-- PATRIMONIO -->
   <section id="view-patrimonio" class="wrap" hidden>
     <form id="as-form" class="card form">
-      <h2>Nuova voce di patrimonio</h2>
-      <select id="as-section"></select>
-      <select id="as-type"></select>
-      <input id="as-name" type="text" placeholder="Nome (es. Fineco, Bitcoin)" required maxlength="80">
-      <input id="as-value" type="number" step="0.01" placeholder="Valore € (debito: -)" required>
-      <select id="as-from" aria-label="Conto collegato" hidden></select>
-      <p id="as-hint" class="hint muted small" hidden></p>
+      <h2 class="bar-h">Nuova voce di patrimonio</h2>
+      <label class="fld"><span>Categoria</span><select id="as-section"></select></label>
+      <label class="fld"><span>Tipo conto</span><select id="as-type"></select></label>
+      <label class="fld"><span>Nota o nome</span><input id="as-name" type="text" placeholder="Es. Risparmi" required maxlength="80"></label>
+      <label class="fld"><span>Importo</span><div class="money"><i>€</i><input id="as-value" type="number" step="0.01" placeholder="0,00" required></div></label>
+      <label class="fld w2"><span>Conto collegato</span><select id="as-from" aria-label="Conto collegato" hidden></select></label>
+      <p id="as-hint" class="hint" hidden></p>
       <label id="as-counted-wrap" class="check" hidden><input id="as-counted" type="checkbox" checked> Conta nel patrimonio</label>
-      <button class="btn" type="submit">Aggiungi</button>
+      <button class="btn cta" type="submit">+ Aggiungi al patrimonio</button>
     </form>
     <div id="as-sections"></div>
   </section>

@@ -121,6 +121,26 @@ function setChart(id, config) {
   charts[id] = new Chart($("#" + id), config);
 }
 
+const ICONS = {
+  entrata: "M17 7L7 17M7 17h8M7 17V9",
+  spesa: "M7 17L17 7M17 7H9M17 7v8",
+  giroconto: "M7 7h13M7 7l3-3M7 7l3 3M17 17H4M17 17l-3-3M17 17l-3 3",
+  Casa: "M3 11l9-7 9 7M5 10v10h14V10M10 20v-6h4v6",
+  Cibo: "M6 3v8a3 3 0 0 0 3 3v7M9 3v8M12 3v8M17 3c-2 2-3 5-3 8h3v10",
+  Trasporti: "M5 16V9l2-4h10l2 4v7M3 16h18M7 19v-3M17 19v-3M8 12h.01M16 12h.01",
+  Svago: "M4 8a2 2 0 0 0 0 4v4h16v-4a2 2 0 0 1 0-4V4H4zM12 4v12",
+  Salute: "M12 21s-7-4.4-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.6-9 9-9 9z",
+  Shopping: "M6 7h12l1 13H5zM9 7a3 3 0 0 1 6 0",
+  Abbonamenti: "M4 12a8 8 0 0 1 14-5l2 2M20 12a8 8 0 0 1-14 5l-2-2M20 4v5h-5M4 20v-5h5",
+  Stipendio: "M3 7h18v10H3zM12 12m-2.5 0a2.5 2.5 0 1 0 5 0 2.5 2.5 0 1 0-5 0M6 10v.01M18 14v.01",
+  Altro: "M12 12m-1 0a1 1 0 1 0 2 0 1 1 0 1 0-2 0M5 12m-1 0a1 1 0 1 0 2 0 1 1 0 1 0-2 0M19 12m-1 0a1 1 0 1 0 2 0 1 1 0 1 0-2 0",
+  trash: "M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3",
+};
+const icon = (name) => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${ICONS[name] || ICONS.Altro}"/></svg>`;
+const fmtDay = (d) => new Date(d + "T00:00").toLocaleDateString("it-IT", { day: "numeric", month: "short", year: "numeric" });
+const compact = (v) => (Math.abs(v) >= 1000 ? `${+(v / 1000).toFixed(1)}k` : v);
+const gridColor = () => (matchMedia("(prefers-color-scheme: light)").matches ? "rgba(15,23,42,.07)" : "rgba(255,255,255,.05)");
+
 function gradient(ctx, area, color) {
   const g = ctx.createLinearGradient(0, area.top, 0, area.bottom);
   g.addColorStop(0, color + "66");
@@ -132,36 +152,72 @@ function renderDashboard() {
   const net = netTotal(assets);
   const m = totalsOf(monthKey());
   $("#k-net").textContent = eur.format(net);
-  $("#k-net").className = signClass(net);
+  $("#k-net").className = "big " + signClass(net);
+
+  // variazione del mese: confronto con l'ultimo punto dello storico prima di questo mese
+  const first = monthKey() + "-01";
+  const prev = [...snapshots].filter((h) => h.date < first).sort((a, b) => b.date.localeCompare(a.date))[0];
+  const prevNet = prev ? Number(prev.total) : 0;
+  $("#k-trend").hidden = !prevNet;
+  if (prevNet) {
+    const pct = ((net - prevNet) / Math.abs(prevNet)) * 100;
+    $("#k-trend").textContent = `${pct >= 0 ? "↗ +" : "↘ "}${pct.toFixed(1).replace(".", ",")}% questo mese`;
+    $("#k-trend").className = "chip " + (pct >= 0 ? "" : "neg");
+  }
+  $("#k-liq").textContent = eur.format(netTotal(assets.filter((a) => a.section === "contanti" || a.section === "banche")));
+  $("#k-inv").textContent = eur.format(netTotal(assets.filter((a) => a.section === "investimenti")));
+  const pm = totalsOf(monthKey(-1));
+  const pmSave = pm.entrate - pm.spese;
+  $("#k-prev").textContent = (pmSave > 0 ? "+" : "") + eur.format(pmSave);
+  $("#k-prev").className = pmSave === 0 ? "" : signClass(pmSave);
+
   $("#k-in").textContent = eur.format(m.entrate);
   $("#k-out").textContent = eur.format(m.spese);
+  const nIn = m.rows.filter((t) => t.type === "entrata").length;
+  $("#k-in-sub").textContent = `${nIn} moviment${nIn === 1 ? "o" : "i"}`;
+  $("#k-out-sub").textContent = m.entrate > 0 ? `${Math.round((m.spese / m.entrate) * 100)}% delle entrate` : "—";
   const save = m.entrate - m.spese;
-  $("#k-save").textContent = eur.format(save);
+  $("#k-save").textContent = (save > 0 ? "+" : "") + eur.format(save);
   $("#k-save").className = signClass(save);
+  $("#k-rate").textContent = m.entrate > 0 ? `${((save / m.entrate) * 100).toFixed(1).replace(".", ",")}% tasso` : "— tasso";
+  $("#k-rate").className = "chip " + (save < 0 ? "neg" : "");
 
   renderGoal(net);
 
   const keys = Object.keys(SEZIONI);
+  const vals = keys.map((k) => Math.max(0, netTotal(assets.filter((a) => a.section === k))));
+  const tot = vals.reduce((t, v) => t + v, 0);
+  const colors = keys.map((k) => css("--c-" + k));
   setChart("ch-assets", {
     type: "doughnut",
-    data: {
-      labels: keys.map((k) => SEZIONI[k].label),
-      datasets: [{ data: keys.map((k) => Math.max(0, netTotal(assets.filter((a) => a.section === k)))), backgroundColor: [css("--warn"), css("--accent2"), css("--pos"), css("--accent")], borderColor: css("--card"), borderWidth: 3 }],
-    },
-    options: { maintainAspectRatio: false, cutout: "68%", plugins: { legend: { position: "bottom", labels: { usePointStyle: true } }, tooltip: { callbacks: { label: (c) => `${c.label}: ${eur.format(c.parsed)}` } } } },
+    data: { labels: keys.map((k) => SEZIONI[k].label), datasets: [{ data: vals, backgroundColor: colors, borderColor: css("--card"), borderWidth: 3 }] },
+    options: { maintainAspectRatio: false, cutout: "72%", plugins: { legend: { display: false }, tooltip: { callbacks: { label: (c) => `${c.label}: ${eur.format(c.parsed)}` } } } },
   });
+  $("#donut-n").textContent = assets.filter((a) => a.section !== "debiti").length;
+  $("#sec-total").textContent = tot > 0 ? "Totale 100%" : "";
+  $("#sec-legend").innerHTML = keys
+    .map((k, i) => `<li style="--c:${colors[i]}"><i></i><span>${esc(SEZIONI[k].label)}</span><b>${tot > 0 ? Math.round((vals[i] / tot) * 100) : 0}%</b></li>`)
+    .join("");
 
   const hist = [...snapshots].sort((a, b) => a.date.localeCompare(b.date));
+  $("#lg-goal").hidden = !goals[0];
   setChart("ch-history", {
     type: "line",
     data: {
       labels: hist.map((h) => h.date),
       datasets: [
-        { label: "Patrimonio netto", data: hist.map((h) => Number(h.total)), borderColor: css("--accent"), backgroundColor: (c) => (c.chart.chartArea ? gradient(c.chart.ctx, c.chart.chartArea, css("--accent")) : "transparent"), borderWidth: 3, pointRadius: 3, pointBackgroundColor: css("--accent"), fill: true, tension: 0.35 },
-        ...(goals[0] ? [{ label: "Obiettivo", data: hist.map(() => Number(goals[0].target)), borderColor: css("--warn"), borderDash: [6, 6], pointRadius: 0, fill: false }] : []),
+        { label: "Patrimonio netto", data: hist.map((h) => Number(h.total)), borderColor: css("--pos"), backgroundColor: (c) => (c.chart.chartArea ? gradient(c.chart.ctx, c.chart.chartArea, css("--pos")) : "transparent"), borderWidth: 2, pointRadius: 3, pointBackgroundColor: css("--pos"), pointBorderColor: css("--card"), pointBorderWidth: 1, fill: true, tension: 0.35 },
+        ...(goals[0] ? [{ label: "Obiettivo", data: hist.map(() => Number(goals[0].target)), borderColor: css("--warn"), borderDash: [6, 6], borderWidth: 1.5, pointRadius: 0, fill: false }] : []),
       ],
     },
-    options: { maintainAspectRatio: false, plugins: { legend: { display: !!goals[0], labels: { usePointStyle: true } } , tooltip: { callbacks: { label: (c) => eur.format(c.parsed.y) } } } },
+    options: {
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: (c) => eur.format(c.parsed.y) } } },
+      scales: {
+        x: { grid: { display: false }, border: { display: false }, ticks: { maxTicksLimit: 6, callback(v) { return new Date(this.getLabelForValue(v) + "T00:00").toLocaleDateString("it-IT", { day: "numeric", month: "short" }); } } },
+        y: { grid: { color: gridColor() }, border: { display: false }, ticks: { maxTicksLimit: 5, callback: compact } },
+      },
+    },
   });
 
   const months = [-5, -4, -3, -2, -1, 0].map(monthKey);
@@ -171,40 +227,57 @@ function renderDashboard() {
     data: {
       labels: months,
       datasets: [
-        { label: "Entrate", data: data.map((d) => d.entrate), backgroundColor: css("--pos"), borderRadius: 6 },
-        { label: "Spese", data: data.map((d) => d.spese), backgroundColor: css("--neg"), borderRadius: 6 },
+        { label: "Entrate", data: data.map((d) => d.entrate), backgroundColor: css("--pos"), borderRadius: 3, barPercentage: 0.7, categoryPercentage: 0.7 },
+        { label: "Spese", data: data.map((d) => d.spese), backgroundColor: css("--neg"), borderRadius: 3, barPercentage: 0.7, categoryPercentage: 0.7 },
       ],
     },
-    options: { maintainAspectRatio: false, plugins: { legend: { labels: { usePointStyle: true } } }, scales: { y: { beginAtZero: true } } },
+    options: {
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: (c) => `${c.dataset.label}: ${eur.format(c.parsed.y)}` } } },
+      scales: {
+        x: { grid: { display: false }, border: { display: false }, ticks: { callback(v) { const l = this.getLabelForValue(v); return l.slice(5) + "/" + l.slice(2, 4); } } },
+        y: { beginAtZero: true, grid: { color: gridColor() }, border: { display: false }, ticks: { maxTicksLimit: 5, callback: compact } },
+      },
+    },
   });
 }
 
 function renderGoal(net) {
   const g = goals[0];
   $("#goal-info").hidden = !g;
+  $("#goal-pct").textContent = "";
   if (!g) return;
   const target = Number(g.target);
   $("#goal-target").value = target;
   $("#goal-date").value = g.deadline;
   const pct = Math.max(0, Math.min(100, Math.round((net / target) * 100)));
+  $("#goal-pct").textContent = pct + "%";
   $("#goal-fill").style.width = pct + "%";
   const missing = target - net;
   const days = Math.ceil((new Date(g.deadline) - new Date()) / 864e5);
-  let text = `${pct}% · mancano ${eur.format(missing)}`;
-  if (missing <= 0) text = "🎯 Obiettivo raggiunto!";
-  else if (days <= 0) text += " · scadenza passata";
-  else if (days < 30) text += ` · scade tra ${days} giorni`;
-  else text += ` · servono ${eur.format(missing / (days / 30.44))}/mese`;
-  $("#goal-text").textContent = text;
+  let left = `Mancano ${eur.format(missing)}`, right = "";
+  if (missing <= 0) left = "🎯 Obiettivo raggiunto!";
+  else if (days <= 0) right = "Scadenza passata";
+  else if (days < 30) right = `Scade tra ${days} giorni`;
+  else right = `Ritmo: ${eur.format(missing / (days / 30.44))}/mese`;
+  $("#goal-left").textContent = left;
+  $("#goal-right").textContent = right;
 }
 
-function accountLabel(t) {
+// riga sotto il titolo: conto (o percorso del giroconto) e data
+function txSub(t) {
   const a = assets.find((x) => x.id === t.asset_id);
+  let acc = a ? esc(a.name) : "";
   if (t.type === "giroconto") {
     const b = assets.find((x) => x.id === t.to_asset_id);
-    return `<br><span class="muted small">${esc(a ? a.name : "?")} → ${esc(b ? b.name : "?")}</span>`;
+    acc = `${esc(a ? a.name : "?")} → ${esc(b ? b.name : "?")}`;
   }
-  return a ? `<br><span class="muted small">${esc(a.name)}</span>` : "";
+  return (acc ? acc + " • " : "") + esc(fmtDay(t.date));
+}
+
+function syncSeg() {
+  const type = $("#tx-type").value;
+  document.querySelectorAll("#tx-seg button, #tx-seg2 button").forEach((b) => b.classList.toggle("on", b.dataset.type === type));
 }
 
 function renderMovimenti() {
@@ -219,17 +292,28 @@ function renderMovimenti() {
   $("#tx-empty").hidden = m.rows.length > 0;
   $("#tx-body").innerHTML = m.rows
     .sort((a, b) => b.date.localeCompare(a.date))
-    .map((t) => `<tr>
-      <td>${esc(t.date)}</td><td>${esc(t.category)}${accountLabel(t)}</td><td>${esc(t.note)}</td>
-      <td class="r ${t.type === "giroconto" ? "xfer" : t.type === "entrata" ? "pos" : "neg"}">${t.type === "giroconto" ? "⇄ " : t.type === "entrata" ? "+" : "−"}${eur.format(t.amount)}</td>
-      <td class="r"><button class="btn ghost small" data-del-tx="${esc(t.id)}" aria-label="Elimina">✕</button></td>
-    </tr>`).join("");
+    .map((t) => {
+      const kind = t.type === "giroconto" ? "xfer" : t.type === "entrata" ? "pos" : "neg";
+      const ic = t.type === "giroconto" ? "giroconto" : ICONS[t.category] ? t.category : t.type;
+      return `<div class="tx">
+      <span class="tx-ico ${kind}">${icon(ic)}</span>
+      <div class="tx-main"><strong>${esc(t.category)}</strong>${t.note ? `<span class="pill">${esc(t.note)}</span>` : ""}<small>${txSub(t)}</small></div>
+      <span class="tx-amt ${kind}">${t.type === "giroconto" ? "⇄ " : t.type === "entrata" ? "+" : "−"}${eur.format(t.amount)}</span>
+      <button class="icon-btn" data-del-tx="${esc(t.id)}" aria-label="Elimina">${icon("trash")}</button>
+    </div>`;
+    }).join("");
 }
 
-function sourceLabel(a) {
+function sourceNote(a) {
   const src = a.section === "debiti" && assets.find((x) => x.id === a.source_id);
-  return src ? ` · ${a.type === "Debito" ? "ricevuto su" : "prestato da"} ${esc(src.name)}` : "";
+  return src ? `${a.type === "Debito" ? "ricevuto su" : "prestato da"} ${src.name}` : "";
 }
+
+// sigla del conto: "ING Arancio" -> ING, "Fineco" -> FI
+const monogram = (name) => {
+  const w = String(name).trim().split(/\s+/)[0] || "?";
+  return (w.length <= 3 ? w : w.slice(0, 2)).toUpperCase();
+};
 
 function renderPatrimonio() {
   fillFrom();
@@ -237,12 +321,13 @@ function renderPatrimonio() {
     const rows = assets.filter((a) => a.section === key);
     const tot = netTotal(rows);
     return `<div class="card">
-      <div class="row between"><h2>${s.label}</h2><strong class="${signClass(tot)}">${eur.format(tot)}</strong></div>
-      ${rows.length ? rows.map((a) => `<div class="asset">
-        <div><strong>${esc(a.name)}</strong><br><span class="muted small">${esc(a.type)}${sourceLabel(a)}</span>${key === "debiti" ? `<label class="check small"><input type="checkbox" data-count-asset="${esc(a.id)}" ${a.counted === false ? "" : "checked"}> Conta nel patrimonio</label>` : ""}</div>
-        <input type="number" step="0.01" value="${Number(a.value)}" data-set-asset="${esc(a.id)}" aria-label="Valore ${esc(a.name)}">
-        <button class="btn ghost small" data-del-asset="${esc(a.id)}" aria-label="Elimina">✕</button>
-      </div>`).join("") : `<p class="muted">Nessuna voce.</p>`}
+      <div class="sec-h"><h2 class="bar-h" style="--bar: var(--c-${key})">${s.label}</h2><span class="sec-tot">Totale: <strong class="${signClass(tot)}">${eur.format(tot)}</strong></span></div>
+      ${rows.length ? rows.map((a) => `<div class="asset" style="--c: var(--c-${key})">
+        <span class="mono">${esc(monogram(a.name))}</span>
+        <div class="as-main"><strong>${esc(a.name)}</strong><span class="pill">${esc(a.type)}</span>${key === "contanti" ? `<small>Disponibilità liquida</small>` : key === "debiti" ? `<small>${esc(sourceNote(a))}</small>` : ""}${key === "debiti" ? `<label class="check"><input type="checkbox" data-count-asset="${esc(a.id)}" ${a.counted === false ? "" : "checked"}> Conta nel patrimonio</label>` : ""}</div>
+        <label class="val"><input type="number" step="0.01" value="${Number(a.value)}" data-set-asset="${esc(a.id)}" aria-label="Valore ${esc(a.name)}"><i>€</i></label>
+        <button class="icon-btn" data-del-asset="${esc(a.id)}" aria-label="Elimina">${icon("trash")}</button>
+      </div>`).join("") : `<p class="empty">Nessuna voce.</p>`}
     </div>`;
   }).join("");
 }
@@ -270,6 +355,7 @@ function toggleTxMode() {
   $("#tx-who").placeholder = type === "credito" ? "A chi hai prestato (es. Mario)" : "Da chi hai ricevuto (es. Mario)";
   $("#tx-cat").required = !(debt || xfer);
   $("#tx-date").required = !debt;
+  syncSeg();
   $("#tx-hint").hidden = !(debt || xfer);
   $("#tx-hint").textContent = xfer ? "Giroconto: sposta soldi da un conto all'altro. Non conta come entrata o spesa." : debtHint(type);
   if (debt || xfer) $("#tx-newcat").hidden = true;
@@ -281,7 +367,7 @@ function fillCats(selected) {
   if (!CATEGORIE[$("#tx-type").value]) return;
   const sel = $("#tx-cat");
   const list = catList($("#tx-type").value);
-  sel.innerHTML = list.map((v) => `<option>${esc(v)}</option>`).join("") + `<option value="${NEW_CAT}">➕ Nuova categoria…</option>`;
+  sel.innerHTML = list.map((v) => `<option>${esc(v)}</option>`).join("") + `<option value="${NEW_CAT}">➕ Nuova…</option>`;
   sel.value = list.includes(selected) || selected === NEW_CAT ? selected : list[0];
   toggleNewCat();
 }
@@ -291,11 +377,11 @@ function adaptAssetName() {
   const cash = $("#as-section").value === "contanti";
   $("#as-name").required = !cash;
   const debt = $("#as-section").value === "debiti";
-  $("#as-name").placeholder = cash ? "Nota (opzionale)" : debt ? "Nome (es. Mario)" : "Nome (es. Fineco, Bitcoin)";
+  $("#as-name").placeholder = cash ? "Nota (opzionale)" : debt ? "Nome (es. Mario)" : "Es. Fineco, Bitcoin";
   $("#as-counted-wrap").hidden = $("#as-from").hidden = $("#as-hint").hidden = !debt;
   $("#as-hint").textContent = debtHint($("#as-type").value);
   $("#as-value").min = debt ? "0.01" : "";
-  $("#as-value").placeholder = debt ? "Importo €" : "Valore € (debito: -)";
+  $("#as-value").placeholder = "0,00";
 }
 
 // conti selezionabili, raggruppati per sezione; il tipo si mostra solo per distinguere nomi uguali
@@ -414,6 +500,9 @@ function init() {
   );
 
   $("#tx-type").addEventListener("change", toggleTxMode);
+  document.querySelectorAll("#tx-seg button, #tx-seg2 button").forEach((b) =>
+    b.addEventListener("click", () => { $("#tx-type").value = b.dataset.type; $("#tx-type").dispatchEvent(new Event("change")); })
+  );
   $("#tx-cat").addEventListener("change", toggleNewCat);
   $("#tx-asset").addEventListener("change", () => {
     if ($("#tx-type").value === "giroconto" && $("#tx-to").value === $("#tx-asset").value) {
@@ -479,8 +568,8 @@ function init() {
   });
 
   document.addEventListener("click", (e) => {
-    const txId = e.target.dataset.delTx;
-    const asId = e.target.dataset.delAsset;
+    const txId = e.target.closest("[data-del-tx]")?.dataset.delTx;
+    const asId = e.target.closest("[data-del-asset]")?.dataset.delAsset;
     if (txId && confirm("Eliminare questo movimento? Il saldo del conto collegato verrà ripristinato.")) run(async () => {
       const t = tx.find((x) => x.id === txId);
       await store.del("transactions", txId);
@@ -507,7 +596,8 @@ function init() {
 function showApp() {
   $("#login").hidden = true;
   $("#app").hidden = false;
-  $("#mode").textContent = CLOUD ? "" : "Modalità locale · dati solo in questo browser";
+  $("#mode").textContent = CLOUD ? "Cloud" : "Locale";
+  $("#mode-sub").textContent = CLOUD ? "Dati sincronizzati con il tuo account" : "Dati memorizzati esclusivamente in questo browser";
   $("#logout").hidden = !CLOUD;
   run(refresh);
 }
