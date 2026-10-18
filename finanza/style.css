@@ -4,6 +4,7 @@
   --cta-bg: #f1f5f9; --cta-fg: #0b0e14; --chip-pos: rgba(16, 185, 129, .12); --chip-neg: rgba(242, 102, 122, .12);
   --c-contanti: #fbbf24; --c-banche: #818cf8; --c-investimenti: #2dd4bf; --c-debiti: #94a3b8;
   --shadow: 0 10px 30px rgba(0, 0, 0, .35); --radius: 16px;
+  --chev: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238b94a8' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
 }
 @media (prefers-color-scheme: light) {
   :root {
@@ -12,6 +13,7 @@
     --cta-bg: #0f172a; --cta-fg: #ffffff; --chip-pos: rgba(4, 120, 87, .1); --chip-neg: rgba(190, 18, 60, .08);
     --c-contanti: #b45309; --c-banche: #4f46e5; --c-investimenti: #0f766e; --c-debiti: #475569;
     --shadow: 0 6px 24px rgba(30, 41, 90, .08);
+    --chev: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%235b6578' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
   }
 }
 * { box-sizing: border-box; }
@@ -107,6 +109,7 @@ h1 { font-size: 24px; letter-spacing: -.02em; text-transform: none; color: var(-
 input, select { width: 100%; padding: 12px 13px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--text); font: inherit; font-size: 14px; transition: border-color .15s, box-shadow .15s; min-width: 0; text-overflow: ellipsis; }
 input::placeholder { color: color-mix(in srgb, var(--muted) 85%, transparent); }
 input:focus, select:focus { outline: 0; border-color: color-mix(in srgb, var(--mint) 60%, transparent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--mint) 18%, transparent); }
+select { -webkit-appearance: none; appearance: none; background-image: var(--chev); background-repeat: no-repeat; background-position: right 18px center; background-size: 12px; padding-right: 42px; cursor: pointer; }
 input[type=checkbox] { width: auto; accent-color: var(--mint); }
 .money { position: relative; }
 .money i { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); font-style: normal; color: var(--muted); pointer-events: none; }
@@ -201,6 +204,7 @@ input[type=checkbox] { width: auto; accent-color: var(--mint); }
   .donut { width: 112px; height: 112px; }
   .form { gap: 12px; }
   .seg button { font-size: 12px; padding: 9px 2px; }
+  .form .fld:has(> #as-section) { grid-column: 1 / -1; }
   .asset { grid-template-columns: 42px 1fr 34px; grid-template-areas: "mono main del" "val val val"; }
   .asset .mono { grid-area: mono; } .asset .as-main { grid-area: main; } .asset .val { grid-area: val; } .asset .icon-btn { grid-area: del; }
 }

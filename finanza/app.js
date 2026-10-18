@@ -367,7 +367,7 @@ function fillCats(selected) {
   if (!CATEGORIE[$("#tx-type").value]) return;
   const sel = $("#tx-cat");
   const list = catList($("#tx-type").value);
-  sel.innerHTML = list.map((v) => `<option>${esc(v)}</option>`).join("") + `<option value="${NEW_CAT}">➕ Nuova…</option>`;
+  sel.innerHTML = list.map((v) => `<option>${esc(v)}</option>`).join("") + `<option value="${NEW_CAT}">➕ Nuova</option>`;
   sel.value = list.includes(selected) || selected === NEW_CAT ? selected : list[0];
   toggleNewCat();
 }
