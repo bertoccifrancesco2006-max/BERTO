@@ -31,7 +31,8 @@ const local = {
 const store = CLOUD
   ? {
       async list(t) {
-        const { data, error } = await sb.from(t).select("*");
+        // ordine esplicito: senza, Postgres puo' restituire le righe in ordine diverso dopo un aggiornamento
+        const { data, error } = await sb.from(t).select("*").order("created_at", { ascending: true });
         if (error) throw error;
         return data;
       },
